@@ -1,6 +1,8 @@
 # SPEC CODEX - Challenger gegen SOLID und RISK (Paper, v0.1)
 
-Status: DRYRUN/Paper. Keine Alpaca-Anbindung, keine echten Orders.
+Status: Paper-Alpaca bereit. Keine Live-Orders; Ausfuehrung nur ueber Alpaca
+Paper und nur wenn `ALPACA_CODEX_KEY`/`ALPACA_CODEX_SECRET` als Secrets gesetzt
+sind.
 
 Ziel: CODEX soll SOLID und RISK risikoadjustiert outperformen. Outperformance
 wird nicht durch stumpf mehr Hebel gesucht, sondern durch drei Dinge:
@@ -36,7 +38,7 @@ Quant-Snapshot -> Entscheider -> Journal -> Eval -> Review.
 
 CODEX vermeidet Microcaps, IPOs, Buzz-Peaks, Averaging-down, Daytrading,
 nicht dokumentierte Trades, selbst erfundene Kurse oder Levels und
-Alpaca-Spiegelung vor explizitem Sign-off.
+Live-Alpaca-Spiegelung. Paper-Alpaca ist nur fuer das Challenger-Konto erlaubt.
 
 ## Mandat
 

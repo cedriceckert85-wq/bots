@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-"""Alpaca-Paper-Anbindung fuer SOLID und RISK (Stufe 1).
+"""Alpaca-Paper-Anbindung fuer SOLID, RISK und CODEX.
 
 Erprobte Swing-Agent-Logik, parameterisiert je Bot: platziert neue Journal-Trades
 ("wartet", US-Symbol) als Bracket-Order (Entry+Stop+Ziel, GTC) und synct Fills.
-Stueckzahl = floor(RISIKO_USD / Stop-Distanz). SOLID: 1.000 $, RISK: 2.000 $.
+Stueckzahl = floor(RISIKO_USD / Stop-Distanz).
 Verfall: Entry >2 Handelstage nicht getriggert -> Order canceln. Zeit-Exit:
 Legs canceln + Market-on-Open. Ohne Keys: stiller No-Op je Bot.
 """
@@ -11,31 +11,16 @@ import json
 import os
 import sys
 import datetime
-import urllib.request
-import urllib.error
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from alpaca_common import api, keys_from_env, price, qty_for_risk  # noqa: E402
 from trade_eval import r_multiple, statistik_neu  # noqa: E402
 
-BASE = "https://paper-api.alpaca.markets/v2"
 BOTS = [
     {"journal": "data/solid_journal.json", "prefix": "ALPACA_SOLID", "risiko_usd": 1000},
     {"journal": "data/risk_journal.json", "prefix": "ALPACA_RISK", "risiko_usd": 2000},
+    {"journal": "data/codex_journal.json", "prefix": "ALPACA_CODEX", "risiko_usd": 1500},
 ]
-
-
-def api(keys, pfad, methode="GET", body=None):
-    req = urllib.request.Request(
-        BASE + pfad, method=methode,
-        headers={"APCA-API-KEY-ID": keys[0], "APCA-API-SECRET-KEY": keys[1],
-                 "Content-Type": "application/json"},
-        data=json.dumps(body).encode() if body is not None else None)
-    try:
-        with urllib.request.urlopen(req, timeout=20) as r:
-            inhalt = r.read().decode()
-            return json.loads(inhalt) if inhalt else {}
-    except urllib.error.HTTPError as e:
-        raise RuntimeError(f"{methode} {pfad}: HTTP {e.code} {e.read().decode()[:300]}")
 
 
 def handelstage(von, bis):
@@ -50,8 +35,7 @@ def handelstage(von, bis):
 
 
 def order_anlegen(keys, t, risiko_usd):
-    risiko = abs(t["entry"] - t["stop"])
-    qty = int(risiko_usd // risiko) if risiko > 0 else 0
+    qty = qty_for_risk(t["entry"], t["stop"], risiko_usd)
     if qty < 1:
         t.setdefault("log", []).append("Alpaca: Stop-Distanz zu gross, qty<1 -> Yahoo-Simulation")
         return
@@ -59,9 +43,9 @@ def order_anlegen(keys, t, risiko_usd):
     typ = "limit" if t.get("entryTyp", "stop") == "limit" else "stop"
     body = {"symbol": t["ticker"], "qty": str(qty), "side": seite, "type": typ,
             "time_in_force": "gtc", "order_class": "bracket",
-            "take_profit": {"limit_price": f"{t['tp']:.2f}"},
-            "stop_loss": {"stop_price": f"{t['stop']:.2f}"}}
-    body["limit_price" if typ == "limit" else "stop_price"] = f"{t['entry']:.2f}"
+            "take_profit": {"limit_price": price(t["tp"])},
+            "stop_loss": {"stop_price": price(t["stop"])}}
+    body["limit_price" if typ == "limit" else "stop_price"] = price(t["entry"])
     o = api(keys, "/orders", "POST", body)
     t["alpaca"] = {"orderId": o["id"], "qty": qty}
     t.setdefault("log", []).append(f"Alpaca: Bracket-Order platziert ({qty} Stk.)")
@@ -116,13 +100,15 @@ def order_sync(keys, t, risiko_usd):
 
 def main():
     for bot in BOTS:
-        keys = (os.environ.get(bot["prefix"] + "_KEY", ""), os.environ.get(bot["prefix"] + "_SECRET", ""))
-        if not keys[0]:
-            print(f"{bot['journal']}: keine Keys — uebersprungen.")
+        keys = keys_from_env(bot["prefix"])
+        if not keys:
+            print(f"{bot['journal']}: keine Keys - uebersprungen.")
             continue
         with open(bot["journal"], encoding="utf-8") as f:
             d = json.load(f)
         vorher = json.dumps(d, sort_keys=True)
+        d.setdefault("konto", {})["alpaca"] = True
+        d["konto"]["status"] = f"ALPACA PAPER ({bot['prefix']})"
         for t in d["trades"]:
             if "." in t.get("yahooSymbol", t["ticker"]):
                 continue

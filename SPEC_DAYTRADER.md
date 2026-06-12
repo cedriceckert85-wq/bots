@@ -1,6 +1,8 @@
 # SPEC DAYTRADER - Intraday ORB Paper-Bot (v0.1)
 
-Status: DRYRUN/Paper. Keine Alpaca-Anbindung, keine echten Orders.
+Status: Paper-Alpaca bereit. Keine Live-Orders; Ausfuehrung nur ueber Alpaca
+Paper und nur wenn `ALPACA_DAYTRADER_KEY`/`ALPACA_DAYTRADER_SECRET` als Secrets
+gesetzt sind.
 
 Ziel: Ein Daytrader-Bot, der nur dann handelt, wenn ein intraday-taugliches,
 regelbasiertes Setup vorliegt. Der Bot soll nicht durch Aktivitaet gewinnen,
@@ -48,7 +50,8 @@ ein Scheitern, kein "aktiver Bot".
 
 ## Engine A - 5-Minuten-Opening-Range-Breakout auf Stocks in Play
 
-Quelle: 5-Minuten-Kerzen von Yahoo Chart API, Paper-only.
+Quelle: 5-Minuten-Kerzen von Yahoo Chart API; Ausfuehrung optional ueber
+Alpaca Paper.
 
 Universum:
 
@@ -73,8 +76,11 @@ Entry-Setup:
 
 Exit:
 
-- Stop oder Ziel, konservativ Stop zuerst wenn beides in gleicher Kerze.
-- Zeit-Exit am Tagesende, keine Overnight-Position.
+- Stop oder Ziel, bei Yahoo-Fallback konservativ Stop zuerst wenn beides in
+  gleicher Kerze.
+- Zeit-Exit am Tagesende, keine Overnight-Position. In Alpaca Paper uebernimmt
+  der Close-Guard kurz vor US-Schluss den Market-Exit, falls weder Stop noch
+  Ziel gefuellt wurden.
 - Bei Datenfehler: kein neuer Trade; offene Paper-Position wird im Log als
   "needs_manual_review" markiert, nicht schoengerechnet.
 
@@ -134,6 +140,6 @@ Beides:
 
 - Kein Scalping.
 - Keine Martingale-/Nachkauf-Logik.
-- Keine echten Orders.
+- Keine Live-Orders. Alpaca ist Paper-only.
 - Keine Broker-/Margin-Optimierung.
 - Keine TQQQ-Kopie von RISK.

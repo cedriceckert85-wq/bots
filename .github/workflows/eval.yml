@@ -21,12 +21,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Alpaca-Sync SOLID/RISK
+      - name: Alpaca-Sync SOLID/RISK/CODEX
         env:
           ALPACA_SOLID_KEY: ${{ secrets.ALPACA_SOLID_KEY }}
           ALPACA_SOLID_SECRET: ${{ secrets.ALPACA_SOLID_SECRET }}
           ALPACA_RISK_KEY: ${{ secrets.ALPACA_RISK_KEY }}
           ALPACA_RISK_SECRET: ${{ secrets.ALPACA_RISK_SECRET }}
+          ALPACA_CODEX_KEY: ${{ secrets.ALPACA_CODEX_KEY }}
+          ALPACA_CODEX_SECRET: ${{ secrets.ALPACA_CODEX_SECRET }}
         run: python scripts/alpaca_sync.py
       - name: Yahoo-Fallback-Auswertung
         run: python scripts/trade_eval.py

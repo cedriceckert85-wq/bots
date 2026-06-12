@@ -15,10 +15,22 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
+from alpaca_common import (
+    DONE_STATUSES,
+    OPEN_STATUSES,
+    api,
+    iso_to_utc_hhmm,
+    keys_from_env,
+    ny_now,
+    price,
+    qty_for_risk,
+)
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SNAPSHOT = ROOT / "data" / "quant_snapshot.json"
 JOURNAL = ROOT / "data" / "daytrader_journal.json"
+ALPACA_PREFIX = "ALPACA_DAYTRADER"
 RISK_USD = 350
 MAX_TRADES_PER_DAY = 1
 MAX_SYMBOLS_TO_SCAN = 30
@@ -268,7 +280,132 @@ def r_multiple(trade: dict, exit_price: float) -> float:
     return round((exit_price - trade["entryFill"]) / risk, 2)
 
 
+def place_alpaca_order(keys: tuple[str, str], trade: dict) -> bool:
+    qty = qty_for_risk(trade["entry"], trade["stop"], trade.get("risikoUsd", RISK_USD))
+    if qty < 1:
+        trade.setdefault("log", []).append("Alpaca: Stop-Distanz zu gross, qty<1")
+        return True
+    body = {
+        "symbol": trade["ticker"],
+        "qty": str(qty),
+        "side": "buy",
+        "type": "stop",
+        "stop_price": price(trade["entry"]),
+        "time_in_force": "day",
+        "order_class": "bracket",
+        "take_profit": {"limit_price": price(trade["tp"])},
+        "stop_loss": {"stop_price": price(trade["stop"])},
+    }
+    order = api(keys, "/orders", "POST", body)
+    trade["alpaca"] = {
+        "orderId": order["id"],
+        "qty": qty,
+        "mode": "paper_bracket_day",
+        "submittedAt": dt.datetime.now(dt.UTC).isoformat(),
+    }
+    trade.setdefault("log", []).append(f"Alpaca: DAY-Bracket-Order platziert ({qty} Stk.)")
+    return True
+
+
+def flatten_window_active() -> bool:
+    now = ny_now()
+    return now.weekday() < 5 and now.hour == 15 and now.minute >= 45
+
+
+def place_flatten_order(keys: tuple[str, str], trade: dict, order: dict) -> bool:
+    if trade.get("exitOrderId") or not flatten_window_active():
+        return False
+    for leg in order.get("legs") or []:
+        if leg.get("status") in OPEN_STATUSES:
+            try:
+                api(keys, f"/orders/{leg['id']}", "DELETE")
+            except RuntimeError as exc:
+                trade.setdefault("log", []).append(f"Alpaca: Leg-Cancel fehlgeschlagen: {exc}")
+    exit_order = api(keys, "/orders", "POST", {
+        "symbol": trade["ticker"],
+        "qty": str(trade["alpaca"]["qty"]),
+        "side": "sell",
+        "type": "market",
+        "time_in_force": "day",
+    })
+    trade["exitOrderId"] = exit_order["id"]
+    trade.setdefault("log", []).append("Alpaca: Close-Guard Market-Exit platziert")
+    return True
+
+
+def sync_alpaca_trade(keys: tuple[str, str], trade: dict, flatten: bool) -> bool:
+    if trade.get("status") == "signal" and "alpaca" not in trade:
+        return place_alpaca_order(keys, trade)
+    if "alpaca" not in trade:
+        return False
+
+    changed = False
+    order = api(keys, f"/orders/{trade['alpaca']['orderId']}?nested=true")
+    order_status = order.get("status")
+
+    if trade.get("status") == "signal":
+        if order_status == "filled":
+            trade["status"] = "offen"
+            trade["entryFill"] = r2(float(order["filled_avg_price"]))
+            trade["entryTimeUtc"] = iso_to_utc_hhmm(order.get("filled_at"))
+            trade.setdefault("log", []).append(f"Alpaca: Entry-Fill {trade['entryFill']:.2f}")
+            changed = True
+        elif order_status in DONE_STATUSES:
+            trade["status"] = "verfallen"
+            trade.setdefault("log", []).append(f"Alpaca: Entry-Order {order_status}")
+            changed = True
+
+    if trade.get("status") == "offen":
+        if trade.get("exitOrderId"):
+            exit_order = api(keys, f"/orders/{trade['exitOrderId']}")
+            if exit_order.get("status") == "filled":
+                trade["status"] = "zeit_exit"
+                trade["exitKurs"] = r2(float(exit_order["filled_avg_price"]))
+                trade["exitTimeUtc"] = iso_to_utc_hhmm(exit_order.get("filled_at"))
+                changed = True
+        else:
+            for leg in order.get("legs") or []:
+                if leg.get("status") == "filled":
+                    trade["exitKurs"] = r2(float(leg["filled_avg_price"]))
+                    trade["exitTimeUtc"] = iso_to_utc_hhmm(leg.get("filled_at"))
+                    trade["status"] = "gewonnen" if leg.get("type") == "limit" else "verloren"
+                    changed = True
+                    break
+            if trade.get("status") == "offen" and flatten:
+                changed = place_flatten_order(keys, trade, order) or changed
+
+    if trade.get("status") in ("gewonnen", "verloren", "zeit_exit") and "ergebnisR" not in trade:
+        trade["ergebnisR"] = r_multiple(trade, trade["exitKurs"])
+        trade["pnlUsd"] = r2(trade["ergebnisR"] * trade.get("risikoUsd", RISK_USD))
+        changed = True
+    return changed
+
+
+def sync_alpaca_journal(journal: dict, flatten: bool = False) -> bool:
+    keys = keys_from_env(ALPACA_PREFIX)
+    if not keys:
+        print("DAYTRADER: keine Alpaca-Keys - Alpaca-Sync uebersprungen.")
+        return False
+
+    changed = False
+    journal.setdefault("konto", {})["alpaca"] = True
+    journal["konto"]["status"] = f"ALPACA PAPER ({ALPACA_PREFIX})"
+    for trade in journal.get("trades", []):
+        if "." in trade.get("yahooSymbol", trade.get("ticker", "")):
+            continue
+        if trade.get("status") not in ("signal", "offen"):
+            continue
+        try:
+            changed = sync_alpaca_trade(keys, trade, flatten) or changed
+        except RuntimeError as exc:
+            trade.setdefault("log", []).append(f"Alpaca-Sync fehlgeschlagen: {exc}")
+            changed = True
+    return changed
+
+
 def evaluate_trade(trade: dict) -> bool:
+    if trade.get("alpaca"):
+        return False
     if trade.get("status") not in ("signal", "offen"):
         return False
     bars_all, _ = yahoo_5m(trade.get("yahooSymbol", trade["ticker"]))
@@ -375,6 +512,8 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="DAYTRADER ORB paper bot")
     parser.add_argument("--write", action="store_true", help="append one paper signal")
     parser.add_argument("--evaluate", action="store_true", help="evaluate open DAYTRADER trades")
+    parser.add_argument("--alpaca", action="store_true", help="place/sync Alpaca paper orders when keys exist")
+    parser.add_argument("--flatten", action="store_true", help="close Alpaca paper positions in the 15:45-15:59 ET window")
     args = parser.parse_args()
 
     snapshot = load_json(SNAPSHOT)
@@ -385,7 +524,7 @@ def main() -> int:
 
     result = scan(snapshot, journal)
     output = {
-        "mode": {"write": args.write, "evaluate": args.evaluate},
+        "mode": {"write": args.write, "evaluate": args.evaluate, "alpaca": args.alpaca, "flatten": args.flatten},
         "snapshotAsOf": snapshot.get("asOf"),
         "decision": result["decision"],
         "topCandidates": result.get("candidates", []),
@@ -398,7 +537,7 @@ def main() -> int:
         journal.setdefault("trades", []).append(trade)
         journal["konto"]["hinweisLetzterLauf"] = (
             f"DAYTRADER Signal {trade['id']} {trade['ticker']} fuer {trade['sessionDate']} geschrieben. "
-            "Paper-only, keine Alpaca-Order."
+            + ("Alpaca-Paper-Order wird versucht." if args.alpaca else "Paper-only, keine Alpaca-Order.")
         )
         journal.setdefault("laufLog", []).append({
             "datum": dt.datetime.now(dt.UTC).isoformat(),
@@ -417,6 +556,13 @@ def main() -> int:
             "gruende": result.get("reasons", []),
         })
         eval_changed = True
+
+    alpaca_changed = False
+    if args.alpaca:
+        alpaca_changed = sync_alpaca_journal(journal, flatten=args.flatten)
+        output["alpacaChanged"] = alpaca_changed
+        if alpaca_changed:
+            eval_changed = True
 
     if eval_changed:
         journal["statistik"] = finished_stats(journal.get("trades", []))

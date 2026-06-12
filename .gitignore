@@ -2,6 +2,7 @@ __pycache__/
 *.pyc
 alpaca_keys*.json
 *alpaca*keys*.json
+!config/alpaca_keys.example.json
 .env
 .env.*
 config/secrets/

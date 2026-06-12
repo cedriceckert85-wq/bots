@@ -23,8 +23,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: DAYTRADER Signal + Auswertung
-        run: python scripts/daytrader.py --write --evaluate
+      - name: DAYTRADER Signal + Alpaca Paper
+        env:
+          ALPACA_DAYTRADER_KEY: ${{ secrets.ALPACA_DAYTRADER_KEY }}
+          ALPACA_DAYTRADER_SECRET: ${{ secrets.ALPACA_DAYTRADER_SECRET }}
+        run: python scripts/daytrader.py --write --evaluate --alpaca
       - name: Commit & Push
         run: |
           if git diff --quiet data/daytrader_journal.json; then echo "Keine Aenderung."; exit 0; fi

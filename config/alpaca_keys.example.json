@@ -1,0 +1,22 @@
+{
+  "ALPACA_SOLID": {
+    "key": "PASTE_KEY_ID_HERE",
+    "secret": "PASTE_SECRET_HERE",
+    "base": "https://paper-api.alpaca.markets/v2"
+  },
+  "ALPACA_RISK": {
+    "key": "PASTE_KEY_ID_HERE",
+    "secret": "PASTE_SECRET_HERE",
+    "base": "https://paper-api.alpaca.markets/v2"
+  },
+  "ALPACA_CODEX": {
+    "key": "PASTE_KEY_ID_HERE",
+    "secret": "PASTE_SECRET_HERE",
+    "base": "https://paper-api.alpaca.markets/v2"
+  },
+  "ALPACA_DAYTRADER": {
+    "key": "PASTE_KEY_ID_HERE",
+    "secret": "PASTE_SECRET_HERE",
+    "base": "https://paper-api.alpaca.markets/v2"
+  }
+}

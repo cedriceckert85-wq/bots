@@ -1,38 +1,38 @@
-name: DAYTRADER Auswertung
+name: DAYTRADER Close Guard
 
 on:
   schedule:
-    # US-Handel. GitHub-Cron kann verzoegern; fuer Paper-Eval unkritisch.
-    - cron: '*/10 14-19 * * 1-5'
-    - cron: '5 20 * * 1-5'
+    # 15:45 New York in Sommer/Winter. Das Script prueft die echte NY-Zeit.
+    - cron: '45 19 * * 1-5'
+    - cron: '45 20 * * 1-5'
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: daytrader-eval
+  group: daytrader-flatten
   cancel-in-progress: false
 
 jobs:
-  eval:
+  flatten:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: DAYTRADER Alpaca Paper-Auswertung
+      - name: DAYTRADER Close Guard
         env:
           ALPACA_DAYTRADER_KEY: ${{ secrets.ALPACA_DAYTRADER_KEY }}
           ALPACA_DAYTRADER_SECRET: ${{ secrets.ALPACA_DAYTRADER_SECRET }}
-        run: python scripts/daytrader.py --evaluate --alpaca
+        run: python scripts/daytrader.py --evaluate --alpaca --flatten
       - name: Commit & Push
         run: |
           if git diff --quiet data/daytrader_journal.json; then echo "Keine Aenderung."; exit 0; fi
-          git config user.name "daytrader-eval"
+          git config user.name "daytrader-close-guard"
           git config user.email "actions@users.noreply.github.com"
           git add data/daytrader_journal.json
-          git commit -m "DAYTRADER Auswertung $(TZ=Europe/Berlin date +%d.%m.%Y' '%H:%M)"
+          git commit -m "DAYTRADER Close Guard $(TZ=Europe/Berlin date +%d.%m.%Y' '%H:%M)"
           for i in 1 2 3; do git push && exit 0; git pull --rebase; done
           exit 1

@@ -1,4 +1,4 @@
-name: Alpaca-Orders SOLID+RISK
+name: Alpaca-Orders SOLID+RISK+CODEX
 
 on:
   schedule:
@@ -11,7 +11,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: duo-orders
+  group: swing-orders
   cancel-in-progress: false
 
 jobs:
@@ -28,13 +28,15 @@ jobs:
           ALPACA_SOLID_SECRET: ${{ secrets.ALPACA_SOLID_SECRET }}
           ALPACA_RISK_KEY: ${{ secrets.ALPACA_RISK_KEY }}
           ALPACA_RISK_SECRET: ${{ secrets.ALPACA_RISK_SECRET }}
+          ALPACA_CODEX_KEY: ${{ secrets.ALPACA_CODEX_KEY }}
+          ALPACA_CODEX_SECRET: ${{ secrets.ALPACA_CODEX_SECRET }}
         run: python scripts/alpaca_sync.py
       - name: Commit & Push
         run: |
           if git diff --quiet data/; then echo "Keine Änderung."; exit 0; fi
           git config user.name "alpaca-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/solid_journal.json data/risk_journal.json
+          git add data/solid_journal.json data/risk_journal.json data/codex_journal.json
           git commit -m "Alpaca-Orders $(TZ=Europe/Berlin date +%d.%m.%Y' '%H:%M)"
           for i in 1 2 3; do git push && exit 0; git pull --rebase; done
           exit 1
