@@ -28,16 +28,15 @@ function Set-GitHubSecret {
     return
   }
 
-  $tmp = [System.IO.Path]::GetTempFileName()
   try {
-    Set-Content -LiteralPath $tmp -Value $value -NoNewline -Encoding utf8
-    gh secret set $Name --repo $Repo --body-file $tmp
+    gh secret set $Name --repo $Repo --body $value
+    if ($LASTEXITCODE -ne 0) {
+      throw "gh secret set failed for $Name"
+    }
     Write-Host "Set $Name"
   }
   finally {
-    if (Test-Path -LiteralPath $tmp) {
-      Remove-Item -LiteralPath $tmp -Force
-    }
+    $value = $null
   }
 }
 
