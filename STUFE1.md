@@ -40,9 +40,31 @@ der Stufe 1 wird bei Umstieg auf Phase 2 zurückgesetzt (Regeländerung = Statis
 - **Regime:** spyZone risk_off → nur Engine-B-Trades mit halbem Risiko, kein A/C.
 
 ## Gemeinsam
-- Journal-Schema = Swing-Schema (+ Feld `engine`). Abrechnung: `scripts/alpaca_sync.py`
-  (echte Bracket-Fills) bzw. `scripts/trade_eval.py` (Yahoo-Fallback). Status/Ergebnisse
-  werden NIE von Hand geändert.
+- **Journal-Schema — EXAKT dieses, keine eigenen Feldnamen erfinden** (Pflichtfelder,
+  Abrechnung crasht sonst):
+```json
+{
+  "id": "S-001 bzw. R-001 (fortlaufend)",
+  "datumEmpfehlung": "YYYY-MM-DD",
+  "aktie": "Firmenname",
+  "ticker": "XXX",
+  "yahooSymbol": "XXX",
+  "richtung": "long",
+  "engine": "momentum|newsdrift bzw. A|B|C",
+  "entryTyp": "limit|stop",
+  "entry": 0.0,
+  "stop": 0.0,
+  "tp": 0.0,
+  "crv": 0.0,
+  "maxHaltezeitTage": 0,
+  "status": "wartet",
+  "begruendung": "… (bei News-Trades mit Quellen-URLs)",
+  "snapshotAsOf": "YYYY-MM-DD"
+}
+```
+  `status` ist beim Anlegen IMMER "wartet" — Fills, Exits und Ergebnisse schreiben
+  ausschließlich `scripts/alpaca_sync.py` (echte Bracket-Fills) bzw.
+  `scripts/trade_eval.py` (Yahoo-Fallback). Status/Ergebnisse NIE von Hand ändern.
 - Microcap-/IPO-Verbot ist durch das kuratierte Universum erzwungen. Earnings-Termine
   in den nächsten 2 Handelstagen → Ticker diese Nacht überspringen (WebSearch-Check).
 - Schedule: Quant-Snapshot 23:37 → Entscheider SOLID 02:53 / RISK 03:08 → Orders 03:26

@@ -4,17 +4,24 @@
   "trades": [
     {
       "id": "R-001",
-      "datum": "2026-06-12",
+      "datumEmpfehlung": "2026-06-12",
+      "aktie": "ProShares UltraPro QQQ",
       "ticker": "TQQQ",
+      "yahooSymbol": "TQQQ",
+      "richtung": "long",
       "engine": "C",
       "entryTyp": "limit",
       "entry": 76.77,
       "stop": 63.34,
-      "ziel": 101.36,
+      "tp": 101.36,
+      "crv": 1.83,
       "maxHaltezeitTage": 15,
-      "status": "offen",
+      "status": "wartet",
       "begruendung": "Engine C TQQQ-Sleeve: alle Gates gruen – spyZone=risk_on, qqqZone=risk_on, vixUnter25=true (VIX 18.87). Keine offene TQQQ-Position im Journal. Snapshot asOf 2026-06-11, generiert 2026-06-12T12:16:25Z. close=76.01, ATR14=5.07. Engine A: momentumRanking leer, keine Kandidaten. Engine B: ADBE volRatio=2.92 Earnings-Tag (negativer Tag -6.25%, disqualifiziert); ORCL volRatio=2.49 Earnings-Tag (negativer Tag -11%, disqualifiziert).",
-      "snapshotAsOf": "2026-06-11"
+      "snapshotAsOf": "2026-06-11",
+      "log": [
+        "12.06. Schema-Normalisierung durch Betreiber: Felder richtung/tp/datumEmpfehlung/yahooSymbol/crv ergaenzt, status offen->wartet (es existierte noch kein Fill). Inhalt der Entscheidung unveraendert."
+      ]
     }
   ],
   "statistik": { "trades": 0, "gewonnen": 0, "verloren": 0, "offen": 1, "trefferquote": null, "summeR": 0, "erwartungswertR": null, "profitFactor": null, "aktuelleVerlustserie": 0, "groessteVerlustserie": 0, "bremseAktiv": false }

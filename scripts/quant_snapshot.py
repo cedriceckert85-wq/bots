@@ -30,7 +30,7 @@ ETFS = ["SPY", "QQQ", "IWM", "TQQQ"]
 INDIZES = ["^VIX", "^IRX"]
 
 
-def kerzen(symbol, range_="1y"):
+def kerzen(symbol, range_="2y"):  # 2 Jahre: 12-1-Momentum braucht >=252 Handelstage
     url = ("https://query1.finance.yahoo.com/v8/finance/chart/"
            + urllib.parse.quote(symbol) + f"?interval=1d&range={range_}")
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
