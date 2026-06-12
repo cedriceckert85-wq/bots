@@ -1,6 +1,21 @@
 {
   "konto": { "start": 100000, "status": "LIVE (Stufe 1)", "alpaca": true, "hinweis": "RISK - kontrolliert aggressiver Gewinn-Jaeger (SPEC_RISK.md, Stufe-1-Regeln: STUFE1.md). Engine D (Shorts) deaktiviert. Live seit 12.06.2026 auf Nutzer-Kommando." },
   "positionen": [],
-  "trades": [],
-  "statistik": { "trades": 0, "gewonnen": 0, "verloren": 0, "offen": 0, "trefferquote": null, "summeR": 0, "erwartungswertR": null, "profitFactor": null, "aktuelleVerlustserie": 0, "groessteVerlustserie": 0, "bremseAktiv": false }
+  "trades": [
+    {
+      "id": "R-001",
+      "datum": "2026-06-12",
+      "ticker": "TQQQ",
+      "engine": "C",
+      "entryTyp": "limit",
+      "entry": 76.77,
+      "stop": 63.34,
+      "ziel": 101.36,
+      "maxHaltezeitTage": 15,
+      "status": "offen",
+      "begruendung": "Engine C TQQQ-Sleeve: alle Gates gruen – spyZone=risk_on, qqqZone=risk_on, vixUnter25=true (VIX 18.87). Keine offene TQQQ-Position im Journal. Snapshot asOf 2026-06-11, generiert 2026-06-12T12:16:25Z. close=76.01, ATR14=5.07. Engine A: momentumRanking leer, keine Kandidaten. Engine B: ADBE volRatio=2.92 Earnings-Tag (negativer Tag -6.25%, disqualifiziert); ORCL volRatio=2.49 Earnings-Tag (negativer Tag -11%, disqualifiziert).",
+      "snapshotAsOf": "2026-06-11"
+    }
+  ],
+  "statistik": { "trades": 0, "gewonnen": 0, "verloren": 0, "offen": 1, "trefferquote": null, "summeR": 0, "erwartungswertR": null, "profitFactor": null, "aktuelleVerlustserie": 0, "groessteVerlustserie": 0, "bremseAktiv": false }
 }
