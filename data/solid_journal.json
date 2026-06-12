@@ -1,0 +1,6 @@
+{
+  "konto": { "start": 100000, "status": "NICHT LIVE", "alpaca": true, "hinweis": "SOLID — Evidenz-Bot (SPEC_SOLID.md). Aktivierung nur nach Aktivierungs-Checkliste und Nutzer-Freigabe." },
+  "positionen": [],
+  "trades": [],
+  "statistik": { "trades": 0, "gewonnen": 0, "verloren": 0, "offen": 0, "trefferquote": null, "summeR": 0, "erwartungswertR": null, "profitFactor": null, "aktuelleVerlustserie": 0, "groessteVerlustserie": 0, "bremseAktiv": false }
+}
