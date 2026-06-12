@@ -1,6 +1,25 @@
 {
-  "konto": { "start": 100000, "status": "LIVE (Stufe 1)", "alpaca": true, "hinweis": "SOLID - Evidenz-Bot (SPEC_SOLID.md, Stufe-1-Regeln: STUFE1.md). Live seit 12.06.2026 auf Nutzer-Kommando.", "hinweisLetzterLauf": "Lauf 2026-06-12: KEIN TRADE. momentumRanking leer (alle mom12_1=null, Ranking nicht berechenbar). News-Drift: kein qualifizierender Kandidat — AMAT-Earnings 14.05. (>24h), PhysicsX-Investment 08.06. (>24h), Cantor-Upgrades AMAT/KLAC/LRCX 10.06. (>24h, Analystenmeinung nicht fundamental); MU-HBM4-Zertifizierung 05.06. (>24h, Markt reagierte negativ). Regime risk_on, bremseAktiv false." },
+  "konto": {
+    "start": 100000,
+    "status": "LIVE (Stufe 1)",
+    "alpaca": true,
+    "hinweis": "SOLID - Evidenz-Bot (SPEC_SOLID.md, Stufe-1-Regeln: STUFE1.md). Live seit 12.06.2026 auf Nutzer-Kommando.",
+    "hinweisLetzterLauf": "Lauf 2026-06-12: KEIN TRADE. momentumRanking leer (alle mom12_1=null, Ranking nicht berechenbar). News-Drift: kein qualifizierender Kandidat — AMAT-Earnings 14.05. (>24h), PhysicsX-Investment 08.06. (>24h), Cantor-Upgrades AMAT/KLAC/LRCX 10.06. (>24h, Analystenmeinung nicht fundamental); MU-HBM4-Zertifizierung 05.06. (>24h, Markt reagierte negativ). Regime risk_on, bremseAktiv false."
+  },
   "positionen": [],
   "trades": [],
-  "statistik": { "trades": 0, "gewonnen": 0, "verloren": 0, "offen": 0, "trefferquote": null, "summeR": 0, "erwartungswertR": null, "profitFactor": null, "aktuelleVerlustserie": 0, "groessteVerlustserie": 0, "bremseAktiv": false }
+  "statistik": {
+    "trades": 0,
+    "gewonnen": 0,
+    "verloren": 0,
+    "verfallen": 0,
+    "offen": 0,
+    "trefferquote": null,
+    "summeR": 0,
+    "erwartungswertR": null,
+    "profitFactor": null,
+    "aktuelleVerlustserie": 0,
+    "groessteVerlustserie": 0,
+    "bremseAktiv": false
+  }
 }
