@@ -1,39 +1,72 @@
-# Bot-Duo: SOLID + RISK — Status: 🟢 LIVE (Stufe 1, Paper) seit 12.06.2026
+# Bot-Flotte: SOLID + RISK + CODEX + DAYTRADER
 
-Zwei Trade-Bots, designt von einem 14-Agenten-Fable-5-Schwarm auf Basis von vier
-Deep Researches (Medien-Einfluss, Strategien, Bot-Architektur, Medien-Signale) inklusive
-adversarialer Prüfung. Vollständige Designs: `SPEC_SOLID.md` und `SPEC_RISK.md`.
-**Aktuell gilt die vereinfachte Stufe 1 — alle Regeln und Spec-Abweichungen: `STUFE1.md`.**
+SOLID und RISK sind live in Stufe 1 (Paper) seit 12.06.2026. Beide wurden aus
+den Deep-Researches zu Medien-Einfluss, Strategien, Bot-Architektur und
+Medien-Signalen abgeleitet. Vollstaendige Designs: `SPEC_SOLID.md` und
+`SPEC_RISK.md`. Aktuell gilt fuer beide die vereinfachte Stufe 1 in
+`STUFE1.md`.
 
-| | 🤍 SOLID | 🔥 RISK |
-|---|---|---|
-| Mandat | Nur belegte Edges: Long-only-Momentum (12-1 + 52W-Hoch) + News-Drift-Satellit | Kontrolliert aggressiv: Engines A Momentum-Leader, B Volumen-Spike, C TQQQ-Sleeve (D Shorts deaktiviert) |
-| Risiko/Trade | 1 % (1.000 $) | 2 % (2.000 $), max 5 Positionen |
-| Alpaca-Paper | Konto Nr. 4 (echte Bracket-Orders) | Konto Nr. 5 (echte Bracket-Orders) |
-| Benchmark | SPY (Pflicht) | SPY + SOLID |
+CODEX ist der neue Paper-Challenger gegen SOLID/RISK. Ziel ist
+risikoadjustierte Outperformance durch Quality-Momentum, Anti-Crowding und
+Bestaetigungs-Entries. Details: `SPEC_CODEX.md`, `AGENT_CODEX.md`.
+
+DAYTRADER ist ein separater Intraday-Paper-Bot auf Basis von 5-Minuten-Opening-
+Range-Breakout und "Stocks in Play". Details: `SPEC_DAYTRADER.md`,
+`AGENT_DAYTRADER.md`.
+
+| | SOLID | RISK | CODEX | DAYTRADER |
+|---|---|---|---|---|
+| Mandat | Nur belegte Edges: Long-only-Momentum (12-1 + 52W-Hoch) + News-Drift-Satellit | Kontrolliert aggressiv: Engines A Momentum-Leader, B Volumen-Spike, C TQQQ-Sleeve (D Shorts deaktiviert) | Challenger: Quality-Momentum, Anti-Crowding, bestaetigte Entries | Intraday ORB auf Stocks in Play |
+| Risiko/Trade | 1 % (1.000 $) | 2 % (2.000 $), max 5 Positionen | 1,5 % (1.500 $), max 4 Positionen | 0,35 % (350 $), max 1 Trade/Tag |
+| Alpaca-Paper | Konto Nr. 4 (echte Bracket-Orders) | Konto Nr. 5 (echte Bracket-Orders) | Aus, Paper-Journal only | Aus, Paper-Journal only |
+| Benchmark | SPY | SPY + SOLID | SPY + SOLID + RISK | SPY + SOLID + RISK + CODEX |
 
 ## Bauphasen
 
-**Phase 0 — Gerüst (✅):** Specs, Quant-Datenpipeline, Journale, GUI, Alpaca-Konten, Routinen.
+Phase 0: Specs, Quant-Datenpipeline, Journale, GUI, Alpaca-Konten und Routinen
+fuer SOLID/RISK stehen.
 
-**Stufe 1 — LIVE seit 12.06.2026 (✅):** Diskrete Bracket-Trades nach `STUFE1.md`,
-abgerechnet von der erprobten Flotten-Maschinerie (`scripts/alpaca_sync.py` echte Fills,
-`scripts/trade_eval.py` Yahoo-Fallback). Statistik wird bei Umstieg auf Phase 2 zurückgesetzt.
+Stufe 1: Diskrete Bracket-Trades nach `STUFE1.md`, abgerechnet von der
+erprobten Flotten-Maschinerie (`scripts/alpaca_sync.py` echte Fills,
+`scripts/trade_eval.py` Yahoo-Fallback). Statistik wird bei Umstieg auf
+Phase 2 zurueckgesetzt.
 
-**Phase 2 — volle Spec (⬜ offen):** `eval_v2.py` (share-basierte Equity-Buchführung,
-Mark-to-Market, Band-/Roll-Exits, Splits), `risk-gate`/`risk-eval`-Workflows (maschinelle
-Eintrags-Validierung + Zwangs-Exits), EDGAR-/FINRA-Feeds, Grenzfall-Tests der
-Aktivierungs-Checklisten.
+CODEX v0.1: Dry-run/Paper only. Kein Alpaca, keine echten Orders. Der
+Challenger schreibt nur `data/codex_journal.json`.
+
+DAYTRADER v0.1: Dry-run/Paper only. Kein Alpaca, keine echten Orders. Der
+Bot schreibt nur `data/daytrader_journal.json` und wertet intraday separat aus.
+
+Phase 2: volle Specs mit `eval_v2.py`, share-basierter Equity-Buchfuehrung,
+Mark-to-Market, Band-/Roll-Exits, Splits, `risk-gate`/`risk-eval`,
+EDGAR-/FINRA-Feeds und Grenzfalltests.
 
 ## Architektur
 
 ```
-GitHub Action (23:37) — quant_snapshot.json: Momentum-Ranking, Regime-Zonen, ATR, Spikes
+GitHub Action (23:37) -> quant_snapshot.json: Momentum-Ranking, Regime, ATR, Spikes
         v liest
-Cloud-Entscheider (SOLID 02:53 / RISK 03:08 — rechnet nie selbst, nur streichen/vetoen)
+Cloud-Entscheider SOLID/RISK bzw. CODEX-Skript
         v schreibt Journal-Trades (Entry/Stop/Ziel)
-GitHub Action (03:26) — Bracket-Orders in die Alpaca-Paper-Konten
-GitHub Action (22:16) — Fills syncen + Yahoo-Abrechnung + Statistik
+GitHub Action (03:26) -> Bracket-Orders fuer SOLID/RISK
+GitHub Action (22:16) -> Fills syncen + Yahoo-Abrechnung + Statistik
 ```
 
-Teil der EPMT-Flotte: https://cedriceckert85-wq.github.io/review/vergleich.html
+Teil der EPMT-Flotte:
+https://cedriceckert85-wq.github.io/review/vergleich.html
+
+## CODEX dry-run
+
+```
+python scripts/codex_challenger.py
+python scripts/codex_challenger.py --write
+python scripts/trade_eval.py
+```
+
+## DAYTRADER dry-run
+
+```
+python scripts/daytrader.py
+python scripts/daytrader.py --write
+python scripts/daytrader.py --evaluate
+```

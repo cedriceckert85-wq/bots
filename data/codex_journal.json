@@ -1,0 +1,26 @@
+{
+  "konto": {
+    "start": 100000,
+    "status": "DRYRUN (Paper, keine Alpaca-Orders)",
+    "alpaca": false,
+    "hinweis": "CODEX - Challenger gegen SOLID und RISK. Ziel: risikoadjustierte Outperformance durch Quality-Momentum, Anti-Crowding und strengere Entry-Bestaetigung.",
+    "hinweisLetzterLauf": "Noch kein Lauf geschrieben. Dry-run: python scripts/codex_challenger.py"
+  },
+  "positionen": [],
+  "trades": [],
+  "statistik": {
+    "trades": 0,
+    "gewonnen": 0,
+    "verloren": 0,
+    "verfallen": 0,
+    "offen": 0,
+    "trefferquote": null,
+    "summeR": 0,
+    "erwartungswertR": null,
+    "profitFactor": null,
+    "aktuelleVerlustserie": 0,
+    "groessteVerlustserie": 0,
+    "bremseAktiv": false
+  },
+  "laufLog": []
+}

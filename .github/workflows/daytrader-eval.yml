@@ -1,0 +1,35 @@
+name: DAYTRADER Auswertung
+
+on:
+  schedule:
+    # US-Handel. GitHub-Cron kann verzoegern; fuer Paper-Eval unkritisch.
+    - cron: '*/10 14-19 * * 1-5'
+    - cron: '5 20 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daytrader-eval
+  cancel-in-progress: false
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: DAYTRADER Paper-Auswertung
+        run: python scripts/daytrader.py --evaluate
+      - name: Commit & Push
+        run: |
+          if git diff --quiet data/daytrader_journal.json; then echo "Keine Aenderung."; exit 0; fi
+          git config user.name "daytrader-eval"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/daytrader_journal.json
+          git commit -m "DAYTRADER Auswertung $(TZ=Europe/Berlin date +%d.%m.%Y' '%H:%M)"
+          for i in 1 2 3; do git push && exit 0; git pull --rebase; done
+          exit 1

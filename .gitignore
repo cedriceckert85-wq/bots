@@ -1,2 +1,8 @@
-﻿__pycache__/
+__pycache__/
 *.pyc
+alpaca_keys*.json
+*alpaca*keys*.json
+.env
+.env.*
+config/secrets/
+config/*.local.json

@@ -15,6 +15,7 @@ import datetime
 BOTS = [
     {"journal": "data/solid_journal.json", "risiko_usd": 1000},
     {"journal": "data/risk_journal.json", "risiko_usd": 2000},
+    {"journal": "data/codex_journal.json", "risiko_usd": 1500},
 ]
 
 

@@ -1,0 +1,34 @@
+name: CODEX Challenger
+
+on:
+  schedule:
+    # Di-Sa 00:48 UTC = 02:48 Berlin Sommer. Nach Quant-Snapshot.
+    - cron: '48 0 * * 2-6'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: codex-challenger
+  cancel-in-progress: false
+
+jobs:
+  codex:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: CODEX Paper-Entscheider
+        run: python scripts/codex_challenger.py --write
+      - name: Commit & Push
+        run: |
+          if git diff --quiet data/codex_journal.json; then echo "Keine Aenderung."; exit 0; fi
+          git config user.name "codex-challenger"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/codex_journal.json
+          git commit -m "CODEX Lauf $(TZ=Europe/Berlin date +%d.%m.%Y' '%H:%M)"
+          for i in 1 2 3; do git push && exit 0; git pull --rebase; done
+          exit 1
