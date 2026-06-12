@@ -3,14 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#0d1117">
+<meta name="theme-color" content="#000000">
 <meta name="color-scheme" content="dark">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>SOLID + RISK — Bot-Duo</title>
 <style>
-  :root { --bg:#0d1117; --card:#161b22; --card2:#1c2330; --border:#30363d; --text:#e6edf3; --muted:#8b949e;
-          --green:#3fb950; --red:#f85149; --amber:#d29922; --blue:#58a6ff; --weiss:#e6edf3; --feuer:#ff7b54; }
+  :root { --bg:#000000; --card:#1c1c1e; --card2:#2c2c2e; --border:#2c2c2e; --text:#f5f5f7; --muted:#98989d;
+          --green:#30d158; --red:#ff453a; --amber:#ffd60a; --blue:#0a84ff; --weiss:#f5f5f7; --feuer:#ff9f0a; }
+  .flotte { display:flex; gap:4px; overflow-x:auto; -webkit-overflow-scrolling:touch;
+            background:#161618; border-radius:14px; padding:4px; margin-bottom:16px; scrollbar-width:none; }
+  .flotte::-webkit-scrollbar { display:none; }
+  .flotte a { white-space:nowrap; padding:9px 13px; border-radius:10px; color:var(--muted);
+              text-decoration:none; font-size:13px; font-weight:600; }
+  .flotte a.active { background:#2f2f31; color:var(--text); }
   * { box-sizing:border-box; margin:0; padding:0; }
   html { -webkit-text-size-adjust:100%; }
   body { background:var(--bg); color:var(--text); font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -23,7 +29,7 @@
           border-radius:999px; padding:3px 14px; font-weight:800; font-size:0.8rem; margin-left:8px; vertical-align:middle; }
   .cols { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
   @media (max-width:760px){ .cols{ grid-template-columns:1fr; } }
-  .card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:18px; border-top:3px solid var(--c,var(--border)); }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:18px; padding:18px; border-top:3px solid var(--c,var(--border)); }
   .card h2 { font-size:1.1rem; margin-bottom:4px; }
   .mandat { font-size:0.85rem; color:var(--muted); font-style:italic; margin-bottom:12px; }
   .kpis { display:flex; gap:18px; flex-wrap:wrap; margin-bottom:12px; }
@@ -50,6 +56,16 @@
 </head>
 <body>
 <div class="wrap">
+  <nav class="flotte">
+    <a href="https://cedriceckert85-wq.github.io/epmt-dashboard/index.html">📊 Haupt</a>
+    <a href="https://cedriceckert85-wq.github.io/epmt-dashboard/speku.html">🚀 Speku</a>
+    <a href="https://cedriceckert85-wq.github.io/review/schatten.html">👤 Schatten</a>
+    <a href="https://cedriceckert85-wq.github.io/swing/">◆ Swing</a>
+    <a href="https://cedriceckert85-wq.github.io/bots/" class="active">🤍 SOLID</a>
+    <a href="https://cedriceckert85-wq.github.io/bots/" class="active">🔥 RISK</a>
+    <a href="https://cedriceckert85-wq.github.io/review/vergleich.html">📈 Vergleich</a>
+    <a href="https://cedriceckert85-wq.github.io/review/">📝 Reviews</a>
+  </nav>
   <h1>Bot-Duo: SOLID + RISK <span class="live">🟢 LIVE — Stufe 1 (Paper)</span></h1>
   <p class="sub">
     Designt von 14 Fable-5-Agenten aus 4 Deep Researches, adversarial geprüft. Live seit 12.06.2026, Regeln: STUFE1.md.
