@@ -1,8 +1,8 @@
 {
   "konto": {
     "start": 100000,
-    "status": "DRYRUN (Paper, keine Alpaca-Orders)",
-    "alpaca": false,
+    "status": "ALPACA PAPER (ALPACA_CODEX)",
+    "alpaca": true,
     "hinweis": "CODEX - Challenger gegen SOLID und RISK. Ziel: risikoadjustierte Outperformance durch Quality-Momentum, Anti-Crowding und strengere Entry-Bestaetigung.",
     "hinweisLetzterLauf": "Noch kein Lauf geschrieben. Dry-run: python scripts/codex_challenger.py"
   },
