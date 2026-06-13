@@ -21,7 +21,8 @@ der Stufe 1 wird bei Umstieg auf Phase 2 zurückgesetzt (Regeländerung = Statis
 - **Kein Trade ist ein gültiges Ergebnis.** Buzz-/Spike-Titel (volRatio ≥ 3) sind für
   SOLID gesperrt (Attention-Spike-Evidenz).
 
-## Stufe-1-Regeln RISK (1R = 2.000 $ = 2 %)
+## Stufe-1-Regeln RISK (Positionsgröße = 30 % des Equity/Trade — Stand 2026-06-13)
+- **Sizing (2026-06-13, Nutzer-Mandat „aggressiv anlegen"; Statistik-Reset ab heute):** Positionswert = **30 % des aktuellen Equity** pro Trade (NICHT mehr 1R=2 %). Stückzahl = floor(0,30 × Equity / Entry), hart durch Buying Power gedeckelt (→ effektiv ~3 Positionen). Stop bleibt regelkonform ATR-basiert/NICHT eng (kein künstlich enger Stop zur Risikodrückung). Effektives Verlustrisiko/Trade = 30 % × Stop-Abstand (typ. 2–4 %). Bei spyZone risk_off: halbe Positionsgröße (15 %). P&L = Stück × (Exit − Einstand).
 - **Caps (hart):** max. 5 offene Positionen gesamt, max. 2 neue Trades/Nacht,
   Verlustserien-Bremse (3 in Folge → keine neuen Trades bis Review).
 - **Engine A — Momentum-Leader:** Kandidaten = Top 5 des Rankings mit dist52wHochPct ≥ −5.

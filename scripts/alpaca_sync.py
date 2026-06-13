@@ -8,6 +8,7 @@ Verfall: Entry >2 Handelstage nicht getriggert -> Order canceln. Zeit-Exit:
 Legs canceln + Market-on-Open. Ohne Keys: stiller No-Op je Bot.
 """
 import json
+import math
 import os
 import sys
 import datetime
@@ -18,7 +19,7 @@ from trade_eval import r_multiple, statistik_neu  # noqa: E402
 
 BOTS = [
     {"journal": "data/solid_journal.json", "prefix": "ALPACA_SOLID", "risiko_usd": 1000},
-    {"journal": "data/risk_journal.json", "prefix": "ALPACA_RISK", "risiko_usd": 2000},
+    {"journal": "data/risk_journal.json", "prefix": "ALPACA_RISK", "risiko_usd": 2000, "sizing": "position", "position_pct": 0.30},
     {"journal": "data/codex_journal.json", "prefix": "ALPACA_CODEX", "risiko_usd": 1500},
 ]
 
@@ -34,8 +35,20 @@ def handelstage(von, bis):
     return n
 
 
-def order_anlegen(keys, t, risiko_usd):
-    qty = qty_for_risk(t["entry"], t["stop"], risiko_usd)
+def order_anlegen(keys, t, bot):
+    risiko_usd = bot["risiko_usd"]
+    if bot.get("sizing") == "position":
+        acc = api(keys, "/account")
+        equity = float(acc.get("equity", 0))
+        bp = float(acc.get("buying_power", 0))
+        entry = float(t["entry"])
+        if entry > 0:
+            qty = math.floor(bot["position_pct"] * equity / entry)
+            qty = min(qty, math.floor(bp / entry))  # hart durch Buying Power gedeckelt
+        else:
+            qty = 0
+    else:
+        qty = qty_for_risk(t["entry"], t["stop"], risiko_usd)
     if qty < 1:
         t.setdefault("log", []).append("Alpaca: Stop-Distanz zu gross, qty<1 -> Yahoo-Simulation")
         return
@@ -52,7 +65,8 @@ def order_anlegen(keys, t, risiko_usd):
     print(f"{t['id']} {t['ticker']}: Bracket {qty} Stk.")
 
 
-def order_sync(keys, t, risiko_usd):
+def order_sync(keys, t, bot):
+    risiko_usd = bot["risiko_usd"]
     heute = datetime.date.today().isoformat()
     o = api(keys, f"/orders/{t['alpaca']['orderId']}?nested=true")
     if t["status"] == "wartet":
@@ -95,7 +109,12 @@ def order_sync(keys, t, risiko_usd):
                 t.setdefault("log", []).append("Haltedauer erreicht -> MOO-Exit platziert")
     if t["status"] in ("gewonnen", "verloren", "zeit_exit") and "ergebnisR" not in t:
         t["ergebnisR"] = r_multiple(t, t["exitKurs"])
-        t["pnlEur"] = round(t["ergebnisR"] * risiko_usd, 2)
+        if bot.get("sizing") == "position":
+            richtung = 1 if t["richtung"] == "long" else -1
+            basis = t.get("entryFill", t["entry"])
+            t["pnlEur"] = round(t["alpaca"]["qty"] * (t["exitKurs"] - basis) * richtung, 2)
+        else:
+            t["pnlEur"] = round(t["ergebnisR"] * risiko_usd, 2)
 
 
 def main():
@@ -114,9 +133,9 @@ def main():
                 continue
             try:
                 if t["status"] == "wartet" and "alpaca" not in t:
-                    order_anlegen(keys, t, bot["risiko_usd"])
+                    order_anlegen(keys, t, bot)
                 if "alpaca" in t and t["status"] in ("wartet", "offen"):
-                    order_sync(keys, t, bot["risiko_usd"])
+                    order_sync(keys, t, bot)
             except RuntimeError as e:
                 print(f"{t['id']}: {e}")
         d["statistik"] = statistik_neu(d["trades"])
