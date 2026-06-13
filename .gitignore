@@ -7,3 +7,7 @@ alpaca_keys*.json
 .env.*
 config/secrets/
 config/*.local.json
+
+# Claude Code lokale Session-Daten (Crons/Settings) nicht versionieren
+.claude/
+FLOTTE_START_LOKAL.md
