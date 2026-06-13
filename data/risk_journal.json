@@ -69,7 +69,14 @@
       "maxHaltezeitTage": 10,
       "status": "wartet",
       "begruendung": "Engine A Momentum-Leader: Rang 5 im momentumRanking (mom12_1=154.94), dist52wHochPct=-3.83 >= -5, ueberSma200=true. close=910.57, ATR14=35.56. Entry=close*1.005=915.12, Stop=close-2*ATR=839.45, TP=close+5*ATR=1088.37. Earnings naechste: 04.08.2026 – kein 2-Handelstage-Konflikt (Quelle: nasdaq.com/market-activity/stocks/cat/earnings). Snapshot asOf 2026-06-12.",
-      "snapshotAsOf": "2026-06-12"
+      "snapshotAsOf": "2026-06-12",
+      "alpaca": {
+        "orderId": "de436464-d4f0-421c-879f-a887b65411bb",
+        "qty": 26
+      },
+      "log": [
+        "Alpaca: Bracket-Order platziert (26 Stk.)"
+      ]
     }
   ],
   "statistik": {
@@ -77,7 +84,7 @@
     "gewonnen": 0,
     "verloren": 0,
     "verfallen": 0,
-    "offen": 1,
+    "offen": 3,
     "trefferquote": null,
     "summeR": 0,
     "erwartungswertR": null,

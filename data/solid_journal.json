@@ -24,7 +24,14 @@
       "maxHaltezeitTage": 20,
       "status": "wartet",
       "begruendung": "Momentum-Rang 1 (mom12_1 +567.9%). dist52wHochPct -9.89% (innerhalb -10%-Schwelle). ueberSMA200: 981.61 > 381.71. volRatio 0.73, kein Buzz. Earnings 24.06.2026 (>2 Handelstage). AI/HBM-Speicher-Superzyklus.",
-      "snapshotAsOf": "2026-06-12"
+      "snapshotAsOf": "2026-06-12",
+      "alpaca": {
+        "orderId": "d3dc080b-8a6f-4a48-85ee-2bd4fe0b82f1",
+        "qty": 4
+      },
+      "log": [
+        "Alpaca: Bracket-Order platziert (4 Stk.)"
+      ]
     },
     {
       "id": "S-002",
@@ -42,7 +49,14 @@
       "maxHaltezeitTage": 20,
       "status": "wartet",
       "begruendung": "Momentum-Rang 2 (mom12_1 +458.2%). dist52wHochPct -6.16%. ueberSMA200: 124.57 > 53.50. volRatio 1.14, kein Buzz. Earnings 23.07.2026 (>2 Handelstage). Intel-Turnaround-Momentum 2026.",
-      "snapshotAsOf": "2026-06-12"
+      "snapshotAsOf": "2026-06-12",
+      "alpaca": {
+        "orderId": "d1ec0828-9bfd-429e-8f29-87c511b7478f",
+        "qty": 38
+      },
+      "log": [
+        "Alpaca: Bracket-Order platziert (38 Stk.)"
+      ]
     },
     {
       "id": "S-003",
@@ -60,7 +74,14 @@
       "maxHaltezeitTage": 20,
       "status": "wartet",
       "begruendung": "Momentum-Rang 3 (mom12_1 +279.5%). dist52wHochPct -6.38%. ueberSMA200: 511.57 > 253.93. volRatio 0.97, kein Buzz. Earnings 04.08.2026 (>2 Handelstage). AI-GPU-Momentum.",
-      "snapshotAsOf": "2026-06-12"
+      "snapshotAsOf": "2026-06-12",
+      "alpaca": {
+        "orderId": "79f867e6-4b32-4263-8eba-aa6790ceb569",
+        "qty": 10
+      },
+      "log": [
+        "Alpaca: Bracket-Order platziert (10 Stk.)"
+      ]
     }
   ],
   "statistik": {
@@ -68,7 +89,7 @@
     "gewonnen": 0,
     "verloren": 0,
     "verfallen": 0,
-    "offen": 0,
+    "offen": 3,
     "trefferquote": null,
     "summeR": 0,
     "erwartungswertR": null,

@@ -36,7 +36,7 @@
     "gewonnen": 0,
     "verloren": 0,
     "verfallen": 0,
-    "offen": 0,
+    "offen": 1,
     "trefferquote": null,
     "summeR": 0,
     "erwartungswertR": null,
