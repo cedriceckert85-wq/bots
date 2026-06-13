@@ -10,6 +10,8 @@ Fail-closed: Ticker mit Datenfehlern erscheinen unter "fehler" statt mit
 Phantomwerten im Ranking.
 """
 import json
+import os
+import time
 import datetime
 import urllib.request
 import urllib.parse
@@ -30,22 +32,35 @@ ETFS = ["SPY", "QQQ", "IWM", "TQQQ"]
 INDIZES = ["^VIX", "^IRX"]
 
 
-def kerzen(symbol, range_="2y"):  # 2 Jahre: 12-1-Momentum braucht >=252 Handelstage
+def kerzen(symbol, range_="2y", versuche=4):  # 2 Jahre: 12-1-Momentum braucht >=252 Handelstage
+    # Robust gegen transiente Yahoo-Aussetzer (429/leere Antwort): mehrfach mit Backoff
+    # versuchen. Eine LEERE Serie zaehlt als Fehlschlag -> Retry (sonst landen still
+    # Phantom-nulls im Snapshot und die Bots machen grundlos KEIN TRADE).
     url = ("https://query1.finance.yahoo.com/v8/finance/chart/"
            + urllib.parse.quote(symbol) + f"?interval=1d&range={range_}")
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    with urllib.request.urlopen(req, timeout=20) as r:
-        d = json.load(r)
-    res = d["chart"]["result"][0]
-    q = res["indicators"]["quote"][0]
-    out = []
-    for i, t in enumerate(res["timestamp"]):
-        o, h, l, c, v = q["open"][i], q["high"][i], q["low"][i], q["close"][i], q["volume"][i]
-        if None in (o, h, l, c):
-            continue
-        out.append({"t": datetime.datetime.utcfromtimestamp(t).strftime("%Y-%m-%d"),
-                    "o": o, "h": h, "l": l, "c": c, "v": v or 0})
-    return out
+    letzter_fehler = None
+    for n in range(versuche):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=25) as r:
+                d = json.load(r)
+            res = d["chart"]["result"][0]
+            q = res["indicators"]["quote"][0]
+            out = []
+            for i, t in enumerate(res["timestamp"]):
+                o, h, l, c, v = q["open"][i], q["high"][i], q["low"][i], q["close"][i], q["volume"][i]
+                if None in (o, h, l, c):
+                    continue
+                out.append({"t": datetime.datetime.utcfromtimestamp(t).strftime("%Y-%m-%d"),
+                            "o": o, "h": h, "l": l, "c": c, "v": v or 0})
+            if out:
+                return out
+            letzter_fehler = ValueError("leere Kerzenserie")
+        except Exception as e:
+            letzter_fehler = e
+        if n < versuche - 1:
+            time.sleep(2 + 3 * n)  # 2s, 5s, 8s Backoff
+    raise letzter_fehler or ValueError("keine Daten")
 
 
 def sma(werte, n):
@@ -141,11 +156,32 @@ def main():
         key=lambda x: x[1], reverse=True)
     snapshot["volumenSpikes"] = [{"ticker": s, "volRatio": v} for s, v in volSpikes]
 
-    with open("data/quant_snapshot.json", "w", encoding="utf-8") as f:
+    # --- SANITY-GATE (Haertung 13.06.) -------------------------------------
+    # Verhindert, dass ein kaputter Lauf (Yahoo-Aussetzer -> fast alles null)
+    # einen GUTEN Snapshot ueberschreibt. Bei zu schlechter Datenqualitaet:
+    # bestehenden Snapshot NICHT anfassen und mit Exit 1 abbrechen -> die
+    # GitHub-Action faellt sichtbar (Alarm-Mail), die Bots laufen am alten
+    # (dann veralteten) Snapshot fail-closed = KEIN falscher Trade.
+    datei = "data/quant_snapshot.json"
+    gueltig = sum(1 for t in snapshot["ticker"].values() if t.get("mom12_1") is not None)
+    mindest = max(40, int(0.5 * len(UNIVERSUM)))
+    schlecht = gueltig < mindest or not snapshot["momentumRanking"] or not snapshot["asOf"]
+    if schlecht and os.path.exists(datei):
+        print(f"FEHLER Datenqualitaet: nur {gueltig}/{len(UNIVERSUM)} Ticker mit mom12_1, "
+              f"Ranking={len(snapshot['momentumRanking'])}, asOf={snapshot['asOf']}, "
+              f"{len(snapshot['fehler'])} Fehler. Bestehender Snapshot bleibt unangetastet.")
+        raise SystemExit(1)
+
+    with open(datei, "w", encoding="utf-8") as f:
         json.dump(snapshot, f, ensure_ascii=False, indent=2)
         f.write("\n")
     print(f"Snapshot {snapshot['asOf']}: {len(snapshot['ticker'])} Ticker, "
-          f"{len(snapshot['fehler'])} Fehler, Regime {snapshot['regime']['spyZone']}")
+          f"{gueltig} mit mom12_1, {len(snapshot['fehler'])} Fehler, "
+          f"Regime {snapshot['regime']['spyZone']}")
+    if schlecht:
+        print("WARNUNG: Datenqualitaet schwach, aber kein alter Snapshot vorhanden -> "
+              "geschrieben und Exit 1 zur Sichtbarkeit.")
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":
