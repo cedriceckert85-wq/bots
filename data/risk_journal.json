@@ -34,6 +34,42 @@
       },
       "entryFill": 75.46,
       "entryDatum": "2026-06-12"
+    },
+    {
+      "id": "R-002",
+      "datumEmpfehlung": "2026-06-13",
+      "aktie": "Lam Research",
+      "ticker": "LRCX",
+      "yahooSymbol": "LRCX",
+      "richtung": "long",
+      "engine": "A",
+      "entryTyp": "stop",
+      "entry": 368.64,
+      "stop": 321.15,
+      "tp": 480.96,
+      "crv": 2.37,
+      "maxHaltezeitTage": 10,
+      "status": "wartet",
+      "begruendung": "Engine A Momentum-Leader: Rang 4 im momentumRanking (mom12_1=226.37), dist52wHochPct=-1.88 >= -5, ueberSma200=true. close=366.81, ATR14=22.83. Entry=close*1.005=368.64, Stop=close-2*ATR=321.15, TP=close+5*ATR=480.96. Earnings naechste: Ende Juli/Anfang August 2026 – kein 2-Handelstage-Konflikt (Quelle: tipranks.com/stocks/lrcx/earnings). Snapshot asOf 2026-06-12.",
+      "snapshotAsOf": "2026-06-12"
+    },
+    {
+      "id": "R-003",
+      "datumEmpfehlung": "2026-06-13",
+      "aktie": "Caterpillar",
+      "ticker": "CAT",
+      "yahooSymbol": "CAT",
+      "richtung": "long",
+      "engine": "A",
+      "entryTyp": "stop",
+      "entry": 915.12,
+      "stop": 839.45,
+      "tp": 1088.37,
+      "crv": 2.29,
+      "maxHaltezeitTage": 10,
+      "status": "wartet",
+      "begruendung": "Engine A Momentum-Leader: Rang 5 im momentumRanking (mom12_1=154.94), dist52wHochPct=-3.83 >= -5, ueberSma200=true. close=910.57, ATR14=35.56. Entry=close*1.005=915.12, Stop=close-2*ATR=839.45, TP=close+5*ATR=1088.37. Earnings naechste: 04.08.2026 – kein 2-Handelstage-Konflikt (Quelle: nasdaq.com/market-activity/stocks/cat/earnings). Snapshot asOf 2026-06-12.",
+      "snapshotAsOf": "2026-06-12"
     }
   ],
   "statistik": {
