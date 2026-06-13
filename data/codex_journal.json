@@ -4,10 +4,33 @@
     "status": "ALPACA PAPER (ALPACA_CODEX)",
     "alpaca": true,
     "hinweis": "CODEX - Challenger gegen SOLID und RISK. Ziel: risikoadjustierte Outperformance durch Quality-Momentum, Anti-Crowding und strengere Entry-Bestaetigung.",
-    "hinweisLetzterLauf": "Noch kein Lauf geschrieben. Dry-run: python scripts/codex_challenger.py"
+    "hinweisLetzterLauf": "CODEX Trade C-001 AMAT fuer Snapshot 2026-06-12 geschrieben. Paper only, keine Alpaca-Order."
   },
   "positionen": [],
-  "trades": [],
+  "trades": [
+    {
+      "id": "C-001",
+      "datumEmpfehlung": "2026-06-13",
+      "aktie": "AMAT",
+      "ticker": "AMAT",
+      "yahooSymbol": "AMAT",
+      "richtung": "long",
+      "engine": "A",
+      "entryTyp": "stop",
+      "entry": 575.63,
+      "stop": 491.78,
+      "tp": 785.26,
+      "crv": 2.5,
+      "maxHaltezeitTage": 12,
+      "status": "wartet",
+      "risikoUsd": 1500,
+      "score": 72.36,
+      "cluster": "semis",
+      "snapshotAsOf": "2026-06-12",
+      "createdBy": "codex_challenger.py",
+      "begruendung": "CODEX Engine A: Quality-Momentum-Confirmed. Score 72.36; mom12_1 151.75%, 52W-Distanz -0.47%, ATR 5.91%, Cluster semis. Entry nur per Bestaetigungs-Stop; kein TQQQ-/Buzz-Duplikat."
+    }
+  ],
   "statistik": {
     "trades": 0,
     "gewonnen": 0,
@@ -22,5 +45,14 @@
     "groessteVerlustserie": 0,
     "bremseAktiv": false
   },
-  "laufLog": []
+  "laufLog": [
+    {
+      "datum": "2026-06-13T05:09:25.399196+00:00",
+      "snapshotAsOf": "2026-06-12",
+      "aktion": "trade",
+      "tradeId": "C-001",
+      "ticker": "AMAT",
+      "score": 72.36
+    }
+  ]
 }
