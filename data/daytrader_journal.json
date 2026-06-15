@@ -1,10 +1,10 @@
 {
   "konto": {
     "start": 100000,
-    "status": "DRYRUN (Paper, keine Alpaca-Orders)",
-    "alpaca": false,
+    "status": "ALPACA PAPER (ALPACA_DAYTRADER)",
+    "alpaca": true,
     "hinweis": "DAYTRADER - Intraday ORB Paper-Bot. Max 1 Trade/Tag, Long-only v0.1, keine Overnight-Positionen.",
-    "hinweisLetzterLauf": "Noch kein Lauf geschrieben. Dry-run: python scripts/daytrader.py"
+    "hinweisLetzterLauf": "DAYTRADER No-Trade: kein_stock_in_play_setup"
   },
   "trades": [],
   "statistik": {
@@ -21,5 +21,13 @@
     "groessteVerlustserie": 0,
     "bremseAktiv": false
   },
-  "laufLog": []
+  "laufLog": [
+    {
+      "datum": "2026-06-15T18:14:02.664698+00:00",
+      "aktion": "no_trade",
+      "gruende": [
+        "kein_stock_in_play_setup"
+      ]
+    }
+  ]
 }
