@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_SOLID)",
     "alpaca": true,
     "hinweis": "SOLID - Evidenz-Bot (SPEC_SOLID.md, Stufe-1-Regeln: STUFE1.md). Live seit 12.06.2026 auf Nutzer-Kommando.",
-    "hinweisLetzterLauf": "Lauf 2026-06-13: 3 MOMENTUM-TRADES (MU S-001, INTC S-002, AMD S-003). Regime: risk_on -> bis 3 neue Trades. 0 Trades offen vorher, bremseAktiv false. Top-10-Filter: GOOGL(-11.97%) und HPE(-25.03%) wegen dist52wHochPct<-10% gesperrt. Verbleibende 8 Kandidaten (MU, INTC, AMD, LRCX, CAT, AMAT, KLAC, CSCO) alle earnings-frei (>2 Handelstage) und volRatio<3. Gewaehlt: Top-3-Ranking. News-Drift: kein zweifach verifizierter fundamentaler Positiv-News-Kandidat <24h (LLY Ebglyss FDA-Zulassung vom 09.06. veraltet >24h; Foundayo-Approval April 2026 veraltet)."
+    "hinweisLetzterLauf": "Lauf 2026-06-16: KEIN TRADE. Snapshot asOf 2026-06-15 (= letzter US-Handelstag Mo, Fail-closed-Gate bestanden). Regime risk_on (spyZone/qqqZone risk_on, VIX 16.2). MOMENTUM: 0 neue - Slot-Limit erreicht (3/3 offen: MU S-001, INTC S-002, AMD S-003, alle status wartet seit 2026-06-13). NEWS-DRIFT: 0 - keine ticker-spezifische, 2-fach verifizierte Fundamental-Positiv-News <24h auf Universums-Ticker. Bewegungen 15.06. makro-getrieben (US-Iran-Friedensdeal, Oel -4%, Semis +3.8% Sektor-Rally, KEIN Einzeltitel-Katalysator). Top-Gainer (AXTI +14.8%, CNL +11.5%, STX +9%, ENTG +9.1%) alle ausserhalb kuratiertem Universum; MU-Kursziel Morgan Stanley vom 03.06. >24h veraltet. bremseAktiv false."
   },
   "positionen": [],
   "trades": [
