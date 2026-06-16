@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_RISK)",
     "alpaca": true,
     "hinweis": "RISK - kontrolliert aggressiver Gewinn-Jaeger (SPEC_RISK.md, Stufe-1-Regeln: STUFE1.md). Engine D (Shorts) deaktiviert. Live seit 12.06.2026 auf Nutzer-Kommando.",
-    "hinweisLetzterLauf": "2026-06-13 manueller Nachhol-Lauf (Montag-Setup) durch lokales RISK-Fenster. Ergebnis: KEIN neuer Trade. Der regulaere RISK-Lauf 2026-06-13 (Commit 9d4b429) hat die Montag-Entries bereits angelegt: R-002 LRCX (Engine A, Rang 4, dist52wHoch -1.88) und R-003 CAT (Engine A, Rang 5, dist -3.83) - die einzigen zwei Engine-A-Kandidaten mit dist52wHoch>=-5 (MU -9.89 / INTC -6.16 / AMD -6.38 disqualifiziert). Engine B: nur ADBE-Spike (Earnings, negativer Drift, unter SMA200) - disqualifiziert. Engine C TQQQ: alle Gates gruen, aber max. 1 TQQQ-Position bereits offen (R-001). Nacht-Quota (max 2 neu) durch R-002+R-003 ausgeschoepft. Snapshot asOf 2026-06-12 (frisch fuer Samstag-Lauf). Bestehende Trades unveraendert."
+    "hinweisLetzterLauf": "2026-06-16 03:08 RISK-Lauf (lokales Fenster, Snapshot asOf 2026-06-15, fehler=[], Stale-Gate bestanden). Regime risk_on (spy+qqq risk_on, VIX 16.2). bremseAktiv=false, vor Lauf 2 offen (R-001 TQQQ, R-002 LRCX). 2 NEUE Engine-A-Trades angelegt (Nacht-Quota max 2 ausgeschoepft): R-004 MU (Rang 1, mom12_1=526.87, dist -0.86) und R-005 INTC (Rang 2, mom12_1=440.07, dist -3.68). LRCX (Rang 4) qualifiziert, aber bereits offen (R-002) - kein Duplikat. AMD (Rang 3, dist -1.99) und AMAT (Rang 5, dist -2.29) qualifiziert, aber durch 2-Trade-Quota nicht angelegt. Engine B: volumenSpikes leer (0) - kein Kandidat. Engine C TQQQ: alle Gates gruen, aber max. 1 TQQQ bereits offen (R-001) - gesperrt. Engine D deaktiviert. Earnings-Check WebSearch: MU 24.06., INTC 23.07. - beide ausserhalb 2-Handelstage-Fenster. Bestehende Trades/Status unveraendert."
   },
   "positionen": [],
   "trades": [
@@ -83,6 +83,42 @@
       "log": [
         "Alpaca: Bracket-Order platziert (26 Stk.)"
       ]
+    },
+    {
+      "id": "R-004",
+      "datumEmpfehlung": "2026-06-16",
+      "aktie": "Micron Technology",
+      "ticker": "MU",
+      "yahooSymbol": "MU",
+      "richtung": "long",
+      "engine": "A",
+      "entryTyp": "stop",
+      "entry": 1093.43,
+      "stop": 919.79,
+      "tp": 1508.49,
+      "crv": 2.39,
+      "maxHaltezeitTage": 10,
+      "status": "wartet",
+      "begruendung": "Engine A Momentum-Leader: Rang 1 im momentumRanking (mom12_1=526.87), dist52wHochPct=-0.86 >= -5, ueberSma200=true. close=1087.99, ATR14=84.1. Entry=close*1.005=1093.43 (Stop-Order/Breakout-Bestaetigung), Stop=close-2*ATR=919.79, TP=close+5*ATR=1508.49 (CRV 2.39). Earnings naechste: 24.06.2026 - ausserhalb 2-Handelstage-Fenster, kein Konflikt (Quellen: stocktitan.net/news/MU/micron-technology-to-report-fiscal-third-quarter-results-on-june-24-22gcrbths4gp.html, tipranks.com/stocks/mu/earnings). Regime risk_on (volle Positionsgroesse). Snapshot asOf 2026-06-15.",
+      "snapshotAsOf": "2026-06-15"
+    },
+    {
+      "id": "R-005",
+      "datumEmpfehlung": "2026-06-16",
+      "aktie": "Intel",
+      "ticker": "INTC",
+      "yahooSymbol": "INTC",
+      "richtung": "long",
+      "engine": "A",
+      "entryTyp": "stop",
+      "entry": 128.50,
+      "stop": 108.10,
+      "tp": 177.26,
+      "crv": 2.39,
+      "maxHaltezeitTage": 10,
+      "status": "wartet",
+      "begruendung": "Engine A Momentum-Leader: Rang 2 im momentumRanking (mom12_1=440.07), dist52wHochPct=-3.68 >= -5, ueberSma200=true. close=127.86, ATR14=9.88. Entry=close*1.005=128.50 (Stop-Order/Breakout-Bestaetigung), Stop=close-2*ATR=108.10, TP=close+5*ATR=177.26 (CRV 2.39). Earnings naechste: 23.07.2026 - kein 2-Handelstage-Konflikt (Quelle: tipranks.com/stocks/intc/earnings). Regime risk_on (volle Positionsgroesse). Snapshot asOf 2026-06-15.",
+      "snapshotAsOf": "2026-06-15"
     }
   ],
   "statistik": {
