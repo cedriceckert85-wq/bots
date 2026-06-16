@@ -47,7 +47,7 @@
       "tp": 174.07,
       "crv": 1.86,
       "maxHaltezeitTage": 20,
-      "status": "wartet",
+      "status": "offen",
       "begruendung": "Momentum-Rang 2 (mom12_1 +458.2%). dist52wHochPct -6.16%. ueberSMA200: 124.57 > 53.50. volRatio 1.14, kein Buzz. Earnings 23.07.2026 (>2 Handelstage). Intel-Turnaround-Momentum 2026.",
       "snapshotAsOf": "2026-06-12",
       "alpaca": {
@@ -56,7 +56,9 @@
       },
       "log": [
         "Alpaca: Bracket-Order platziert (38 Stk.)"
-      ]
+      ],
+      "entryFill": 125.6,
+      "entryDatum": "2026-06-16"
     },
     {
       "id": "S-003",
@@ -72,7 +74,7 @@
       "tp": 686.87,
       "crv": 1.83,
       "maxHaltezeitTage": 20,
-      "status": "wartet",
+      "status": "offen",
       "begruendung": "Momentum-Rang 3 (mom12_1 +279.5%). dist52wHochPct -6.38%. ueberSMA200: 511.57 > 253.93. volRatio 0.97, kein Buzz. Earnings 04.08.2026 (>2 Handelstage). AI-GPU-Momentum.",
       "snapshotAsOf": "2026-06-12",
       "alpaca": {
@@ -81,7 +83,9 @@
       },
       "log": [
         "Alpaca: Bracket-Order platziert (10 Stk.)"
-      ]
+      ],
+      "entryFill": 516.69,
+      "entryDatum": "2026-06-16"
     }
   ],
   "statistik": {

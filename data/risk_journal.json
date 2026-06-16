@@ -98,7 +98,7 @@
       "tp": 1508.49,
       "crv": 2.39,
       "maxHaltezeitTage": 10,
-      "status": "wartet",
+      "status": "offen",
       "begruendung": "Engine A Momentum-Leader: Rang 1 im momentumRanking (mom12_1=526.87), dist52wHochPct=-0.86 >= -5, ueberSma200=true. close=1087.99, ATR14=84.1. Entry=close*1.005=1093.43 (Stop-Order/Breakout-Bestaetigung), Stop=close-2*ATR=919.79, TP=close+5*ATR=1508.49 (CRV 2.39). Earnings naechste: 24.06.2026 - ausserhalb 2-Handelstage-Fenster, kein Konflikt (Quellen: stocktitan.net/news/MU/micron-technology-to-report-fiscal-third-quarter-results-on-june-24-22gcrbths4gp.html, tipranks.com/stocks/mu/earnings). Regime risk_on (volle Positionsgroesse). Snapshot asOf 2026-06-15.",
       "snapshotAsOf": "2026-06-15",
       "alpaca": {
@@ -107,7 +107,9 @@
       },
       "log": [
         "Alpaca: Bracket-Order platziert (27 Stk.)"
-      ]
+      ],
+      "entryFill": 1098.0,
+      "entryDatum": "2026-06-16"
     },
     {
       "id": "R-005",
@@ -123,7 +125,7 @@
       "tp": 177.26,
       "crv": 2.39,
       "maxHaltezeitTage": 10,
-      "status": "wartet",
+      "status": "offen",
       "begruendung": "Engine A Momentum-Leader: Rang 2 im momentumRanking (mom12_1=440.07), dist52wHochPct=-3.68 >= -5, ueberSma200=true. close=127.86, ATR14=9.88. Entry=close*1.005=128.50 (Stop-Order/Breakout-Bestaetigung), Stop=close-2*ATR=108.10, TP=close+5*ATR=177.26 (CRV 2.39). Earnings naechste: 23.07.2026 - kein 2-Handelstage-Konflikt (Quelle: tipranks.com/stocks/intc/earnings). Regime risk_on (volle Positionsgroesse). Snapshot asOf 2026-06-15.",
       "snapshotAsOf": "2026-06-15",
       "alpaca": {
@@ -132,7 +134,9 @@
       },
       "log": [
         "Alpaca: Bracket-Order platziert (236 Stk.)"
-      ]
+      ],
+      "entryFill": 128.5,
+      "entryDatum": "2026-06-16"
     }
   ],
   "statistik": {
