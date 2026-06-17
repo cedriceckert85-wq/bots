@@ -56,6 +56,13 @@
       "gruende": [
         "kein_stock_in_play_setup"
       ]
+    },
+    {
+      "datum": "2026-06-17T17:35:12.663212+00:00",
+      "aktion": "no_trade",
+      "gruende": [
+        "kein_stock_in_play_setup"
+      ]
     }
   ]
 }
