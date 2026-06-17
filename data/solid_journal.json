@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_SOLID)",
     "alpaca": true,
     "hinweis": "SOLID - Evidenz-Bot (SPEC_SOLID.md, Stufe-1-Regeln: STUFE1.md). Live seit 12.06.2026 auf Nutzer-Kommando.",
-    "hinweisLetzterLauf": "Lauf 2026-06-16: KEIN TRADE. Snapshot asOf 2026-06-15 (= letzter US-Handelstag Mo, Fail-closed-Gate bestanden). Regime risk_on (spyZone/qqqZone risk_on, VIX 16.2). MOMENTUM: 0 neue - Slot-Limit erreicht (3/3 offen: MU S-001, INTC S-002, AMD S-003, alle status wartet seit 2026-06-13). NEWS-DRIFT: 0 - keine ticker-spezifische, 2-fach verifizierte Fundamental-Positiv-News <24h auf Universums-Ticker. Bewegungen 15.06. makro-getrieben (US-Iran-Friedensdeal, Oel -4%, Semis +3.8% Sektor-Rally, KEIN Einzeltitel-Katalysator). Top-Gainer (AXTI +14.8%, CNL +11.5%, STX +9%, ENTG +9.1%) alle ausserhalb kuratiertem Universum; MU-Kursziel Morgan Stanley vom 03.06. >24h veraltet. bremseAktiv false."
+    "hinweisLetzterLauf": "Lauf 2026-06-17: KEIN TRADE. Snapshot asOf 2026-06-16 (= letzter US-Handelstag Di, Fail-closed-Gate bestanden). Regime risk_on (spyZone/qqqZone risk_on, VIX 16.41). MOMENTUM: 0 neue - Slot-Limit erreicht (3/3: MU S-001 wartet, INTC S-002 offen, AMD S-003 offen; INTC+AMD zum Di-Open gefuellt). NEWS-DRIFT: 0 - kein qualifizierender Kandidat. QCOM (+5.8%, im Universum, ueberSma200, volRatio 0.88) nur auf unbestaetigten Uebernahme-GERUECHTEN (Tenstorrent $8-10B Diskussionen) - kein bestaetigter Fundamental-Katalysator, QCOM zudem Kaeufer (ambivalent); Evidenz-Bot meidet M&A-Spekulation. Semis-Move (MU +3.8%, WDC +9.2%, STX +7.5%) sektorbreit (AI storage/memory), kein Einzeltitel-Katalysator; WDC/STX ausserhalb Universum. Fed-Entscheid 17.06. = zusaetzliches Event-Risiko. bremseAktiv false."
   },
   "positionen": [],
   "trades": [
