@@ -49,13 +49,18 @@
       "tp": 1166.89,
       "crv": 2.5,
       "maxHaltezeitTage": 12,
-      "status": "wartet",
+      "status": "offen",
       "risikoUsd": 1500,
       "score": 78.89,
       "cluster": "industrials",
       "snapshotAsOf": "2026-06-15",
       "createdBy": "codex_challenger.py",
-      "begruendung": "CODEX Engine A: Quality-Momentum-Confirmed. Score 78.89; mom12_1 148.79%, 52W-Distanz -1.36%, ATR 3.84%, Cluster industrials. Entry nur per Bestaetigungs-Stop; kein TQQQ-/Buzz-Duplikat."
+      "begruendung": "CODEX Engine A: Quality-Momentum-Confirmed. Score 78.89; mom12_1 148.79%, 52W-Distanz -1.36%, ATR 3.84%, Cluster industrials. Entry nur per Bestaetigungs-Stop; kein TQQQ-/Buzz-Duplikat.",
+      "entryFill": 956.98,
+      "entryDatum": "2026-06-17",
+      "log": [
+        "2026-06-17 Entry-Fill 956.98"
+      ]
     },
     {
       "id": "C-003",
