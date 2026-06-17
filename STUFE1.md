@@ -37,8 +37,20 @@ der Stufe 1 wird bei Umstieg auf Phase 2 zurückgesetzt (Regeländerung = Statis
   qqqZone = risk_on UND vixUnter25. Max. 1 TQQQ-Position. Entry Limit close × 1,01,
   Stop 2,5 × ATR, Ziel 5 × ATR, maxHaltezeitTage = 15. Gate-Bruch → risk-eval/Agent
   schließt am Folgelauf.
-- **Engine D — Shorts: DEAKTIVIERT** (Datenquellen-Nachweis steht aus, siehe Spec).
-- **Regime:** spyZone risk_off → nur Engine-B-Trades mit halbem Risiko, kein A/C.
+- **Engine D — Regime-Index-Hedge (REAKTIVIERT 17.06.2026, Nutzer-Mandat „RISK soll long UND short können"):**
+  RISK ist damit ein **Long/Short-Bot**. **Trigger:** `regime.spyZone == "risk_off"` im Snapshot.
+  Dann **EINE Short-Position auf den Index als Hedge** eröffnen: **SPY** (primär) oder **QQQ**
+  (beide shortbar + easy-to-borrow, verifiziert 17.06.). Journal: `richtung: "short"`, `engine: "D"`,
+  `entryTyp: "limit"` (Limit = close × 0,995). **Stop = Entry + 2 × ATR14** (falls ATR im Snapshot,
+  sonst Entry + 5 %); **TP = Entry − 4 × ATR14** bzw. Entry − 10 % (CRV 2,0). **Sizing wie die anderen
+  Engines: 30 % des Equity, durch Buying Power gedeckelt; max. 1 Engine-D-Position.**
+  **Exit (zusätzlich zu Stop/TP via Bracket):** kippt `spyZone` zurück auf `risk_on` → Hedge am
+  Folgelauf schließen (Regime-Exit). `maxHaltezeitTage = 15` (hart). Zählt in die 5-Positionen-
+  und 2-neue-Trades/Nacht-Caps. **Index-Short ist für DIESE Engine ausdrücklich erlaubt** (frühere
+  K16-Sperre nur für den Hedge aufgehoben; Einzeltitel-Shorts bleiben vorerst außen vor).
+- **Regime (Long/Short):** `spyZone risk_off` → KEINE neuen Long-A/C-Entries (Engine B nur halbes
+  Risiko) UND **Engine D aktiv: Index-Short-Hedge (SPY/QQQ)**. `spyZone risk_on` → Long-Engines A/B/C
+  aktiv, **Engine-D-Hedge wird geschlossen (flat)**. neutral → Long max. 1, kein neuer Hedge.
 
 ## Gemeinsam
 - **Journal-Schema — EXAKT dieses, keine eigenen Feldnamen erfinden** (Pflichtfelder,

@@ -101,6 +101,13 @@ Max. 5 offene Positionen gesamt (dominiert die Engine-Maxima: first come, first 
 - **Bewertung kalenderbasiert (H2):** kumulierte R-Bilanz nach 12 Monaten; ein n ≥ 30-Gate wäre bei 4–8 Trades/Jahr erst nach 4–7 Jahren erreichbar gewesen.
 
 ### Engine D — Taktische Shorts (max. 5 % Risikobudget; **Status: DEAKTIVIERT**)
+> **STUFE-1-UPDATE 17.06.2026 (Nutzer-Mandat „RISK soll long UND short können"):** Engine D wird
+> in der Live-Stufe-1 **REAKTIVIERT — aber NEU definiert** als **Regime-Index-Hedge** (Short SPY/QQQ
+> bei `spyZone == risk_off`), NICHT als der unten beschriebene Einzeltitel-Stale-News-Short. Grund:
+> Der Stale-News-Short braucht die noch fehlenden FINRA-SI-/EDGAR-Pipelines und schützt NICHT gegen
+> Markt-Abstürze (z. B. FOMC 17.06.). Der Index-Hedge nutzt das bereits vorhandene `regime.spyZone`
+> + shortbare Index-ETFs. **Maßgeblich ist `STUFE1.md` (Engine D / Regime).** Die K16-Sperre
+> (Index-Short) ist NUR für diesen Hedge aufgehoben. Der Einzeltitel-Short unten bleibt Phase-2-Konzept.
 - **Engine D ist bei Start NICHT aktiv.** `eligible_engines` enthält nie "D", `short_candidates` bleibt leer, bis die Aktivierungs-Voraussetzungen erfüllt und als eigener Trial registriert sind: (1) FINRA-SI-Pipeline mit `si_as_of` läuft nachweislich, (2) EDGAR-Filing-Check produziert `move_ohne_frisches_filing` korrekt (Testfälle), (3) Betreiber-Sign-off. Die Engine bleibt hier definiert, damit eine spätere Aktivierung als registrierter Trial läuft statt als undokumentierte Ad-hoc-Erweiterung.
 - **Setup nur:** Stale-News-Reversal — Large Cap > 10 Mrd. $, Tagesmove > +8 % ohne frisches Filing (`move_ohne_frisches_filing=true` aus EDGAR-Check) + WebSearch-Verifikation des Stale-Charakters durch den Entscheider, Short Interest < 5 % (frische FINRA-Daten), kein Sperrlisten-Treffer.
 - **Entry:** `entryTyp: limit` (Short). Stop = Entry + 2,0·ATR14, TP = Entry − 4·ATR14 (CRV 2,0 — dokumentierte Ausnahme, §Mandat). **maxHaltezeitTage = 3, hart, keine Verlängerung** (K5; Short-Bein-Crashes entstehen durch Halten gegen Rebounds).
