@@ -154,7 +154,14 @@
       "maxHaltezeitTage": 10,
       "status": "wartet",
       "begruendung": "Engine A Momentum-Leader: Rang 5 im momentumRanking (mom12_1=138.37), dist52wHochPct=-1.65 >= -5, ueberSma200=true. close=945.46, ATR14=36.24. Entry=close*1.005=950.19 (Stop-Order/Breakout-Bestaetigung), Stop=close-2*ATR=872.98, TP=close+5*ATR=1126.66 (CRV 2.29). Einziger Top-5-Kandidat mit dist>=-5 (MU -8.07 / INTC -11.83 / AMD -9.15 / LRCX -6.04 nach Dienstag-Selloff disqualifiziert). R-003 CAT war verfallen, keine offene CAT-Position. Earnings naechste: 05.08.2026 (Q2; Q1 war 30.04.2026) - ausserhalb 2-Handelstage-Fenster (Quellen: tikr.com/blog/caterpillar-beat-q1-2026-earnings, sec.gov 8-K CAT FY2026). Regime risk_on (volle Positionsgroesse). Snapshot asOf 2026-06-16.",
-      "snapshotAsOf": "2026-06-16"
+      "snapshotAsOf": "2026-06-16",
+      "alpaca": {
+        "orderId": "dd5dab83-362b-4ec9-a6c0-cd0025c5b254",
+        "qty": 30
+      },
+      "log": [
+        "Alpaca: Bracket-Order platziert (30 Stk.)"
+      ]
     }
   ],
   "statistik": {
@@ -162,7 +169,7 @@
     "gewonnen": 0,
     "verloren": 0,
     "verfallen": 1,
-    "offen": 4,
+    "offen": 5,
     "trefferquote": null,
     "summeR": 0,
     "erwartungswertR": null,
