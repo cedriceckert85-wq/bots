@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_RISK)",
     "alpaca": true,
     "hinweis": "RISK - kontrolliert aggressiver Gewinn-Jaeger (SPEC_RISK.md, Stufe-1-Regeln: STUFE1.md). Engine D (Shorts) deaktiviert. Live seit 12.06.2026 auf Nutzer-Kommando.",
-    "hinweisLetzterLauf": "2026-06-17 03:08 RISK-Lauf (lokales Fenster, Snapshot asOf 2026-06-16, fehler=[], Stale-Gate bestanden). Regime risk_on (spy+qqq risk_on, VIX 16.41). bremseAktiv=false, vor Lauf 4 offen (R-001 TQQQ, R-002 LRCX, R-004 MU @1098, R-005 INTC @128.5). 1 NEUER Engine-A-Trade: R-006 CAT (Rang 5, mom12_1=138.37, dist -1.65). Nach Dienstag-Selloff fielen die Top-Namen unter die -5-Schwelle: MU dist -8.07, INTC -11.83, AMD -9.15, LRCX -6.04 (alle disqualifiziert) - CAT einziger Top-5-Kandidat mit dist>=-5. R-003 CAT war verfallen, keine offene CAT-Position. Engine B: volumenSpikes leer (0). Engine C TQQQ: Gates gruen, aber max. 1 TQQQ bereits offen (R-001) - gesperrt. Engine D deaktiviert. Earnings-Check WebSearch: CAT 05.08.2026 - ausserhalb 2-Handelstage-Fenster. Cap nach Lauf: 5 offen+wartend (Maximum erreicht). Bestehende Trades/Status unveraendert."
+    "hinweisLetzterLauf": "2026-06-18 03:08 RISK-Lauf (lokales Fenster, Snapshot asOf 2026-06-17, fehler=[], Stale-Gate bestanden). ERSTER Lauf mit reaktivierter Engine D (Long/Short-Hedge). Regime risk_on (spy+qqq risk_on, VIX 18.44) -> Engine D NICHT getriggert (Post-FOMC kein risk_off), kein offener Hedge zu schliessen. bremseAktiv=false, vor Lauf 4 offen (R-001 TQQQ, R-002 LRCX, R-004 MU, R-005 INTC); R-006 CAT verfallen. 1 NEUER Engine-A-Trade: R-007 CAT (Rang 5, mom12_1=140.48, dist -2.02) - einziger Top-5-Kandidat mit dist>=-5 (MU -6.05 / INTC -8.78 / AMD -8.22 / LRCX -5.88 weiter disqualifiziert; AMAT -4.88 Rang 6 ausserhalb Top-5). Neuauflage des CAT-Breakouts nach Verfall R-006. Engine B: volumenSpikes leer (0). Engine C TQQQ: Gates gruen, aber max. 1 TQQQ bereits offen (R-001) - gesperrt. Earnings CAT 05.08.2026 - ausserhalb 2-Handelstage-Fenster. Cap nach Lauf: 5 offen+wartend (Maximum). Bestehende Trades/Status unveraendert."
   },
   "positionen": [],
   "trades": [
@@ -162,6 +162,24 @@
       "log": [
         "Alpaca: Bracket-Order platziert (30 Stk.)"
       ]
+    },
+    {
+      "id": "R-007",
+      "datumEmpfehlung": "2026-06-18",
+      "aktie": "Caterpillar",
+      "ticker": "CAT",
+      "yahooSymbol": "CAT",
+      "richtung": "long",
+      "engine": "A",
+      "entryTyp": "stop",
+      "entry": 960.70,
+      "stop": 883.32,
+      "tp": 1137.42,
+      "crv": 2.28,
+      "maxHaltezeitTage": 10,
+      "status": "wartet",
+      "begruendung": "Engine A Momentum-Leader: Rang 5 im momentumRanking (mom12_1=140.48), dist52wHochPct=-2.02 >= -5, ueberSma200=true. close=955.92, ATR14=36.3. Entry=close*1.005=960.70 (Stop-Order/Breakout-Bestaetigung), Stop=close-2*ATR=883.32, TP=close+5*ATR=1137.42 (CRV 2.28). Einziger Top-5-Kandidat mit dist>=-5 (MU -6.05 / INTC -8.78 / AMD -8.22 / LRCX -5.88 weiter disqualifiziert; AMAT -4.88 ist Rang 6 ausserhalb Top-5). Vortags-CAT R-006 verfallen (Breakout nicht getriggert), keine offene CAT-Position - Neuauflage des Breakout-Setups mit frischem Snapshot. Earnings naechste: 05.08.2026 (Q2; gestern via WebSearch verifiziert, Quartalstermin unveraendert) - ausserhalb 2-Handelstage-Fenster. Regime risk_on (volle Positionsgroesse). Snapshot asOf 2026-06-17.",
+      "snapshotAsOf": "2026-06-17"
     }
   ],
   "statistik": {
