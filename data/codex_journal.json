@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_CODEX)",
     "alpaca": true,
     "hinweis": "CODEX - Challenger gegen SOLID und RISK. Ziel: risikoadjustierte Outperformance durch Quality-Momentum, Anti-Crowding und strengere Entry-Bestaetigung.",
-    "hinweisLetzterLauf": "CODEX Trade C-003 GOOGL fuer Snapshot 2026-06-16 geschrieben. Paper only, keine Alpaca-Order."
+    "hinweisLetzterLauf": "CODEX Trade C-004 CSCO fuer Snapshot 2026-06-17 geschrieben. Paper only, keine Alpaca-Order."
   },
   "positionen": [],
   "trades": [
@@ -83,6 +83,28 @@
       "snapshotAsOf": "2026-06-16",
       "createdBy": "codex_challenger.py",
       "begruendung": "CODEX Engine A: Quality-Momentum-Confirmed. Score 78.76; mom12_1 124.55%, 52W-Distanz -8.65%, ATR 3.0%, Cluster mega_tech. Entry nur per Bestaetigungs-Stop; kein TQQQ-/Buzz-Duplikat."
+    },
+    {
+      "id": "C-004",
+      "datumEmpfehlung": "2026-06-18",
+      "aktie": "CSCO",
+      "ticker": "CSCO",
+      "yahooSymbol": "CSCO",
+      "richtung": "long",
+      "engine": "A",
+      "entryTyp": "stop",
+      "entry": 118.47,
+      "stop": 107.03,
+      "tp": 147.1,
+      "crv": 2.5,
+      "maxHaltezeitTage": 12,
+      "status": "wartet",
+      "risikoUsd": 1500,
+      "score": 61.65,
+      "cluster": "other",
+      "snapshotAsOf": "2026-06-17",
+      "createdBy": "codex_challenger.py",
+      "begruendung": "CODEX Engine A: Quality-Momentum-Confirmed. Score 61.65; mom12_1 76.61%, 52W-Distanz -10.0%, ATR 3.9%, Cluster other. Entry nur per Bestaetigungs-Stop; kein TQQQ-/Buzz-Duplikat."
     }
   ],
   "statistik": {
@@ -123,6 +145,14 @@
       "tradeId": "C-003",
       "ticker": "GOOGL",
       "score": 78.76
+    },
+    {
+      "datum": "2026-06-18T05:23:29.759335+00:00",
+      "snapshotAsOf": "2026-06-17",
+      "aktion": "trade",
+      "tradeId": "C-004",
+      "ticker": "CSCO",
+      "score": 61.65
     }
   ]
 }
