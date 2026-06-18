@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_SOLID)",
     "alpaca": true,
     "hinweis": "SOLID - Evidenz-Bot (SPEC_SOLID.md, Stufe-1-Regeln: STUFE1.md). Live seit 12.06.2026 auf Nutzer-Kommando.",
-    "hinweisLetzterLauf": "Lauf 2026-06-17: KEIN TRADE. Snapshot asOf 2026-06-16 (= letzter US-Handelstag Di, Fail-closed-Gate bestanden). Regime risk_on (spyZone/qqqZone risk_on, VIX 16.41). MOMENTUM: 0 neue - Slot-Limit erreicht (3/3: MU S-001 wartet, INTC S-002 offen, AMD S-003 offen; INTC+AMD zum Di-Open gefuellt). NEWS-DRIFT: 0 - kein qualifizierender Kandidat. QCOM (+5.8%, im Universum, ueberSma200, volRatio 0.88) nur auf unbestaetigten Uebernahme-GERUECHTEN (Tenstorrent $8-10B Diskussionen) - kein bestaetigter Fundamental-Katalysator, QCOM zudem Kaeufer (ambivalent); Evidenz-Bot meidet M&A-Spekulation. Semis-Move (MU +3.8%, WDC +9.2%, STX +7.5%) sektorbreit (AI storage/memory), kein Einzeltitel-Katalysator; WDC/STX ausserhalb Universum. Fed-Entscheid 17.06. = zusaetzliches Event-Risiko. bremseAktiv false."
+    "hinweisLetzterLauf": "Lauf 2026-06-18: 1 MOMENTUM-TRADE (LRCX S-004). Snapshot asOf 2026-06-17 (= letzter US-Handelstag Mi, Fail-closed-Gate bestanden). Regime risk_on (spyZone/qqqZone risk_on, VIX 18.44). MU S-001 zwischenzeitlich VERFALLEN (Limit nie gefuellt) -> nur noch 2/3 Slots belegt (INTC S-002, AMD S-003 offen) -> 1 freier Slot, risk_on -> 1 neuer Trade. Momentum Top-10: MU(R1) BEWUSST UEBERSPRUNGEN wg. Earnings 24.06.2026 (Order fuellt erst Mo 22. wg. Juneteenth-Feiertag Fr 19., dann nur 2 Sitzungen bis Earnings -> Held-into-Earnings-Binaerrisiko, ATR-Stop ~21% breit); INTC/AMD bereits gehalten; GOOGL/KLAC/HPE/NEM via dist52wHoch<-10 gesperrt. Gewaehlt: LRCX (R4, dist -5.88, volRatio 1.03, Earnings 29.07. weit weg). News-Drift: kein qualifizierter Kandidat. bremseAktiv false."
   },
   "positionen": [],
   "trades": [
@@ -86,6 +86,24 @@
       ],
       "entryFill": 516.69,
       "entryDatum": "2026-06-16"
+    },
+    {
+      "id": "S-004",
+      "datumEmpfehlung": "2026-06-18",
+      "aktie": "Lam Research",
+      "ticker": "LRCX",
+      "yahooSymbol": "LRCX",
+      "richtung": "long",
+      "engine": "momentum",
+      "entryTyp": "limit",
+      "entry": 377.92,
+      "stop": 312.28,
+      "tp": 497.98,
+      "crv": 1.83,
+      "maxHaltezeitTage": 20,
+      "status": "wartet",
+      "begruendung": "Momentum-Rang 4 (mom12_1 +195.0%). dist52wHochPct -5.88%. ueberSMA200: 374.18 > 208.61. volRatio 1.03, kein Buzz. Earnings 29.07.2026 (>2 Handelstage). Halbleiter-WFE-Momentum. HINWEIS: Rang-1 MU bewusst uebersprungen - Earnings 24.06.2026, Order fuellt wg. Juneteenth (Fr 19.06.) erst Mo 22., dann nur 2 Sitzungen bis Earnings -> Held-into-Earnings-Binaerrisiko bei breitem ATR-Stop.",
+      "snapshotAsOf": "2026-06-17"
     }
   ],
   "statistik": {
