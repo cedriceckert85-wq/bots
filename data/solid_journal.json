@@ -103,7 +103,14 @@
       "maxHaltezeitTage": 20,
       "status": "wartet",
       "begruendung": "Momentum-Rang 4 (mom12_1 +195.0%). dist52wHochPct -5.88%. ueberSMA200: 374.18 > 208.61. volRatio 1.03, kein Buzz. Earnings 29.07.2026 (>2 Handelstage). Halbleiter-WFE-Momentum. HINWEIS: Rang-1 MU bewusst uebersprungen - Earnings 24.06.2026, Order fuellt wg. Juneteenth (Fr 19.06.) erst Mo 22., dann nur 2 Sitzungen bis Earnings -> Held-into-Earnings-Binaerrisiko bei breitem ATR-Stop.",
-      "snapshotAsOf": "2026-06-17"
+      "snapshotAsOf": "2026-06-17",
+      "alpaca": {
+        "orderId": "864a87bd-ebff-4ceb-bf67-d5f6aa091e8b",
+        "qty": 15
+      },
+      "log": [
+        "Alpaca: Bracket-Order platziert (15 Stk.)"
+      ]
     }
   ],
   "statistik": {
@@ -111,7 +118,7 @@
     "gewonnen": 0,
     "verloren": 0,
     "verfallen": 1,
-    "offen": 2,
+    "offen": 3,
     "trefferquote": null,
     "summeR": 0,
     "erwartungswertR": null,
