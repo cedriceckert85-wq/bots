@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-06-18T23:20:09Z",
+  "generatedAtUtc": "2026-06-19T22:32:15Z",
   "asOf": "2026-06-18",
   "ticker": {
     "AAPL": {
@@ -11,8 +11,8 @@
       "ueberSma200": true,
       "atr14": 8.16,
       "atrPct": 2.74,
-      "volRatio": 1.47,
-      "dollarVol20dMio": 15570.0
+      "volRatio": 1.63,
+      "dollarVol20dMio": 15708.0
     },
     "MSFT": {
       "close": 379.4,
@@ -23,8 +23,8 @@
       "ueberSma200": false,
       "atr14": 12.54,
       "atrPct": 3.3,
-      "volRatio": 1.5,
-      "dollarVol20dMio": 14752.4
+      "volRatio": 1.53,
+      "dollarVol20dMio": 14776.1
     },
     "NVDA": {
       "close": 210.69,
@@ -35,8 +35,8 @@
       "ueberSma200": true,
       "atr14": 8.5,
       "atrPct": 4.03,
-      "volRatio": 1.36,
-      "dollarVol20dMio": 36983.0
+      "volRatio": 1.37,
+      "dollarVol20dMio": 37014.6
     },
     "AMZN": {
       "close": 244.39,
@@ -47,8 +47,8 @@
       "ueberSma200": true,
       "atr14": 8.23,
       "atrPct": 3.37,
-      "volRatio": 1.52,
-      "dollarVol20dMio": 10671.0
+      "volRatio": 1.71,
+      "dollarVol20dMio": 10782.1
     },
     "GOOGL": {
       "close": 368.03,
@@ -60,7 +60,7 @@
       "atr14": 11.48,
       "atrPct": 3.12,
       "volRatio": 1.36,
-      "dollarVol20dMio": 12007.7
+      "dollarVol20dMio": 12009.7
     },
     "META": {
       "close": 577.22,
@@ -71,8 +71,8 @@
       "ueberSma200": false,
       "atr14": 22.99,
       "atrPct": 3.98,
-      "volRatio": 1.41,
-      "dollarVol20dMio": 10993.8
+      "volRatio": 1.51,
+      "dollarVol20dMio": 11050.9
     },
     "AVGO": {
       "close": 411.35,
@@ -83,8 +83,8 @@
       "ueberSma200": true,
       "atr14": 25.94,
       "atrPct": 6.3,
-      "volRatio": 1.14,
-      "dollarVol20dMio": 14417.4
+      "volRatio": 1.28,
+      "dollarVol20dMio": 14522.1
     },
     "TSLA": {
       "close": 400.49,
@@ -95,8 +95,8 @@
       "ueberSma200": false,
       "atr14": 18.39,
       "atrPct": 4.59,
-      "volRatio": 1.17,
-      "dollarVol20dMio": 18730.3
+      "volRatio": 1.24,
+      "dollarVol20dMio": 18803.9
     },
     "BRK-B": {
       "close": 489.46,
@@ -107,8 +107,8 @@
       "ueberSma200": false,
       "atr14": 7.49,
       "atrPct": 1.53,
-      "volRatio": 1.13,
-      "dollarVol20dMio": 2615.1
+      "volRatio": 1.62,
+      "dollarVol20dMio": 2685.0
     },
     "LLY": {
       "close": 1098.57,
@@ -119,8 +119,8 @@
       "ueberSma200": true,
       "atr14": 36.98,
       "atrPct": 3.37,
-      "volRatio": 1.36,
-      "dollarVol20dMio": 3589.8
+      "volRatio": 1.37,
+      "dollarVol20dMio": 3591.4
     },
     "JPM": {
       "close": 325.22,
@@ -131,8 +131,8 @@
       "ueberSma200": true,
       "atr14": 7.59,
       "atrPct": 2.33,
-      "volRatio": 2.07,
-      "dollarVol20dMio": 3147.1
+      "volRatio": 2.08,
+      "dollarVol20dMio": 3148.5
     },
     "V": {
       "close": 327.24,
@@ -141,22 +141,22 @@
       "dist52wHochPct": -9.01,
       "sma200": 329.09,
       "ueberSma200": false,
-      "atr14": 7.5,
+      "atr14": 7.51,
       "atrPct": 2.29,
       "volRatio": 1.82,
-      "dollarVol20dMio": 2643.2
+      "dollarVol20dMio": 2643.5
     },
     "MA": {
-      "close": 489.79,
-      "datum": "2026-06-18",
-      "mom12_1": -7.55,
-      "dist52wHochPct": -18.61,
-      "sma200": 534.82,
+      "close": 492.99,
+      "datum": "2026-06-17",
+      "mom12_1": -12.25,
+      "dist52wHochPct": -18.08,
+      "sma200": 535.33,
       "ueberSma200": false,
-      "atr14": 11.35,
-      "atrPct": 2.32,
-      "volRatio": 0.92,
-      "dollarVol20dMio": 1803.4
+      "atr14": 11.37,
+      "atrPct": 2.31,
+      "volRatio": 0.79,
+      "dollarVol20dMio": 1820.5
     },
     "UNH": {
       "close": 400.96,
@@ -165,10 +165,10 @@
       "dist52wHochPct": -3.61,
       "sma200": 333.55,
       "ueberSma200": true,
-      "atr14": 9.87,
+      "atr14": 9.88,
       "atrPct": 2.46,
-      "volRatio": 1.67,
-      "dollarVol20dMio": 2811.0
+      "volRatio": 1.69,
+      "dollarVol20dMio": 2815.4
     },
     "XOM": {
       "close": 137.81,
@@ -179,8 +179,8 @@
       "ueberSma200": true,
       "atr14": 4.07,
       "atrPct": 2.96,
-      "volRatio": 2.6,
-      "dollarVol20dMio": 2472.2
+      "volRatio": 2.67,
+      "dollarVol20dMio": 2481.6
     },
     "CVX": {
       "close": 173.63,
@@ -191,8 +191,8 @@
       "ueberSma200": true,
       "atr14": 4.47,
       "atrPct": 2.58,
-      "volRatio": 1.99,
-      "dollarVol20dMio": 1594.2
+      "volRatio": 2.08,
+      "dollarVol20dMio": 1601.4
     },
     "HD": {
       "close": 334.28,
@@ -203,8 +203,8 @@
       "ueberSma200": false,
       "atr14": 8.61,
       "atrPct": 2.57,
-      "volRatio": 1.02,
-      "dollarVol20dMio": 1659.6
+      "volRatio": 2.02,
+      "dollarVol20dMio": 1752.0
     },
     "COST": {
       "close": 951.45,
@@ -215,8 +215,8 @@
       "ueberSma200": false,
       "atr14": 19.98,
       "atrPct": 2.1,
-      "volRatio": 1.27,
-      "dollarVol20dMio": 2367.6
+      "volRatio": 1.49,
+      "dollarVol20dMio": 2394.8
     },
     "WMT": {
       "close": 117.18,
@@ -227,20 +227,20 @@
       "ueberSma200": true,
       "atr14": 2.74,
       "atrPct": 2.34,
-      "volRatio": 1.31,
-      "dollarVol20dMio": 3213.8
+      "volRatio": 1.33,
+      "dollarVol20dMio": 3216.8
     },
     "PG": {
-      "close": 150.38,
-      "datum": "2026-06-18",
-      "mom12_1": -9.86,
-      "dist52wHochPct": -10.09,
-      "sma200": 148.97,
+      "close": 150.56,
+      "datum": "2026-06-17",
+      "mom12_1": -10.86,
+      "dist52wHochPct": -9.98,
+      "sma200": 149.01,
       "ueberSma200": true,
-      "atr14": 3.03,
-      "atrPct": 2.02,
-      "volRatio": 1.89,
-      "dollarVol20dMio": 1344.7
+      "atr14": 3.1,
+      "atrPct": 2.06,
+      "volRatio": 0.83,
+      "dollarVol20dMio": 1282.1
     },
     "JNJ": {
       "close": 228.39,
@@ -251,8 +251,8 @@
       "ueberSma200": true,
       "atr14": 5.05,
       "atrPct": 2.21,
-      "volRatio": 2.33,
-      "dollarVol20dMio": 1834.3
+      "volRatio": 2.36,
+      "dollarVol20dMio": 1837.2
     },
     "ABBV": {
       "close": 216.49,
@@ -263,8 +263,8 @@
       "ueberSma200": false,
       "atr14": 5.68,
       "atrPct": 2.62,
-      "volRatio": 1.75,
-      "dollarVol20dMio": 1181.6
+      "volRatio": 1.77,
+      "dollarVol20dMio": 1182.5
     },
     "MRK": {
       "close": 113.87,
@@ -275,8 +275,8 @@
       "ueberSma200": true,
       "atr14": 3.33,
       "atrPct": 2.92,
-      "volRatio": 1.07,
-      "dollarVol20dMio": 1298.7
+      "volRatio": 2.41,
+      "dollarVol20dMio": 1397.5
     },
     "ORCL": {
       "close": 184.29,
@@ -287,8 +287,8 @@
       "ueberSma200": false,
       "atr14": 15.05,
       "atrPct": 8.17,
-      "volRatio": 0.75,
-      "dollarVol20dMio": 4809.1
+      "volRatio": 1.18,
+      "dollarVol20dMio": 4917.1
     },
     "CRM": {
       "close": 151.78,
@@ -299,8 +299,8 @@
       "ueberSma200": false,
       "atr14": 8.74,
       "atrPct": 5.76,
-      "volRatio": 1.22,
-      "dollarVol20dMio": 2554.7
+      "volRatio": 3.1,
+      "dollarVol20dMio": 2838.0
     },
     "ADBE": {
       "close": 195.16,
@@ -311,8 +311,8 @@
       "ueberSma200": false,
       "atr14": 11.44,
       "atrPct": 5.86,
-      "volRatio": 1.91,
-      "dollarVol20dMio": 1565.4
+      "volRatio": 1.97,
+      "dollarVol20dMio": 1570.7
     },
     "AMD": {
       "close": 537.37,
@@ -323,8 +323,8 @@
       "ueberSma200": true,
       "atr14": 36.89,
       "atrPct": 6.87,
-      "volRatio": 1.34,
-      "dollarVol20dMio": 17140.8
+      "volRatio": 1.37,
+      "dollarVol20dMio": 17165.7
     },
     "QCOM": {
       "close": 226.11,
@@ -335,8 +335,8 @@
       "ueberSma200": true,
       "atr14": 17.32,
       "atrPct": 7.66,
-      "volRatio": 1.88,
-      "dollarVol20dMio": 5072.3
+      "volRatio": 2.08,
+      "dollarVol20dMio": 5127.6
     },
     "TXN": {
       "close": 322.86,
@@ -347,8 +347,8 @@
       "ueberSma200": true,
       "atr14": 14.47,
       "atrPct": 4.48,
-      "volRatio": 2.05,
-      "dollarVol20dMio": 2870.5
+      "volRatio": 2.42,
+      "dollarVol20dMio": 2929.9
     },
     "INTC": {
       "close": 133.99,
@@ -359,8 +359,8 @@
       "ueberSma200": true,
       "atr14": 10.39,
       "atrPct": 7.75,
-      "volRatio": 1.63,
-      "dollarVol20dMio": 17427.5
+      "volRatio": 1.78,
+      "dollarVol20dMio": 17578.5
     },
     "NFLX": {
       "close": 77.38,
@@ -371,8 +371,8 @@
       "ueberSma200": false,
       "atr14": 2.15,
       "atrPct": 2.78,
-      "volRatio": 2.31,
-      "dollarVol20dMio": 3052.0
+      "volRatio": 2.33,
+      "dollarVol20dMio": 3054.5
     },
     "DIS": {
       "close": 103.89,
@@ -381,10 +381,10 @@
       "dist52wHochPct": -16.68,
       "sma200": 107.13,
       "ueberSma200": false,
-      "atr14": 2.17,
+      "atr14": 2.18,
       "atrPct": 2.09,
-      "volRatio": 1.25,
-      "dollarVol20dMio": 910.0
+      "volRatio": 2.45,
+      "dollarVol20dMio": 972.4
     },
     "CMCSA": {
       "close": 22.43,
@@ -393,10 +393,10 @@
       "dist52wHochPct": -34.72,
       "sma200": 27.91,
       "ueberSma200": false,
-      "atr14": 0.69,
-      "atrPct": 3.09,
-      "volRatio": 1.98,
-      "dollarVol20dMio": 719.2
+      "atr14": 0.7,
+      "atrPct": 3.1,
+      "volRatio": 2.29,
+      "dollarVol20dMio": 731.6
     },
     "PEP": {
       "close": 142.02,
@@ -407,8 +407,8 @@
       "ueberSma200": false,
       "atr14": 2.91,
       "atrPct": 2.05,
-      "volRatio": 1.91,
-      "dollarVol20dMio": 1323.7
+      "volRatio": 2.04,
+      "dollarVol20dMio": 1332.9
     },
     "KO": {
       "close": 79.39,
@@ -420,7 +420,7 @@
       "atr14": 1.76,
       "atrPct": 2.21,
       "volRatio": 2.57,
-      "dollarVol20dMio": 1446.9
+      "dollarVol20dMio": 1447.0
     },
     "MCD": {
       "close": 278.61,
@@ -431,8 +431,8 @@
       "ueberSma200": false,
       "atr14": 5.36,
       "atrPct": 1.92,
-      "volRatio": 0.95,
-      "dollarVol20dMio": 1197.5
+      "volRatio": 1.8,
+      "dollarVol20dMio": 1253.6
     },
     "NKE": {
       "close": 45.2,
@@ -443,8 +443,8 @@
       "ueberSma200": false,
       "atr14": 1.47,
       "atrPct": 3.25,
-      "volRatio": 1.52,
-      "dollarVol20dMio": 956.1
+      "volRatio": 1.53,
+      "dollarVol20dMio": 956.7
     },
     "SBUX": {
       "close": 100.65,
@@ -455,20 +455,20 @@
       "ueberSma200": true,
       "atr14": 2.75,
       "atrPct": 2.73,
-      "volRatio": 1.18,
-      "dollarVol20dMio": 825.5
+      "volRatio": 1.29,
+      "dollarVol20dMio": 830.2
     },
     "TMO": {
-      "close": 464.61,
-      "datum": "2026-06-18",
-      "mom12_1": 15.09,
-      "dist52wHochPct": -27.85,
-      "sma200": 525.82,
+      "close": 461.69,
+      "datum": "2026-06-17",
+      "mom12_1": 14.75,
+      "dist52wHochPct": -28.31,
+      "sma200": 525.93,
       "ueberSma200": false,
-      "atr14": 13.56,
-      "atrPct": 2.92,
-      "volRatio": 1.39,
-      "dollarVol20dMio": 1108.7
+      "atr14": 14.21,
+      "atrPct": 3.08,
+      "volRatio": 0.86,
+      "dollarVol20dMio": 1091.1
     },
     "ABT": {
       "close": 88.41,
@@ -479,8 +479,8 @@
       "ueberSma200": false,
       "atr14": 2.24,
       "atrPct": 2.54,
-      "volRatio": 0.86,
-      "dollarVol20dMio": 1074.4
+      "volRatio": 3.06,
+      "dollarVol20dMio": 1213.9
     },
     "CAT": {
       "close": 985.82,
@@ -491,19 +491,19 @@
       "ueberSma200": true,
       "atr14": 37.29,
       "atrPct": 3.78,
-      "volRatio": 1.12,
-      "dollarVol20dMio": 2774.1
+      "volRatio": 2.08,
+      "dollarVol20dMio": 2923.6
     },
     "DE": {
-      "close": 589.24,
-      "datum": "2026-06-18",
-      "mom12_1": 6.76,
-      "dist52wHochPct": -12.6,
-      "sma200": 527.36,
+      "close": 588.47,
+      "datum": "2026-06-17",
+      "mom12_1": 6.68,
+      "dist52wHochPct": -12.71,
+      "sma200": 526.8,
       "ueberSma200": true,
-      "atr14": 18.08,
-      "atrPct": 3.07,
-      "volRatio": 0.86,
+      "atr14": 18.19,
+      "atrPct": 3.09,
+      "volRatio": 0.93,
       "dollarVol20dMio": 956.1
     },
     "BA": {
@@ -515,20 +515,20 @@
       "ueberSma200": true,
       "atr14": 7.9,
       "atrPct": 3.55,
-      "volRatio": 1.31,
-      "dollarVol20dMio": 1466.5
+      "volRatio": 1.34,
+      "dollarVol20dMio": 1468.8
     },
     "GE": {
       "close": 357.64,
       "datum": "2026-06-18",
       "mom12_1": 27.25,
-      "dist52wHochPct": -1.92,
+      "dist52wHochPct": -1.94,
       "sma200": 305.43,
       "ueberSma200": true,
       "atr14": 11.04,
       "atrPct": 3.09,
-      "volRatio": 0.77,
-      "dollarVol20dMio": 1683.7
+      "volRatio": 1.58,
+      "dollarVol20dMio": 1757.7
     },
     "HON": {
       "close": 229.01,
@@ -539,20 +539,20 @@
       "ueberSma200": true,
       "atr14": 7.97,
       "atrPct": 3.48,
-      "volRatio": 1.22,
-      "dollarVol20dMio": 1232.8
+      "volRatio": 1.24,
+      "dollarVol20dMio": 1233.8
     },
     "UNP": {
-      "close": 256.88,
-      "datum": "2026-06-18",
-      "mom12_1": 19.72,
-      "dist52wHochPct": -8.16,
-      "sma200": 242.12,
+      "close": 258.05,
+      "datum": "2026-06-17",
+      "mom12_1": 23.11,
+      "dist52wHochPct": -7.74,
+      "sma200": 241.95,
       "ueberSma200": true,
-      "atr14": 6.35,
-      "atrPct": 2.47,
-      "volRatio": 1.12,
-      "dollarVol20dMio": 786.8
+      "atr14": 6.49,
+      "atrPct": 2.52,
+      "volRatio": 1.19,
+      "dollarVol20dMio": 795.0
     },
     "UPS": {
       "close": 104.86,
@@ -564,7 +564,7 @@
       "atr14": 3.22,
       "atrPct": 3.07,
       "volRatio": 2.27,
-      "dollarVol20dMio": 614.7
+      "dollarVol20dMio": 614.8
     },
     "RTX": {
       "close": 185.6,
@@ -573,10 +573,10 @@
       "dist52wHochPct": -13.47,
       "sma200": 182.44,
       "ueberSma200": true,
-      "atr14": 5.29,
-      "atrPct": 2.85,
-      "volRatio": 1.51,
-      "dollarVol20dMio": 1054.6
+      "atr14": 5.3,
+      "atrPct": 2.86,
+      "volRatio": 1.56,
+      "dollarVol20dMio": 1057.2
     },
     "LMT": {
       "close": 510.95,
@@ -585,10 +585,10 @@
       "dist52wHochPct": -26.16,
       "sma200": 538.43,
       "ueberSma200": false,
-      "atr14": 13.56,
-      "atrPct": 2.65,
-      "volRatio": 1.72,
-      "dollarVol20dMio": 618.1
+      "atr14": 13.63,
+      "atrPct": 2.67,
+      "volRatio": 3.05,
+      "dollarVol20dMio": 666.6
     },
     "NOC": {
       "close": 521.5,
@@ -599,8 +599,8 @@
       "ueberSma200": false,
       "atr14": 15.45,
       "atrPct": 2.96,
-      "volRatio": 2.27,
-      "dollarVol20dMio": 545.7
+      "volRatio": 2.29,
+      "dollarVol20dMio": 546.3
     },
     "GS": {
       "close": 1096.56,
@@ -609,22 +609,22 @@
       "dist52wHochPct": -2.53,
       "sma200": 876.64,
       "ueberSma200": true,
-      "atr14": 37.54,
+      "atr14": 37.55,
       "atrPct": 3.42,
-      "volRatio": 0.96,
-      "dollarVol20dMio": 2560.2
+      "volRatio": 1.84,
+      "dollarVol20dMio": 2683.7
     },
     "MS": {
       "close": 223.17,
       "datum": "2026-06-18",
       "mom12_1": 49.24,
-      "dist52wHochPct": -3.12,
+      "dist52wHochPct": -3.17,
       "sma200": 175.55,
       "ueberSma200": true,
       "atr14": 6.37,
-      "atrPct": 2.85,
-      "volRatio": 1.1,
-      "dollarVol20dMio": 1357.9
+      "atrPct": 2.86,
+      "volRatio": 1.88,
+      "dollarVol20dMio": 1416.1
     },
     "BAC": {
       "close": 56.2,
@@ -635,8 +635,8 @@
       "ueberSma200": true,
       "atr14": 1.23,
       "atrPct": 2.19,
-      "volRatio": 1.77,
-      "dollarVol20dMio": 2224.5
+      "volRatio": 1.78,
+      "dollarVol20dMio": 2226.1
     },
     "WFC": {
       "close": 82.2,
@@ -646,9 +646,9 @@
       "sma200": 84.2,
       "ueberSma200": false,
       "atr14": 2.17,
-      "atrPct": 2.63,
-      "volRatio": 2.28,
-      "dollarVol20dMio": 1319.0
+      "atrPct": 2.64,
+      "volRatio": 2.29,
+      "dollarVol20dMio": 1319.8
     },
     "C": {
       "close": 143.06,
@@ -659,20 +659,20 @@
       "ueberSma200": true,
       "atr14": 4.05,
       "atrPct": 2.83,
-      "volRatio": 1.23,
-      "dollarVol20dMio": 1655.6
+      "volRatio": 2.38,
+      "dollarVol20dMio": 1763.7
     },
     "BLK": {
-      "close": 1050.09,
-      "datum": "2026-06-18",
-      "mom12_1": 7.36,
-      "dist52wHochPct": -13.92,
-      "sma200": 1069.67,
+      "close": 1057.38,
+      "datum": "2026-06-17",
+      "mom12_1": 6.93,
+      "dist52wHochPct": -13.33,
+      "sma200": 1069.99,
       "ueberSma200": false,
-      "atr14": 27.43,
-      "atrPct": 2.61,
-      "volRatio": 1.45,
-      "dollarVol20dMio": 746.9
+      "atr14": 26.71,
+      "atrPct": 2.53,
+      "volRatio": 1.12,
+      "dollarVol20dMio": 737.8
     },
     "SCHW": {
       "close": 91.7,
@@ -683,8 +683,8 @@
       "ueberSma200": false,
       "atr14": 2.27,
       "atrPct": 2.47,
-      "volRatio": 0.99,
-      "dollarVol20dMio": 1103.2
+      "volRatio": 2.14,
+      "dollarVol20dMio": 1174.3
     },
     "AXP": {
       "close": 338.0,
@@ -695,8 +695,8 @@
       "ueberSma200": true,
       "atr14": 8.46,
       "atrPct": 2.5,
-      "volRatio": 0.86,
-      "dollarVol20dMio": 977.3
+      "volRatio": 1.5,
+      "dollarVol20dMio": 1011.1
     },
     "PYPL": {
       "close": 42.51,
@@ -707,8 +707,8 @@
       "ueberSma200": false,
       "atr14": 1.39,
       "atrPct": 3.26,
-      "volRatio": 1.3,
-      "dollarVol20dMio": 691.7
+      "volRatio": 1.64,
+      "dollarVol20dMio": 704.5
     },
     "INTU": {
       "close": 267.0,
@@ -719,8 +719,8 @@
       "ueberSma200": false,
       "atr14": 16.3,
       "atrPct": 6.1,
-      "volRatio": 1.29,
-      "dollarVol20dMio": 2062.7
+      "volRatio": 1.3,
+      "dollarVol20dMio": 2063.5
     },
     "NOW": {
       "close": 95.04,
@@ -731,8 +731,8 @@
       "ueberSma200": false,
       "atr14": 7.5,
       "atrPct": 7.89,
-      "volRatio": 0.78,
-      "dollarVol20dMio": 3046.5
+      "volRatio": 1.11,
+      "dollarVol20dMio": 3100.6
     },
     "PANW": {
       "close": 287.78,
@@ -742,9 +742,9 @@
       "sma200": 196.14,
       "ueberSma200": true,
       "atr14": 13.4,
-      "atrPct": 4.65,
-      "volRatio": 1.25,
-      "dollarVol20dMio": 2635.6
+      "atrPct": 4.66,
+      "volRatio": 1.33,
+      "dollarVol20dMio": 2645.7
     },
     "ANET": {
       "close": 169.67,
@@ -753,10 +753,10 @@
       "dist52wHochPct": -5.63,
       "sma200": 142.17,
       "ueberSma200": true,
-      "atr14": 8.94,
-      "atrPct": 5.27,
-      "volRatio": 1.26,
-      "dollarVol20dMio": 1478.6
+      "atr14": 8.96,
+      "atrPct": 5.28,
+      "volRatio": 1.28,
+      "dollarVol20dMio": 1479.5
     },
     "MU": {
       "close": 1133.99,
@@ -767,8 +767,8 @@
       "ueberSma200": true,
       "atr14": 91.67,
       "atrPct": 8.08,
-      "volRatio": 1.13,
-      "dollarVol20dMio": 61559.3
+      "volRatio": 1.19,
+      "dollarVol20dMio": 61738.0
     },
     "LRCX": {
       "close": 389.04,
@@ -779,8 +779,8 @@
       "ueberSma200": true,
       "atr14": 26.16,
       "atrPct": 6.72,
-      "volRatio": 1.87,
-      "dollarVol20dMio": 4343.2
+      "volRatio": 2.02,
+      "dollarVol20dMio": 4379.4
     },
     "AMAT": {
       "close": 617.11,
@@ -792,7 +792,7 @@
       "atr14": 39.73,
       "atrPct": 6.44,
       "volRatio": 1.8,
-      "dollarVol20dMio": 5746.7
+      "dollarVol20dMio": 5747.7
     },
     "KLAC": {
       "close": 259.56,
@@ -803,8 +803,8 @@
       "ueberSma200": true,
       "atr14": 17.9,
       "atrPct": 6.9,
-      "volRatio": 1.82,
-      "dollarVol20dMio": 3273.0
+      "volRatio": 2.05,
+      "dollarVol20dMio": 3314.1
     },
     "SNPS": {
       "close": 455.51,
@@ -815,20 +815,20 @@
       "ueberSma200": false,
       "atr14": 20.61,
       "atrPct": 4.53,
-      "volRatio": 1.32,
-      "dollarVol20dMio": 994.0
+      "volRatio": 1.47,
+      "dollarVol20dMio": 1001.8
     },
     "CDNS": {
-      "close": 387.39,
-      "datum": "2026-06-18",
-      "mom12_1": 18.21,
-      "dist52wHochPct": -7.03,
-      "sma200": 326.32,
+      "close": 389.6,
+      "datum": "2026-06-17",
+      "mom12_1": 13.08,
+      "dist52wHochPct": -6.5,
+      "sma200": 326.1,
       "ueberSma200": true,
-      "atr14": 19.51,
-      "atrPct": 5.04,
-      "volRatio": 2.63,
-      "dollarVol20dMio": 1043.9
+      "atr14": 18.8,
+      "atrPct": 4.82,
+      "volRatio": 0.98,
+      "dollarVol20dMio": 951.5
     },
     "CEG": {
       "close": 274.06,
@@ -839,8 +839,8 @@
       "ueberSma200": false,
       "atr14": 10.94,
       "atrPct": 3.99,
-      "volRatio": 1.5,
-      "dollarVol20dMio": 1171.0
+      "volRatio": 1.62,
+      "dollarVol20dMio": 1178.8
     },
     "VST": {
       "close": 163.75,
@@ -851,8 +851,8 @@
       "ueberSma200": false,
       "atr14": 6.98,
       "atrPct": 4.26,
-      "volRatio": 1.63,
-      "dollarVol20dMio": 793.8
+      "volRatio": 1.64,
+      "dollarVol20dMio": 794.3
     },
     "NEE": {
       "close": 86.75,
@@ -864,43 +864,43 @@
       "atr14": 1.72,
       "atrPct": 1.98,
       "volRatio": 1.59,
-      "dollarVol20dMio": 1051.2
+      "dollarVol20dMio": 1051.3
     },
     "DUK": {
-      "close": 123.86,
-      "datum": "2026-06-18",
-      "mom12_1": 8.06,
-      "dist52wHochPct": -7.9,
+      "close": 123.73,
+      "datum": "2026-06-17",
+      "mom12_1": 8.51,
+      "dist52wHochPct": -8.0,
       "sma200": 124.05,
       "ueberSma200": false,
-      "atr14": 2.5,
-      "atrPct": 2.02,
-      "volRatio": 1.26,
-      "dollarVol20dMio": 397.6
+      "atr14": 2.48,
+      "atrPct": 2.0,
+      "volRatio": 1.02,
+      "dollarVol20dMio": 396.8
     },
     "SO": {
-      "close": 93.09,
-      "datum": "2026-06-18",
-      "mom12_1": 5.63,
-      "dist52wHochPct": -7.69,
+      "close": 92.53,
+      "datum": "2026-06-17",
+      "mom12_1": 6.47,
+      "dist52wHochPct": -8.24,
       "sma200": 92.51,
       "ueberSma200": true,
-      "atr14": 1.99,
-      "atrPct": 2.14,
-      "volRatio": 3.1,
-      "dollarVol20dMio": 606.8
+      "atr14": 1.95,
+      "atrPct": 2.1,
+      "volRatio": 1.23,
+      "dollarVol20dMio": 534.1
     },
     "LIN": {
-      "close": 512.15,
-      "datum": "2026-06-18",
-      "mom12_1": 10.45,
-      "dist52wHochPct": -2.61,
-      "sma200": 467.49,
+      "close": 515.85,
+      "datum": "2026-06-17",
+      "mom12_1": 9.8,
+      "dist52wHochPct": -1.91,
+      "sma200": 467.3,
       "ueberSma200": true,
-      "atr14": 10.76,
-      "atrPct": 2.1,
-      "volRatio": 2.0,
-      "dollarVol20dMio": 1324.6
+      "atr14": 10.72,
+      "atrPct": 2.08,
+      "volRatio": 0.86,
+      "dollarVol20dMio": 1253.4
     },
     "FCX": {
       "close": 68.68,
@@ -911,8 +911,8 @@
       "ueberSma200": true,
       "atr14": 3.51,
       "atrPct": 5.11,
-      "volRatio": 1.36,
-      "dollarVol20dMio": 902.2
+      "volRatio": 1.37,
+      "dollarVol20dMio": 902.4
     },
     "NEM": {
       "close": 103.79,
@@ -923,20 +923,20 @@
       "ueberSma200": true,
       "atr14": 5.02,
       "atrPct": 4.83,
-      "volRatio": 0.84,
-      "dollarVol20dMio": 854.9
+      "volRatio": 2.16,
+      "dollarVol20dMio": 918.2
     },
     "COP": {
-      "close": 107.74,
-      "datum": "2026-06-18",
-      "mom12_1": 30.45,
-      "dist52wHochPct": -20.7,
-      "sma200": 105.12,
+      "close": 111.21,
+      "datum": "2026-06-17",
+      "mom12_1": 31.01,
+      "dist52wHochPct": -18.15,
+      "sma200": 105.08,
       "ueberSma200": true,
-      "atr14": 3.62,
-      "atrPct": 3.36,
-      "volRatio": 2.94,
-      "dollarVol20dMio": 838.2
+      "atr14": 3.49,
+      "atrPct": 3.14,
+      "volRatio": 1.01,
+      "dollarVol20dMio": 769.4
     },
     "SLB": {
       "close": 48.09,
@@ -948,7 +948,7 @@
       "atr14": 2.1,
       "atrPct": 4.38,
       "volRatio": 2.67,
-      "dollarVol20dMio": 753.7
+      "dollarVol20dMio": 753.8
     },
     "EOG": {
       "close": 129.98,
@@ -959,8 +959,8 @@
       "ueberSma200": true,
       "atr14": 4.25,
       "atrPct": 3.27,
-      "volRatio": 1.2,
-      "dollarVol20dMio": 460.1
+      "volRatio": 3.1,
+      "dollarVol20dMio": 512.0
     },
     "HPE": {
       "close": 47.41,
@@ -971,8 +971,8 @@
       "ueberSma200": true,
       "atr14": 4.19,
       "atrPct": 8.84,
-      "volRatio": 1.2,
-      "dollarVol20dMio": 2045.5
+      "volRatio": 1.23,
+      "dollarVol20dMio": 2049.6
     },
     "IBM": {
       "close": 249.1,
@@ -983,8 +983,8 @@
       "ueberSma200": false,
       "atr14": 14.83,
       "atrPct": 5.95,
-      "volRatio": 1.27,
-      "dollarVol20dMio": 3226.0
+      "volRatio": 1.28,
+      "dollarVol20dMio": 3228.6
     },
     "CSCO": {
       "close": 119.54,
@@ -995,8 +995,8 @@
       "ueberSma200": true,
       "atr14": 4.48,
       "atrPct": 3.75,
-      "volRatio": 2.02,
-      "dollarVol20dMio": 3064.0
+      "volRatio": 2.04,
+      "dollarVol20dMio": 3067.0
     },
     "T": {
       "close": 22.01,
@@ -1007,8 +1007,8 @@
       "ueberSma200": false,
       "atr14": 0.66,
       "atrPct": 2.99,
-      "volRatio": 1.17,
-      "dollarVol20dMio": 1034.3
+      "volRatio": 1.93,
+      "dollarVol20dMio": 1077.4
     },
     "VZ": {
       "close": 45.37,
@@ -1019,8 +1019,8 @@
       "ueberSma200": true,
       "atr14": 1.25,
       "atrPct": 2.76,
-      "volRatio": 1.01,
-      "dollarVol20dMio": 1050.2
+      "volRatio": 2.62,
+      "dollarVol20dMio": 1147.7
     },
     "TMUS": {
       "close": 181.67,
@@ -1029,10 +1029,10 @@
       "dist52wHochPct": -30.54,
       "sma200": 207.07,
       "ueberSma200": false,
-      "atr14": 5.44,
-      "atrPct": 2.99,
-      "volRatio": 1.93,
-      "dollarVol20dMio": 982.1
+      "atr14": 5.45,
+      "atrPct": 3.0,
+      "volRatio": 2.28,
+      "dollarVol20dMio": 1001.3
     },
     "BKNG": {
       "close": 171.78,
@@ -1044,7 +1044,7 @@
       "atr14": 6.11,
       "atrPct": 3.55,
       "volRatio": 2.3,
-      "dollarVol20dMio": 1368.9
+      "dollarVol20dMio": 1369.1
     },
     "ABNB": {
       "close": 142.41,
@@ -1056,7 +1056,7 @@
       "atr14": 4.37,
       "atrPct": 3.07,
       "volRatio": 1.92,
-      "dollarVol20dMio": 550.4
+      "dollarVol20dMio": 550.5
     },
     "UBER": {
       "close": 71.64,
@@ -1067,8 +1067,8 @@
       "ueberSma200": false,
       "atr14": 2.31,
       "atrPct": 3.22,
-      "volRatio": 1.2,
-      "dollarVol20dMio": 1549.3
+      "volRatio": 1.25,
+      "dollarVol20dMio": 1554.2
     },
     "PLTR": {
       "close": 128.47,
@@ -1077,10 +1077,10 @@
       "dist52wHochPct": -38.09,
       "sma200": 159.91,
       "ueberSma200": false,
-      "atr14": 6.68,
+      "atr14": 6.69,
       "atrPct": 5.2,
-      "volRatio": 1.26,
-      "dollarVol20dMio": 5118.6
+      "volRatio": 1.38,
+      "dollarVol20dMio": 5152.0
     }
   },
   "etfs": {
@@ -1093,8 +1093,8 @@
       "ueberSma200": true,
       "atr14": 11.03,
       "atrPct": 1.48,
-      "volRatio": 1.17,
-      "dollarVol20dMio": 43211.2
+      "volRatio": 1.38,
+      "dollarVol20dMio": 43696.9
     },
     "QQQ": {
       "close": 740.62,
@@ -1103,10 +1103,10 @@
       "dist52wHochPct": -1.07,
       "sma200": 628.63,
       "ueberSma200": true,
-      "atr14": 18.39,
+      "atr14": 18.4,
       "atrPct": 2.48,
-      "volRatio": 1.01,
-      "dollarVol20dMio": 36090.8
+      "volRatio": 1.03,
+      "dollarVol20dMio": 36122.7
     },
     "IWM": {
       "close": 295.59,
@@ -1117,8 +1117,8 @@
       "ueberSma200": true,
       "atr14": 6.72,
       "atrPct": 2.27,
-      "volRatio": 1.09,
-      "dollarVol20dMio": 8729.8
+      "volRatio": 1.1,
+      "dollarVol20dMio": 8734.7
     },
     "TQQQ": {
       "close": 82.87,
@@ -1129,30 +1129,30 @@
       "ueberSma200": true,
       "atr14": 5.97,
       "atrPct": 7.2,
-      "volRatio": 0.8,
-      "dollarVol20dMio": 6248.0
+      "volRatio": 0.81,
+      "dollarVol20dMio": 6252.2
     },
     "VIX": {
-      "close": 16.4,
-      "datum": "2026-06-18",
+      "close": 16.78,
+      "datum": "2026-06-19",
       "mom12_1": -18.72,
-      "dist52wHochPct": -53.54,
+      "dist52wHochPct": -52.46,
       "sma200": 18.56,
       "ueberSma200": false,
-      "atr14": 2.51,
-      "atrPct": 15.33,
+      "atr14": 2.49,
+      "atrPct": 14.83,
       "volRatio": null,
       "dollarVol20dMio": null
     },
     "IRX": {
-      "close": 3.66,
-      "datum": "2026-06-18",
-      "mom12_1": -15.38,
-      "dist52wHochPct": -14.03,
+      "close": 3.62,
+      "datum": "2026-06-12",
+      "mom12_1": -15.74,
+      "dist52wHochPct": -15.96,
       "sma200": 3.67,
       "ueberSma200": false,
       "atr14": 0.01,
-      "atrPct": 0.33,
+      "atrPct": 0.26,
       "volRatio": null,
       "dollarVol20dMio": null
     }
@@ -1160,7 +1160,7 @@
   "regime": {
     "spyZone": "risk_on",
     "qqqZone": "risk_on",
-    "vixClose": 16.4,
+    "vixClose": 16.78,
     "vixUnter25": true
   },
   "fehler": [],
@@ -1268,43 +1268,79 @@
   ],
   "volumenSpikes": [
     {
-      "ticker": "SO",
+      "ticker": "CRM",
       "volRatio": 3.1
     },
     {
-      "ticker": "COP",
-      "volRatio": 2.94
+      "ticker": "EOG",
+      "volRatio": 3.1
+    },
+    {
+      "ticker": "ABT",
+      "volRatio": 3.06
+    },
+    {
+      "ticker": "LMT",
+      "volRatio": 3.05
+    },
+    {
+      "ticker": "XOM",
+      "volRatio": 2.67
     },
     {
       "ticker": "SLB",
       "volRatio": 2.67
     },
     {
-      "ticker": "CDNS",
-      "volRatio": 2.63
-    },
-    {
-      "ticker": "XOM",
-      "volRatio": 2.6
+      "ticker": "VZ",
+      "volRatio": 2.62
     },
     {
       "ticker": "KO",
       "volRatio": 2.57
     },
     {
+      "ticker": "DIS",
+      "volRatio": 2.45
+    },
+    {
+      "ticker": "TXN",
+      "volRatio": 2.42
+    },
+    {
+      "ticker": "MRK",
+      "volRatio": 2.41
+    },
+    {
+      "ticker": "C",
+      "volRatio": 2.38
+    },
+    {
       "ticker": "JNJ",
-      "volRatio": 2.33
+      "volRatio": 2.36
     },
     {
       "ticker": "NFLX",
-      "volRatio": 2.31
+      "volRatio": 2.33
     },
     {
       "ticker": "BKNG",
       "volRatio": 2.3
     },
     {
+      "ticker": "CMCSA",
+      "volRatio": 2.29
+    },
+    {
+      "ticker": "NOC",
+      "volRatio": 2.29
+    },
+    {
       "ticker": "WFC",
+      "volRatio": 2.29
+    },
+    {
+      "ticker": "TMUS",
       "volRatio": 2.28
     },
     {
@@ -1312,24 +1348,48 @@
       "volRatio": 2.27
     },
     {
-      "ticker": "NOC",
-      "volRatio": 2.27
+      "ticker": "NEM",
+      "volRatio": 2.16
+    },
+    {
+      "ticker": "SCHW",
+      "volRatio": 2.14
     },
     {
       "ticker": "JPM",
-      "volRatio": 2.07
+      "volRatio": 2.08
     },
     {
-      "ticker": "TXN",
+      "ticker": "CVX",
+      "volRatio": 2.08
+    },
+    {
+      "ticker": "QCOM",
+      "volRatio": 2.08
+    },
+    {
+      "ticker": "CAT",
+      "volRatio": 2.08
+    },
+    {
+      "ticker": "KLAC",
       "volRatio": 2.05
     },
     {
+      "ticker": "PEP",
+      "volRatio": 2.04
+    },
+    {
       "ticker": "CSCO",
+      "volRatio": 2.04
+    },
+    {
+      "ticker": "HD",
       "volRatio": 2.02
     },
     {
-      "ticker": "LIN",
-      "volRatio": 2.0
+      "ticker": "LRCX",
+      "volRatio": 2.02
     }
   ]
 }
