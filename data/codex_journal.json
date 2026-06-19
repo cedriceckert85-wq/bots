@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_CODEX)",
     "alpaca": true,
     "hinweis": "CODEX - Challenger gegen SOLID und RISK. Ziel: risikoadjustierte Outperformance durch Quality-Momentum, Anti-Crowding und strengere Entry-Bestaetigung.",
-    "hinweisLetzterLauf": "CODEX Trade C-004 CSCO fuer Snapshot 2026-06-17 geschrieben. Paper only, keine Alpaca-Order."
+    "hinweisLetzterLauf": "CODEX No-Trade 2026-06-19 fuer Snapshot 2026-06-18: max_open_erreicht"
   },
   "positionen": [],
   "trades": [
@@ -153,6 +153,31 @@
       "tradeId": "C-004",
       "ticker": "CSCO",
       "score": 61.65
+    },
+    {
+      "datum": "2026-06-19T05:57:20.227429+00:00",
+      "snapshotAsOf": "2026-06-18",
+      "aktion": "no_trade",
+      "gruende": [
+        "max_open_erreicht"
+      ],
+      "topKandidat": {
+        "ticker": "C",
+        "cluster": "financials",
+        "score": 65.41,
+        "mom12_1": 59.31,
+        "dist52wHochPct": -3.31,
+        "atrPct": 2.83,
+        "volRatio": 1.23,
+        "close": 143.06,
+        "atr14": 4.05,
+        "entry": 144.07,
+        "stop": 133.95,
+        "tp": 169.38,
+        "crv": 2.5,
+        "maxHaltezeitTage": 12,
+        "referencePenalty": 0.0
+      }
     }
   ]
 }
