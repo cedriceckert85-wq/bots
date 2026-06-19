@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_SOLID)",
     "alpaca": true,
     "hinweis": "SOLID - Evidenz-Bot (SPEC_SOLID.md, Stufe-1-Regeln: STUFE1.md). Live seit 12.06.2026 auf Nutzer-Kommando.",
-    "hinweisLetzterLauf": "Lauf 2026-06-18: 1 MOMENTUM-TRADE (LRCX S-004). Snapshot asOf 2026-06-17 (= letzter US-Handelstag Mi, Fail-closed-Gate bestanden). Regime risk_on (spyZone/qqqZone risk_on, VIX 18.44). MU S-001 zwischenzeitlich VERFALLEN (Limit nie gefuellt) -> nur noch 2/3 Slots belegt (INTC S-002, AMD S-003 offen) -> 1 freier Slot, risk_on -> 1 neuer Trade. Momentum Top-10: MU(R1) BEWUSST UEBERSPRUNGEN wg. Earnings 24.06.2026 (Order fuellt erst Mo 22. wg. Juneteenth-Feiertag Fr 19., dann nur 2 Sitzungen bis Earnings -> Held-into-Earnings-Binaerrisiko, ATR-Stop ~21% breit); INTC/AMD bereits gehalten; GOOGL/KLAC/HPE/NEM via dist52wHoch<-10 gesperrt. Gewaehlt: LRCX (R4, dist -5.88, volRatio 1.03, Earnings 29.07. weit weg). News-Drift: kein qualifizierter Kandidat. bremseAktiv false."
+    "hinweisLetzterLauf": "Lauf 2026-06-19 (Juneteenth, US-Boerse zu): KEIN TRADE. Snapshot asOf 2026-06-18 (= letzter US-Handelstag Do, Fail-closed-Gate bestanden). Regime risk_on (spyZone/qqqZone risk_on, VIX 16.4). MOMENTUM: 0 neue - 3/3 Slots belegt (INTC S-002 offen, AMD S-003 offen, LRCX S-004 wartet/fuellt fruehestens Mo 22.; MU S-001 verfallen). NEWS-DRIFT: 0 - FDA-Katalysatoren 17.06. (uniQure QURE +75% Huntington-Gentherapie; Spero SPRO/GSK Antibiotikum-Zulassung) alle AUSSERHALB kuratiertem 90er-Universum (Biotech-Small/Mid-Caps), QURE zudem Buzz-Spike (volRatio>=3 gesperrt) und News >24h alt. bremseAktiv false."
   },
   "positionen": [],
   "trades": [
