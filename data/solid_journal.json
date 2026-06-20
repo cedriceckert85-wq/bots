@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_SOLID)",
     "alpaca": true,
     "hinweis": "SOLID - Evidenz-Bot (SPEC_SOLID.md, Stufe-1-Regeln: STUFE1.md). Live seit 12.06.2026 auf Nutzer-Kommando.",
-    "hinweisLetzterLauf": "Lauf 2026-06-19 (Juneteenth, US-Boerse zu): KEIN TRADE. Snapshot asOf 2026-06-18 (= letzter US-Handelstag Do, Fail-closed-Gate bestanden). Regime risk_on (spyZone/qqqZone risk_on, VIX 16.4). MOMENTUM: 0 neue - 3/3 Slots belegt (INTC S-002 offen, AMD S-003 offen, LRCX S-004 wartet/fuellt fruehestens Mo 22.; MU S-001 verfallen). NEWS-DRIFT: 0 - FDA-Katalysatoren 17.06. (uniQure QURE +75% Huntington-Gentherapie; Spero SPRO/GSK Antibiotikum-Zulassung) alle AUSSERHALB kuratiertem 90er-Universum (Biotech-Small/Mid-Caps), QURE zudem Buzz-Spike (volRatio>=3 gesperrt) und News >24h alt. bremseAktiv false."
+    "hinweisLetzterLauf": "Lauf 2026-06-20 (Sa, nach Juneteenth): KEIN TRADE. Snapshot asOf 2026-06-18 (= letzter US-Handelstag Do; Fr 19.06. Juneteenth-Feiertag; Fail-closed-Gate bestanden). Regime risk_on (spyZone/qqqZone risk_on, VIX 16.78). MOMENTUM: 0 neue - 3/3 Slots belegt (INTC S-002 offen, AMD S-003 offen, LRCX S-004 wartet/fuellt fruehestens Mo 22.; MU S-001 verfallen). NEWS-DRIFT: 0 - kein Universums-Ticker mit frischer (<24h) fundamentaler Positiv-News. Mid-June-/Wochenend-M&A (Fox/Roku $22B, GSK/Nuvalent 09.06., Ingredion/Tate&Lyle 08.06., Zydus/Assertio 16.06.) entweder >24h alt oder ausserhalb 90er-Universum (FOXA/FOX/ROKU nicht im Universum). bremseAktiv false."
   },
   "positionen": [],
   "trades": [
