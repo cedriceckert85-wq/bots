@@ -1,11 +1,7 @@
 name: DAYTRADER Signal
 
 on:
-  schedule:
-    # US-Open + ca. 10 Minuten. Beide UTC-Zeiten decken Sommer/Winterzeit ab;
-    # das Script schreibt nur im fruehen Signalfenster und nie rueckwirkend.
-    - cron: '40 13 * * 1-5'
-    - cron: '40 14 * * 1-5'
+  # schedule: DEAKTIVIERT 2026-06-21 (Flotte 2.0: alles auf den Pi -> Orders laufen ueber die Pi-Session/Timer durchs Risk-Gate, nicht aus der Cloud). Manuell weiter via workflow_dispatch.
   workflow_dispatch:
 
 permissions:

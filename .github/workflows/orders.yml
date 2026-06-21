@@ -1,10 +1,7 @@
 name: Alpaca-Orders SOLID+RISK+CODEX
 
 on:
-  schedule:
-    # Di-Sa 01:26 UTC = 03:26 Berlin — NACH den Entscheider-Läufen (02:53/03:08 Berlin),
-    # damit frische Journal-Trades sofort als Bracket-Orders ins jeweilige Konto gehen.
-    - cron: '26 1 * * 2-6'
+  # schedule: DEAKTIVIERT 2026-06-21 (Flotte 2.0: alles auf den Pi -> Orders laufen ueber die Pi-Session/Timer durchs Risk-Gate, nicht aus der Cloud). Manuell weiter via workflow_dispatch.
   workflow_dispatch:
 
 permissions:

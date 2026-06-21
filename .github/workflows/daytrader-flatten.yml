@@ -1,10 +1,7 @@
 name: DAYTRADER Close Guard
 
 on:
-  schedule:
-    # 15:45 New York in Sommer/Winter. Das Script prueft die echte NY-Zeit.
-    - cron: '45 19 * * 1-5'
-    - cron: '45 20 * * 1-5'
+  # schedule: DEAKTIVIERT 2026-06-21 (Flotte 2.0: alles auf den Pi -> Orders laufen ueber die Pi-Session/Timer durchs Risk-Gate, nicht aus der Cloud). Manuell weiter via workflow_dispatch.
   workflow_dispatch:
 
 permissions:

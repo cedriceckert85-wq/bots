@@ -26,6 +26,18 @@ from alpaca_common import (
     qty_for_risk,
 )
 
+# Flotte 2.0: Orders NUR ueber das zentrale Risk-Gate (steuerung/pi/bin/order_gate.py).
+# Nicht erreichbar -> KEINE Order direkt (fail-safe).
+import sys as _sys  # noqa: E402
+_GATE_BIN = str(Path(__file__).resolve().parents[3] / "steuerung" / "pi" / "bin")
+if _GATE_BIN not in _sys.path:
+    _sys.path.insert(0, _GATE_BIN)
+try:
+    from order_gate import submit_order as _gate_submit  # noqa: E402
+except Exception as _e:  # pragma: no cover
+    _gate_submit = None
+    print(f"WARN order_gate nicht erreichbar ({_e}) -> Orders werden NICHT direkt gesetzt.")
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SNAPSHOT = ROOT / "data" / "quant_snapshot.json"
@@ -44,9 +56,13 @@ def load_json(path: Path) -> dict:
 
 
 def write_json(path: Path, data: dict) -> None:
-    with path.open("w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-        f.write("\n")
+    try:
+        from atomwrite import write_atomic as _wa
+        _wa(str(path), json.dumps(data, ensure_ascii=False, indent=2) + "\n")
+    except Exception:
+        with path.open("w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+            f.write("\n")
 
 
 def r2(x: float) -> float:
@@ -296,7 +312,14 @@ def place_alpaca_order(keys: tuple[str, str], trade: dict) -> bool:
         "take_profit": {"limit_price": price(trade["tp"])},
         "stop_loss": {"stop_price": price(trade["stop"])},
     }
-    order = api(keys, "/orders", "POST", body)
+    if _gate_submit is None:
+        trade.setdefault("log", []).append("Alpaca: Risk-Gate nicht erreichbar -> kein Order")
+        return True
+    order = _gate_submit("daytrade", body)
+    if not order or not order.get("id"):
+        grund = (order or {}).get("reason") or (order or {}).get("gate") or "kein Versand"
+        trade.setdefault("log", []).append(f"Alpaca: Order nicht platziert ({grund})")
+        return True
     trade["alpaca"] = {
         "orderId": order["id"],
         "qty": qty,
@@ -321,13 +344,17 @@ def place_flatten_order(keys: tuple[str, str], trade: dict, order: dict) -> bool
                 api(keys, f"/orders/{leg['id']}", "DELETE")
             except RuntimeError as exc:
                 trade.setdefault("log", []).append(f"Alpaca: Leg-Cancel fehlgeschlagen: {exc}")
-    exit_order = api(keys, "/orders", "POST", {
+    exit_order = _gate_submit("daytrade", {
         "symbol": trade["ticker"],
         "qty": str(trade["alpaca"]["qty"]),
         "side": "sell",
         "type": "market",
         "time_in_force": "day",
-    })
+    }) if _gate_submit else None
+    if not exit_order or not exit_order.get("id"):
+        trade.setdefault("log", []).append(
+            f"Alpaca: Close-Guard-Exit nicht platziert ({(exit_order or {}).get('reason', 'Gate?')})")
+        return False
     trade["exitOrderId"] = exit_order["id"]
     trade.setdefault("log", []).append("Alpaca: Close-Guard Market-Exit platziert")
     return True

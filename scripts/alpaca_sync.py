@@ -17,6 +17,25 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from alpaca_common import api, keys_from_env, price, qty_for_risk  # noqa: E402
 from trade_eval import r_multiple, statistik_neu  # noqa: E402
 
+# Flotte 2.0: Orders NUR ueber das zentrale Risk-Gate (steuerung/pi/bin/order_gate.py).
+# Nicht erreichbar (z.B. fremder Cloud-Runner ohne steuerung/) -> KEINE Order direkt
+# (fail-safe: lieber Yahoo-Simulation als am Gate vorbei zu handeln).
+_GATE_BIN = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                          "..", "..", "..", "steuerung", "pi", "bin"))
+if _GATE_BIN not in sys.path:
+    sys.path.insert(0, _GATE_BIN)
+try:
+    from order_gate import submit_order as _gate_submit  # noqa: E402
+except Exception as _e:  # pragma: no cover
+    _gate_submit = None
+    print(f"WARN order_gate nicht erreichbar ({_e}) -> Orders werden NICHT direkt gesetzt.")
+
+
+def _gate_name(bot):
+    """Bot-Name fuers Gate aus dem Key-Prefix (ALPACA_SOLID -> solid)."""
+    return bot["prefix"].replace("ALPACA_", "").lower()
+
+
 BOTS = [
     {"journal": "data/solid_journal.json", "prefix": "ALPACA_SOLID", "risiko_usd": 1000},
     {"journal": "data/risk_journal.json", "prefix": "ALPACA_RISK", "risiko_usd": 2000, "sizing": "position", "position_pct": 0.30},
@@ -59,7 +78,14 @@ def order_anlegen(keys, t, bot):
             "take_profit": {"limit_price": price(t["tp"])},
             "stop_loss": {"stop_price": price(t["stop"])}}
     body["limit_price" if typ == "limit" else "stop_price"] = price(t["entry"])
-    o = api(keys, "/orders", "POST", body)
+    if _gate_submit is None:
+        t.setdefault("log", []).append("Alpaca: Risk-Gate nicht erreichbar -> Yahoo-Simulation")
+        return
+    o = _gate_submit(_gate_name(bot), body)
+    if not o or not o.get("id"):
+        grund = (o or {}).get("reason") or (o or {}).get("gate") or "kein Versand"
+        t.setdefault("log", []).append(f"Alpaca: Order nicht platziert ({grund}) -> Yahoo-Simulation")
+        return
     t["alpaca"] = {"orderId": o["id"], "qty": qty}
     t.setdefault("log", []).append(f"Alpaca: Bracket-Order platziert ({qty} Stk.)")
     print(f"{t['id']} {t['ticker']}: Bracket {qty} Stk.")
@@ -102,11 +128,15 @@ def order_sync(keys, t, bot):
                         except RuntimeError:
                             pass
                 seite = "sell" if t["richtung"] == "long" else "buy"
-                eo = api(keys, "/orders", "POST", {
+                eo = _gate_submit(_gate_name(bot), {
                     "symbol": t["ticker"], "qty": str(t["alpaca"]["qty"]),
-                    "side": seite, "type": "market", "time_in_force": "opg"})
-                t["exitOrderId"] = eo["id"]
-                t.setdefault("log", []).append("Haltedauer erreicht -> MOO-Exit platziert")
+                    "side": seite, "type": "market", "time_in_force": "opg"}) if _gate_submit else None
+                if eo and eo.get("id"):
+                    t["exitOrderId"] = eo["id"]
+                    t.setdefault("log", []).append("Haltedauer erreicht -> MOO-Exit platziert")
+                else:
+                    t.setdefault("log", []).append(
+                        f"MOO-Exit nicht platziert ({(eo or {}).get('reason', 'Gate?')}) -> naechster Lauf")
     if t["status"] in ("gewonnen", "verloren", "zeit_exit") and "ergebnisR" not in t:
         t["ergebnisR"] = r_multiple(t, t["exitKurs"])
         if bot.get("sizing") == "position":
@@ -140,9 +170,13 @@ def main():
                 print(f"{t['id']}: {e}")
         d["statistik"] = statistik_neu(d["trades"])
         if json.dumps(d, sort_keys=True) != vorher:
-            with open(bot["journal"], "w", encoding="utf-8") as f:
-                json.dump(d, f, ensure_ascii=False, indent=2)
-                f.write("\n")
+            try:
+                from atomwrite import write_atomic as _wa
+                _wa(bot["journal"], json.dumps(d, ensure_ascii=False, indent=2) + "\n")
+            except Exception:
+                with open(bot["journal"], "w", encoding="utf-8") as f:
+                    json.dump(d, f, ensure_ascii=False, indent=2)
+                    f.write("\n")
             print(bot["journal"], "aktualisiert (Alpaca).")
         else:
             print(bot["journal"], "unveraendert (Alpaca).")
