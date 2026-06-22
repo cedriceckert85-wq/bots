@@ -177,9 +177,14 @@
       "tp": 1137.42,
       "crv": 2.28,
       "maxHaltezeitTage": 10,
-      "status": "wartet",
+      "status": "offen",
       "begruendung": "Engine A Momentum-Leader: Rang 5 im momentumRanking (mom12_1=140.48), dist52wHochPct=-2.02 >= -5, ueberSma200=true. close=955.92, ATR14=36.3. Entry=close*1.005=960.70 (Stop-Order/Breakout-Bestaetigung), Stop=close-2*ATR=883.32, TP=close+5*ATR=1137.42 (CRV 2.28). Einziger Top-5-Kandidat mit dist>=-5 (MU -6.05 / INTC -8.78 / AMD -8.22 / LRCX -5.88 weiter disqualifiziert; AMAT -4.88 ist Rang 6 ausserhalb Top-5). Vortags-CAT R-006 verfallen (Breakout nicht getriggert), keine offene CAT-Position - Neuauflage des Breakout-Setups mit frischem Snapshot. Earnings naechste: 05.08.2026 (Q2; gestern via WebSearch verifiziert, Quartalstermin unveraendert) - ausserhalb 2-Handelstage-Fenster. Regime risk_on (volle Positionsgroesse). Snapshot asOf 2026-06-17.",
-      "snapshotAsOf": "2026-06-17"
+      "snapshotAsOf": "2026-06-17",
+      "entryFill": 999.28,
+      "entryDatum": "2026-06-22",
+      "log": [
+        "2026-06-22 Entry-Fill 999.28"
+      ]
     }
   ],
   "statistik": {

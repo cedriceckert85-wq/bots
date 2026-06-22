@@ -76,13 +76,17 @@
       "tp": 446.12,
       "crv": 2.5,
       "maxHaltezeitTage": 12,
-      "status": "wartet",
+      "status": "verfallen",
       "risikoUsd": 1500,
       "score": 78.76,
       "cluster": "mega_tech",
       "snapshotAsOf": "2026-06-16",
       "createdBy": "codex_challenger.py",
-      "begruendung": "CODEX Engine A: Quality-Momentum-Confirmed. Score 78.76; mom12_1 124.55%, 52W-Distanz -8.65%, ATR 3.0%, Cluster mega_tech. Entry nur per Bestaetigungs-Stop; kein TQQQ-/Buzz-Duplikat."
+      "begruendung": "CODEX Engine A: Quality-Momentum-Confirmed. Score 78.76; mom12_1 124.55%, 52W-Distanz -8.65%, ATR 3.0%, Cluster mega_tech. Entry nur per Bestaetigungs-Stop; kein TQQQ-/Buzz-Duplikat.",
+      "log": [
+        "Alpaca: Risk-Gate nicht erreichbar -> Yahoo-Simulation",
+        "Entry 2 Handelstage nicht getriggert -> verfallen"
+      ]
     },
     {
       "id": "C-004",
@@ -98,21 +102,27 @@
       "tp": 147.1,
       "crv": 2.5,
       "maxHaltezeitTage": 12,
-      "status": "wartet",
+      "status": "offen",
       "risikoUsd": 1500,
       "score": 61.65,
       "cluster": "other",
       "snapshotAsOf": "2026-06-17",
       "createdBy": "codex_challenger.py",
-      "begruendung": "CODEX Engine A: Quality-Momentum-Confirmed. Score 61.65; mom12_1 76.61%, 52W-Distanz -10.0%, ATR 3.9%, Cluster other. Entry nur per Bestaetigungs-Stop; kein TQQQ-/Buzz-Duplikat."
+      "begruendung": "CODEX Engine A: Quality-Momentum-Confirmed. Score 61.65; mom12_1 76.61%, 52W-Distanz -10.0%, ATR 3.9%, Cluster other. Entry nur per Bestaetigungs-Stop; kein TQQQ-/Buzz-Duplikat.",
+      "log": [
+        "Alpaca: Risk-Gate nicht erreichbar -> Yahoo-Simulation",
+        "2026-06-22 Entry-Fill 119.60"
+      ],
+      "entryFill": 119.6,
+      "entryDatum": "2026-06-22"
     }
   ],
   "statistik": {
     "trades": 0,
     "gewonnen": 0,
     "verloren": 0,
-    "verfallen": 0,
-    "offen": 4,
+    "verfallen": 1,
+    "offen": 3,
     "trefferquote": null,
     "summeR": 0,
     "erwartungswertR": null,
