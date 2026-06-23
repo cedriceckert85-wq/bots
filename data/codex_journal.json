@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_CODEX)",
     "alpaca": true,
     "hinweis": "CODEX - Challenger gegen SOLID und RISK. Ziel: risikoadjustierte Outperformance durch Quality-Momentum, Anti-Crowding und strengere Entry-Bestaetigung.",
-    "hinweisLetzterLauf": "CODEX No-Trade 2026-06-20 fuer Snapshot 2026-06-18: max_open_erreicht"
+    "hinweisLetzterLauf": "CODEX Trade C-005 GOOGL fuer Snapshot 2026-06-22 geschrieben. Paper only, keine Alpaca-Order."
   },
   "positionen": [],
   "trades": [
@@ -115,6 +115,28 @@
       ],
       "entryFill": 119.6,
       "entryDatum": "2026-06-22"
+    },
+    {
+      "id": "C-005",
+      "datumEmpfehlung": "2026-06-23",
+      "aktie": "GOOGL",
+      "ticker": "GOOGL",
+      "yahooSymbol": "GOOGL",
+      "richtung": "long",
+      "engine": "A",
+      "entryTyp": "stop",
+      "entry": 352.9,
+      "stop": 320.72,
+      "tp": 433.33,
+      "crv": 2.5,
+      "maxHaltezeitTage": 12,
+      "status": "wartet",
+      "risikoUsd": 1500,
+      "score": 66.31,
+      "cluster": "mega_tech",
+      "snapshotAsOf": "2026-06-22",
+      "createdBy": "codex_challenger.py",
+      "begruendung": "CODEX Engine A: Quality-Momentum-Confirmed. Score 66.31; mom12_1 132.63%, 52W-Distanz -14.42%, ATR 3.68%, Cluster mega_tech. Entry nur per Bestaetigungs-Stop; kein TQQQ-/Buzz-Duplikat."
     }
   ],
   "statistik": {
@@ -213,6 +235,14 @@
         "maxHaltezeitTage": 12,
         "referencePenalty": 0.0
       }
+    },
+    {
+      "datum": "2026-06-23T04:45:33.858439+00:00",
+      "snapshotAsOf": "2026-06-22",
+      "aktion": "trade",
+      "tradeId": "C-005",
+      "ticker": "GOOGL",
+      "score": 66.31
     }
   ]
 }
