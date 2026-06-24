@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_CODEX)",
     "alpaca": true,
     "hinweis": "CODEX - Challenger gegen SOLID und RISK. Ziel: risikoadjustierte Outperformance durch Quality-Momentum, Anti-Crowding und strengere Entry-Bestaetigung.",
-    "hinweisLetzterLauf": "CODEX Trade C-005 GOOGL fuer Snapshot 2026-06-22 geschrieben. Paper only, keine Alpaca-Order."
+    "hinweisLetzterLauf": "CODEX No-Trade 2026-06-24 fuer Snapshot 2026-06-23: max_open_erreicht"
   },
   "positionen": [],
   "trades": [
@@ -246,6 +246,31 @@
       "tradeId": "C-005",
       "ticker": "GOOGL",
       "score": 66.31
+    },
+    {
+      "datum": "2026-06-24T04:51:04.185541+00:00",
+      "snapshotAsOf": "2026-06-23",
+      "aktion": "no_trade",
+      "gruende": [
+        "max_open_erreicht"
+      ],
+      "topKandidat": {
+        "ticker": "MRK",
+        "cluster": "healthcare",
+        "score": 62.94,
+        "mom12_1": 52.71,
+        "dist52wHochPct": -4.43,
+        "atrPct": 2.8,
+        "volRatio": 0.8,
+        "close": 119.6,
+        "atr14": 3.35,
+        "entry": 120.44,
+        "stop": 112.06,
+        "tp": 141.38,
+        "crv": 2.5,
+        "maxHaltezeitTage": 12,
+        "referencePenalty": 0.0
+      }
     }
   ]
 }
