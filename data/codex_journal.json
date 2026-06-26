@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_CODEX)",
     "alpaca": true,
     "hinweis": "CODEX - Challenger gegen SOLID und RISK. Ziel: risikoadjustierte Outperformance durch Quality-Momentum, Anti-Crowding und strengere Entry-Bestaetigung.",
-    "hinweisLetzterLauf": "CODEX No-Trade 2026-06-25 fuer Snapshot 2026-06-24: max_open_erreicht"
+    "hinweisLetzterLauf": "CODEX No-Trade 2026-06-26 fuer Snapshot 2026-06-25: max_open_erreicht"
   },
   "positionen": [],
   "trades": [
@@ -296,6 +296,31 @@
         "entry": 144.53,
         "stop": 135.09,
         "tp": 168.16,
+        "crv": 2.5,
+        "maxHaltezeitTage": 12,
+        "referencePenalty": 0.0
+      }
+    },
+    {
+      "datum": "2026-06-26T04:57:51.018326+00:00",
+      "snapshotAsOf": "2026-06-25",
+      "aktion": "no_trade",
+      "gruende": [
+        "max_open_erreicht"
+      ],
+      "topKandidat": {
+        "ticker": "JNJ",
+        "cluster": "healthcare",
+        "score": 61.13,
+        "mom12_1": 51.88,
+        "dist52wHochPct": -2.71,
+        "atrPct": 2.26,
+        "volRatio": 1.14,
+        "close": 244.88,
+        "atr14": 5.54,
+        "entry": 246.26,
+        "stop": 232.41,
+        "tp": 280.89,
         "crv": 2.5,
         "maxHaltezeitTage": 12,
         "referencePenalty": 0.0
