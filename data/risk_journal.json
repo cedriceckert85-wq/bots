@@ -50,14 +50,18 @@
       "tp": 480.96,
       "crv": 2.37,
       "maxHaltezeitTage": 10,
-      "status": "offen",
+      "status": "zeit_exit",
       "begruendung": "Engine A Momentum-Leader: Rang 4 im momentumRanking (mom12_1=226.37), dist52wHochPct=-1.88 >= -5, ueberSma200=true. close=366.81, ATR14=22.83. Entry=close*1.005=368.64, Stop=close-2*ATR=321.15, TP=close+5*ATR=480.96. Earnings naechste: Ende Juli/Anfang August 2026 – kein 2-Handelstage-Konflikt (Quelle: tipranks.com/stocks/lrcx/earnings). Snapshot asOf 2026-06-12.",
       "snapshotAsOf": "2026-06-12",
       "entryFill": 385.63,
       "entryDatum": "2026-06-15",
       "log": [
         "2026-06-15 Entry-Fill 385.63"
-      ]
+      ],
+      "exitDatum": "2026-06-29",
+      "exitKurs": 410.91,
+      "ergebnisR": 0.39,
+      "pnlEur": 780.0
     },
     {
       "id": "R-003",
@@ -188,14 +192,14 @@
     }
   ],
   "statistik": {
-    "trades": 0,
-    "gewonnen": 0,
+    "trades": 1,
+    "gewonnen": 1,
     "verloren": 0,
     "verfallen": 2,
-    "offen": 5,
-    "trefferquote": null,
-    "summeR": 0,
-    "erwartungswertR": null,
+    "offen": 4,
+    "trefferquote": 100.0,
+    "summeR": 0.39,
+    "erwartungswertR": 0.39,
     "profitFactor": null,
     "aktuelleVerlustserie": 0,
     "groessteVerlustserie": 0,
