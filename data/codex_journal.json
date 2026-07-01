@@ -22,7 +22,7 @@
       "tp": 785.26,
       "crv": 2.5,
       "maxHaltezeitTage": 12,
-      "status": "offen",
+      "status": "zeit_exit",
       "risikoUsd": 1500,
       "score": 72.36,
       "cluster": "semis",
@@ -33,7 +33,11 @@
       "entryDatum": "2026-06-15",
       "log": [
         "2026-06-15 Entry-Fill 589.99"
-      ]
+      ],
+      "exitDatum": "2026-07-01",
+      "exitKurs": 650.91,
+      "ergebnisR": 0.62,
+      "pnlEur": 930.0
     },
     {
       "id": "C-002",
@@ -147,14 +151,14 @@
     }
   ],
   "statistik": {
-    "trades": 0,
-    "gewonnen": 0,
+    "trades": 1,
+    "gewonnen": 1,
     "verloren": 0,
     "verfallen": 1,
-    "offen": 4,
-    "trefferquote": null,
-    "summeR": 0,
-    "erwartungswertR": null,
+    "offen": 3,
+    "trefferquote": 100.0,
+    "summeR": 0.62,
+    "erwartungswertR": 0.62,
     "profitFactor": null,
     "aktuelleVerlustserie": 0,
     "groessteVerlustserie": 0,
