@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_CODEX)",
     "alpaca": true,
     "hinweis": "CODEX - Challenger gegen SOLID und RISK. Ziel: risikoadjustierte Outperformance durch Quality-Momentum, Anti-Crowding und strengere Entry-Bestaetigung.",
-    "hinweisLetzterLauf": "CODEX No-Trade 2026-07-01 fuer Snapshot 2026-06-30: max_open_erreicht"
+    "hinweisLetzterLauf": "CODEX Trade C-006 AMD fuer Snapshot 2026-07-01 geschrieben. Paper only, keine Alpaca-Order."
   },
   "positionen": [],
   "trades": [
@@ -148,6 +148,28 @@
       ],
       "entryFill": 352.9,
       "entryDatum": "2026-06-24"
+    },
+    {
+      "id": "C-006",
+      "datumEmpfehlung": "2026-07-02",
+      "aktie": "AMD",
+      "ticker": "AMD",
+      "yahooSymbol": "AMD",
+      "richtung": "long",
+      "engine": "A",
+      "entryTyp": "stop",
+      "entry": 550.06,
+      "stop": 458.28,
+      "tp": 779.49,
+      "crv": 2.5,
+      "maxHaltezeitTage": 12,
+      "status": "wartet",
+      "risikoUsd": 1500,
+      "score": 62.59,
+      "cluster": "semis",
+      "snapshotAsOf": "2026-07-01",
+      "createdBy": "codex_challenger.py",
+      "begruendung": "CODEX Engine A: Quality-Momentum-Confirmed. Score 62.59; mom12_1 283.18%, 52W-Distanz -7.5%, ATR 6.79%, Cluster semis. Entry nur per Bestaetigungs-Stop; kein TQQQ-/Buzz-Duplikat."
     }
   ],
   "statistik": {
@@ -404,6 +426,14 @@
         "maxHaltezeitTage": 12,
         "referencePenalty": 0.0
       }
+    },
+    {
+      "datum": "2026-07-02T04:45:50.949729+00:00",
+      "snapshotAsOf": "2026-07-01",
+      "aktion": "trade",
+      "tradeId": "C-006",
+      "ticker": "AMD",
+      "score": 62.59
     }
   ]
 }
