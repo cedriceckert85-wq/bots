@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_CODEX)",
     "alpaca": true,
     "hinweis": "CODEX - Challenger gegen SOLID und RISK. Ziel: risikoadjustierte Outperformance durch Quality-Momentum, Anti-Crowding und strengere Entry-Bestaetigung.",
-    "hinweisLetzterLauf": "CODEX Trade C-006 AMD fuer Snapshot 2026-07-01 geschrieben. Paper only, keine Alpaca-Order."
+    "hinweisLetzterLauf": "CODEX No-Trade 2026-07-03 fuer Snapshot 2026-07-02: max_open_erreicht"
   },
   "positionen": [],
   "trades": [
@@ -437,6 +437,31 @@
       "tradeId": "C-006",
       "ticker": "AMD",
       "score": 62.59
+    },
+    {
+      "datum": "2026-07-03T04:30:23.051031+00:00",
+      "snapshotAsOf": "2026-07-02",
+      "aktion": "no_trade",
+      "gruende": [
+        "max_open_erreicht"
+      ],
+      "topKandidat": {
+        "ticker": "C",
+        "cluster": "financials",
+        "score": 60.1,
+        "mom12_1": 49.76,
+        "dist52wHochPct": -5.4,
+        "atrPct": 2.44,
+        "volRatio": 0.45,
+        "close": 139.97,
+        "atr14": 3.41,
+        "entry": 140.82,
+        "stop": 132.3,
+        "tp": 162.13,
+        "crv": 2.5,
+        "maxHaltezeitTage": 12,
+        "referencePenalty": 0.0
+      }
     }
   ]
 }
