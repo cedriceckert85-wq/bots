@@ -171,6 +171,7 @@
       "createdBy": "codex_challenger.py",
       "begruendung": "CODEX Engine A: Quality-Momentum-Confirmed. Score 62.59; mom12_1 283.18%, 52W-Distanz -7.5%, ATR 6.79%, Cluster semis. Entry nur per Bestaetigungs-Stop; kein TQQQ-/Buzz-Duplikat.",
       "log": [
+        "Alpaca: Risk-Gate nicht erreichbar -> Yahoo-Simulation",
         "Alpaca: Risk-Gate nicht erreichbar -> Yahoo-Simulation"
       ]
     }
