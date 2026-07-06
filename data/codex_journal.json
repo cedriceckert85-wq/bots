@@ -53,7 +53,7 @@
       "tp": 1166.89,
       "crv": 2.5,
       "maxHaltezeitTage": 12,
-      "status": "offen",
+      "status": "zeit_exit",
       "risikoUsd": 1500,
       "score": 78.89,
       "cluster": "industrials",
@@ -64,7 +64,11 @@
       "entryDatum": "2026-06-17",
       "log": [
         "2026-06-17 Entry-Fill 956.98"
-      ]
+      ],
+      "exitDatum": "2026-07-06",
+      "exitKurs": 969.92,
+      "ergebnisR": 0.12,
+      "pnlEur": 180.0
     },
     {
       "id": "C-003",
@@ -163,7 +167,7 @@
       "tp": 779.49,
       "crv": 2.5,
       "maxHaltezeitTage": 12,
-      "status": "wartet",
+      "status": "offen",
       "risikoUsd": 1500,
       "score": 62.59,
       "cluster": "semis",
@@ -172,19 +176,23 @@
       "begruendung": "CODEX Engine A: Quality-Momentum-Confirmed. Score 62.59; mom12_1 283.18%, 52W-Distanz -7.5%, ATR 6.79%, Cluster semis. Entry nur per Bestaetigungs-Stop; kein TQQQ-/Buzz-Duplikat.",
       "log": [
         "Alpaca: Risk-Gate nicht erreichbar -> Yahoo-Simulation",
-        "Alpaca: Risk-Gate nicht erreichbar -> Yahoo-Simulation"
-      ]
+        "Alpaca: Risk-Gate nicht erreichbar -> Yahoo-Simulation",
+        "Alpaca: Risk-Gate nicht erreichbar -> Yahoo-Simulation",
+        "2026-07-06 Entry-Fill 550.06"
+      ],
+      "entryFill": 550.06,
+      "entryDatum": "2026-07-06"
     }
   ],
   "statistik": {
-    "trades": 1,
-    "gewonnen": 1,
+    "trades": 2,
+    "gewonnen": 2,
     "verloren": 0,
     "verfallen": 1,
-    "offen": 4,
+    "offen": 3,
     "trefferquote": 100.0,
-    "summeR": 0.62,
-    "erwartungswertR": 0.62,
+    "summeR": 0.74,
+    "erwartungswertR": 0.37,
     "profitFactor": null,
     "aktuelleVerlustserie": 0,
     "groessteVerlustserie": 0,
