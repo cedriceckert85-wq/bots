@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_CODEX)",
     "alpaca": true,
     "hinweis": "CODEX - Challenger gegen SOLID und RISK. Ziel: risikoadjustierte Outperformance durch Quality-Momentum, Anti-Crowding und strengere Entry-Bestaetigung.",
-    "hinweisLetzterLauf": "CODEX No-Trade 2026-07-04 fuer Snapshot 2026-07-02: max_open_erreicht"
+    "hinweisLetzterLauf": "CODEX Trade C-007 CAT fuer Snapshot 2026-07-06 geschrieben. Paper only, keine Alpaca-Order."
   },
   "positionen": [],
   "trades": [
@@ -182,6 +182,28 @@
       ],
       "entryFill": 550.06,
       "entryDatum": "2026-07-06"
+    },
+    {
+      "id": "C-007",
+      "datumEmpfehlung": "2026-07-07",
+      "aktie": "CAT",
+      "ticker": "CAT",
+      "yahooSymbol": "CAT",
+      "richtung": "long",
+      "engine": "A",
+      "entryTyp": "stop",
+      "entry": 981.18,
+      "stop": 868.53,
+      "tp": 1262.81,
+      "crv": 2.5,
+      "maxHaltezeitTage": 12,
+      "status": "wartet",
+      "risikoUsd": 1500,
+      "score": 70.07,
+      "cluster": "industrials",
+      "snapshotAsOf": "2026-07-06",
+      "createdBy": "codex_challenger.py",
+      "begruendung": "CODEX Engine A: Quality-Momentum-Confirmed. Score 70.07; mom12_1 136.38%, 52W-Distanz -9.65%, ATR 4.65%, Cluster industrials. Entry nur per Bestaetigungs-Stop; kein TQQQ-/Buzz-Duplikat."
     }
   ],
   "statistik": {
@@ -496,6 +518,14 @@
         "maxHaltezeitTage": 12,
         "referencePenalty": 0.0
       }
+    },
+    {
+      "datum": "2026-07-07T04:37:48.848206+00:00",
+      "snapshotAsOf": "2026-07-06",
+      "aktion": "trade",
+      "tradeId": "C-007",
+      "ticker": "CAT",
+      "score": 70.07
     }
   ]
 }
