@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_CODEX)",
     "alpaca": true,
     "hinweis": "CODEX - Challenger gegen SOLID und RISK. Ziel: risikoadjustierte Outperformance durch Quality-Momentum, Anti-Crowding und strengere Entry-Bestaetigung.",
-    "hinweisLetzterLauf": "CODEX Trade C-007 CAT fuer Snapshot 2026-07-06 geschrieben. Paper only, keine Alpaca-Order."
+    "hinweisLetzterLauf": "CODEX No-Trade 2026-07-08 fuer Snapshot 2026-07-07: max_open_erreicht"
   },
   "positionen": [],
   "trades": [
@@ -529,6 +529,31 @@
       "tradeId": "C-007",
       "ticker": "CAT",
       "score": 70.07
+    },
+    {
+      "datum": "2026-07-08T03:58:11.153524+00:00",
+      "snapshotAsOf": "2026-07-07",
+      "aktion": "no_trade",
+      "gruende": [
+        "max_open_erreicht"
+      ],
+      "topKandidat": {
+        "ticker": "C",
+        "cluster": "financials",
+        "score": 61.89,
+        "mom12_1": 51.22,
+        "dist52wHochPct": -4.86,
+        "atrPct": 2.48,
+        "volRatio": 0.49,
+        "close": 140.77,
+        "atr14": 3.49,
+        "entry": 141.64,
+        "stop": 132.92,
+        "tp": 163.45,
+        "crv": 2.5,
+        "maxHaltezeitTage": 12,
+        "referencePenalty": 0.0
+      }
     }
   ]
 }
