@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_CODEX)",
     "alpaca": true,
     "hinweis": "CODEX - Challenger gegen SOLID und RISK. Ziel: risikoadjustierte Outperformance durch Quality-Momentum, Anti-Crowding und strengere Entry-Bestaetigung.",
-    "hinweisLetzterLauf": "CODEX No-Trade 2026-07-08 fuer Snapshot 2026-07-07: max_open_erreicht"
+    "hinweisLetzterLauf": "CODEX Trade C-008 MS fuer Snapshot 2026-07-08 geschrieben. Paper only, keine Alpaca-Order."
   },
   "positionen": [],
   "trades": [
@@ -212,6 +212,28 @@
         "Alpaca: Risk-Gate nicht erreichbar -> Yahoo-Simulation",
         "Alpaca: Risk-Gate nicht erreichbar -> Yahoo-Simulation"
       ]
+    },
+    {
+      "id": "C-008",
+      "datumEmpfehlung": "2026-07-09",
+      "aktie": "MS",
+      "ticker": "MS",
+      "yahooSymbol": "MS",
+      "richtung": "long",
+      "engine": "A",
+      "entryTyp": "stop",
+      "entry": 219.62,
+      "stop": 204.1,
+      "tp": 258.44,
+      "crv": 2.5,
+      "maxHaltezeitTage": 12,
+      "status": "wartet",
+      "risikoUsd": 1500,
+      "score": 59.9,
+      "cluster": "financials",
+      "snapshotAsOf": "2026-07-08",
+      "createdBy": "codex_challenger.py",
+      "begruendung": "CODEX Engine A: Quality-Momentum-Confirmed. Score 59.9; mom12_1 50.39%, 52W-Distanz -5.38%, ATR 2.85%, Cluster financials. Entry nur per Bestaetigungs-Stop; kein TQQQ-/Buzz-Duplikat."
     }
   ],
   "statistik": {
@@ -559,6 +581,14 @@
         "maxHaltezeitTage": 12,
         "referencePenalty": 0.0
       }
+    },
+    {
+      "datum": "2026-07-09T04:37:11.897391+00:00",
+      "snapshotAsOf": "2026-07-08",
+      "aktion": "trade",
+      "tradeId": "C-008",
+      "ticker": "MS",
+      "score": 59.9
     }
   ]
 }
