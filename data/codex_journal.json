@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_CODEX)",
     "alpaca": true,
     "hinweis": "CODEX - Challenger gegen SOLID und RISK. Ziel: risikoadjustierte Outperformance durch Quality-Momentum, Anti-Crowding und strengere Entry-Bestaetigung.",
-    "hinweisLetzterLauf": "CODEX Trade C-008 MS fuer Snapshot 2026-07-08 geschrieben. Paper only, keine Alpaca-Order."
+    "hinweisLetzterLauf": "CODEX No-Trade 2026-07-10 fuer Snapshot 2026-07-09: max_open_erreicht"
   },
   "positionen": [],
   "trades": [
@@ -596,6 +596,31 @@
       "tradeId": "C-008",
       "ticker": "MS",
       "score": 59.9
+    },
+    {
+      "datum": "2026-07-10T04:38:50.104978+00:00",
+      "snapshotAsOf": "2026-07-09",
+      "aktion": "no_trade",
+      "gruende": [
+        "max_open_erreicht"
+      ],
+      "topKandidat": {
+        "ticker": "JNJ",
+        "cluster": "healthcare",
+        "score": 63.48,
+        "mom12_1": 51.65,
+        "dist52wHochPct": -3.83,
+        "atrPct": 2.6,
+        "volRatio": 0.7,
+        "close": 259.1,
+        "atr14": 6.74,
+        "entry": 260.79,
+        "stop": 243.94,
+        "tp": 302.91,
+        "crv": 2.5,
+        "maxHaltezeitTage": 12,
+        "referencePenalty": 0.0
+      }
     }
   ]
 }
