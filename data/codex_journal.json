@@ -270,7 +270,10 @@
       "cluster": "mega_tech",
       "snapshotAsOf": "2026-07-10",
       "createdBy": "codex_challenger.py",
-      "begruendung": "CODEX Engine A: Quality-Momentum-Confirmed. Score 70.77; mom12_1 100.64%, 52W-Distanz -12.59%, ATR 3.21%, Cluster mega_tech. Entry nur per Bestaetigungs-Stop; kein TQQQ-/Buzz-Duplikat."
+      "begruendung": "CODEX Engine A: Quality-Momentum-Confirmed. Score 70.77; mom12_1 100.64%, 52W-Distanz -12.59%, ATR 3.21%, Cluster mega_tech. Entry nur per Bestaetigungs-Stop; kein TQQQ-/Buzz-Duplikat.",
+      "log": [
+        "Alpaca: Risk-Gate nicht erreichbar -> Yahoo-Simulation"
+      ]
     }
   ],
   "statistik": {
@@ -278,7 +281,7 @@
     "gewonnen": 3,
     "verloren": 1,
     "verfallen": 1,
-    "offen": 3,
+    "offen": 4,
     "trefferquote": 75.0,
     "summeR": 0.41,
     "erwartungswertR": 0.102,
