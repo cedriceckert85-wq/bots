@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_CODEX)",
     "alpaca": true,
     "hinweis": "CODEX - Challenger gegen SOLID und RISK. Ziel: risikoadjustierte Outperformance durch Quality-Momentum, Anti-Crowding und strengere Entry-Bestaetigung.",
-    "hinweisLetzterLauf": "CODEX Trade C-009 GOOGL fuer Snapshot 2026-07-10 geschrieben. Paper only, keine Alpaca-Order."
+    "hinweisLetzterLauf": "CODEX No-Trade 2026-07-14 fuer Snapshot 2026-07-13: max_open_erreicht"
   },
   "positionen": [],
   "trades": [
@@ -662,6 +662,31 @@
       "tradeId": "C-009",
       "ticker": "GOOGL",
       "score": 70.77
+    },
+    {
+      "datum": "2026-07-14T03:47:19.948785+00:00",
+      "snapshotAsOf": "2026-07-13",
+      "aktion": "no_trade",
+      "gruende": [
+        "max_open_erreicht"
+      ],
+      "topKandidat": {
+        "ticker": "CSCO",
+        "cluster": "other",
+        "score": 66.54,
+        "mom12_1": 79.29,
+        "dist52wHochPct": -8.53,
+        "atrPct": 3.32,
+        "volRatio": 0.65,
+        "close": 119.25,
+        "atr14": 3.96,
+        "entry": 120.24,
+        "stop": 110.34,
+        "tp": 144.99,
+        "crv": 2.5,
+        "maxHaltezeitTage": 12,
+        "referencePenalty": 0.0
+      }
     }
   ]
 }
