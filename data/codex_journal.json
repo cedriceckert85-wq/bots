@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_CODEX)",
     "alpaca": true,
     "hinweis": "CODEX - Challenger gegen SOLID und RISK. Ziel: risikoadjustierte Outperformance durch Quality-Momentum, Anti-Crowding und strengere Entry-Bestaetigung.",
-    "hinweisLetzterLauf": "CODEX No-Trade 2026-07-14 fuer Snapshot 2026-07-13: max_open_erreicht"
+    "hinweisLetzterLauf": "CODEX No-Trade 2026-07-15 fuer Snapshot 2026-07-14: max_open_erreicht"
   },
   "positionen": [],
   "trades": [
@@ -687,6 +687,31 @@
         "entry": 120.24,
         "stop": 110.34,
         "tp": 144.99,
+        "crv": 2.5,
+        "maxHaltezeitTage": 12,
+        "referencePenalty": 0.0
+      }
+    },
+    {
+      "datum": "2026-07-15T03:47:58.335882+00:00",
+      "snapshotAsOf": "2026-07-14",
+      "aktion": "no_trade",
+      "gruende": [
+        "max_open_erreicht"
+      ],
+      "topKandidat": {
+        "ticker": "CSCO",
+        "cluster": "other",
+        "score": 62.89,
+        "mom12_1": 78.56,
+        "dist52wHochPct": -10.19,
+        "atrPct": 3.31,
+        "volRatio": 0.84,
+        "close": 117.09,
+        "atr14": 3.87,
+        "entry": 118.06,
+        "stop": 108.38,
+        "tp": 142.25,
         "crv": 2.5,
         "maxHaltezeitTage": 12,
         "referencePenalty": 0.0
