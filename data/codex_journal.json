@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_CODEX)",
     "alpaca": true,
     "hinweis": "CODEX - Challenger gegen SOLID und RISK. Ziel: risikoadjustierte Outperformance durch Quality-Momentum, Anti-Crowding und strengere Entry-Bestaetigung.",
-    "hinweisLetzterLauf": "CODEX No-Trade 2026-07-15 fuer Snapshot 2026-07-14: max_open_erreicht"
+    "hinweisLetzterLauf": "CODEX No-Trade 2026-07-16 fuer Snapshot 2026-07-15: max_open_erreicht"
   },
   "positionen": [],
   "trades": [
@@ -712,6 +712,31 @@
         "entry": 118.06,
         "stop": 108.38,
         "tp": 142.25,
+        "crv": 2.5,
+        "maxHaltezeitTage": 12,
+        "referencePenalty": 0.0
+      }
+    },
+    {
+      "datum": "2026-07-16T03:51:31.656505+00:00",
+      "snapshotAsOf": "2026-07-15",
+      "aktion": "no_trade",
+      "gruende": [
+        "max_open_erreicht"
+      ],
+      "topKandidat": {
+        "ticker": "UNH",
+        "cluster": "healthcare",
+        "score": 58.41,
+        "mom12_1": 40.91,
+        "dist52wHochPct": -3.63,
+        "atrPct": 2.49,
+        "volRatio": 1.13,
+        "close": 418.52,
+        "atr14": 10.4,
+        "entry": 421.12,
+        "stop": 395.12,
+        "tp": 486.12,
         "crv": 2.5,
         "maxHaltezeitTage": 12,
         "referencePenalty": 0.0
