@@ -205,7 +205,7 @@
       "tp": 1262.81,
       "crv": 2.5,
       "maxHaltezeitTage": 12,
-      "status": "offen",
+      "status": "verloren",
       "risikoUsd": 1500,
       "score": 70.07,
       "cluster": "industrials",
@@ -219,7 +219,11 @@
         "2026-07-09 Entry-Fill 981.18"
       ],
       "entryFill": 981.18,
-      "entryDatum": "2026-07-09"
+      "entryDatum": "2026-07-09",
+      "exitDatum": "2026-07-17",
+      "exitKurs": 841.73,
+      "ergebnisR": -1.24,
+      "pnlEur": -1860.0
     },
     {
       "id": "C-008",
@@ -281,16 +285,16 @@
     }
   ],
   "statistik": {
-    "trades": 4,
+    "trades": 5,
     "gewonnen": 3,
-    "verloren": 1,
+    "verloren": 2,
     "verfallen": 1,
-    "offen": 4,
-    "trefferquote": 75.0,
-    "summeR": 0.41,
-    "erwartungswertR": 0.102,
-    "profitFactor": 1.89,
-    "aktuelleVerlustserie": 0,
+    "offen": 3,
+    "trefferquote": 60.0,
+    "summeR": -0.83,
+    "erwartungswertR": -0.166,
+    "profitFactor": 0.51,
+    "aktuelleVerlustserie": 1,
     "groessteVerlustserie": 1,
     "bremseAktiv": false
   },
