@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_CODEX)",
     "alpaca": true,
     "hinweis": "CODEX - Challenger gegen SOLID und RISK. Ziel: risikoadjustierte Outperformance durch Quality-Momentum, Anti-Crowding und strengere Entry-Bestaetigung.",
-    "hinweisLetzterLauf": "CODEX No-Trade 2026-07-17 fuer Snapshot 2026-07-16: max_open_erreicht"
+    "hinweisLetzterLauf": "CODEX Trade C-010 LLY fuer Snapshot 2026-07-17 geschrieben. Paper only, keine Alpaca-Order."
   },
   "positionen": [],
   "trades": [
@@ -282,6 +282,28 @@
       ],
       "entryFill": 360.05,
       "entryDatum": "2026-07-14"
+    },
+    {
+      "id": "C-010",
+      "datumEmpfehlung": "2026-07-18",
+      "aktie": "LLY",
+      "ticker": "LLY",
+      "yahooSymbol": "LLY",
+      "richtung": "long",
+      "engine": "A",
+      "entryTyp": "stop",
+      "entry": 1188.67,
+      "stop": 1093.09,
+      "tp": 1427.6,
+      "crv": 2.5,
+      "maxHaltezeitTage": 12,
+      "status": "wartet",
+      "risikoUsd": 1500,
+      "score": 57.66,
+      "cluster": "healthcare",
+      "snapshotAsOf": "2026-07-17",
+      "createdBy": "codex_challenger.py",
+      "begruendung": "CODEX Engine A: Quality-Momentum-Confirmed. Score 57.66; mom12_1 46.03%, 52W-Distanz -5.63%, ATR 3.24%, Cluster healthcare. Entry nur per Bestaetigungs-Stop; kein TQQQ-/Buzz-Duplikat."
     }
   ],
   "statistik": {
@@ -770,6 +792,14 @@
         "maxHaltezeitTage": 12,
         "referencePenalty": 0.0
       }
+    },
+    {
+      "datum": "2026-07-18T03:44:16.622920+00:00",
+      "snapshotAsOf": "2026-07-17",
+      "aktion": "trade",
+      "tradeId": "C-010",
+      "ticker": "LLY",
+      "score": 57.66
     }
   ]
 }
