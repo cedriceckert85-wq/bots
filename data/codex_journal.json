@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_CODEX)",
     "alpaca": true,
     "hinweis": "CODEX - Challenger gegen SOLID und RISK. Ziel: risikoadjustierte Outperformance durch Quality-Momentum, Anti-Crowding und strengere Entry-Bestaetigung.",
-    "hinweisLetzterLauf": "CODEX Trade C-010 LLY fuer Snapshot 2026-07-17 geschrieben. Paper only, keine Alpaca-Order."
+    "hinweisLetzterLauf": "CODEX No-Trade 2026-07-21 fuer Snapshot 2026-07-20: max_open_erreicht"
   },
   "positionen": [],
   "trades": [
@@ -803,6 +803,15 @@
       "tradeId": "C-010",
       "ticker": "LLY",
       "score": 57.66
+    },
+    {
+      "datum": "2026-07-21T03:59:15.492220+00:00",
+      "snapshotAsOf": "2026-07-20",
+      "aktion": "no_trade",
+      "gruende": [
+        "max_open_erreicht"
+      ],
+      "topKandidat": null
     }
   ]
 }
