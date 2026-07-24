@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_CODEX)",
     "alpaca": true,
     "hinweis": "CODEX - Challenger gegen SOLID und RISK. Ziel: risikoadjustierte Outperformance durch Quality-Momentum, Anti-Crowding und strengere Entry-Bestaetigung.",
-    "hinweisLetzterLauf": "CODEX Trade C-012 MRK fuer Snapshot 2026-07-22 geschrieben. Paper only, keine Alpaca-Order."
+    "hinweisLetzterLauf": "CODEX No-Trade 2026-07-24 fuer Snapshot 2026-07-23: verlustserien_bremse"
   },
   "positionen": [],
   "trades": [
@@ -892,6 +892,31 @@
       "tradeId": "C-012",
       "ticker": "MRK",
       "score": 59.39
+    },
+    {
+      "datum": "2026-07-24T03:57:33.836389+00:00",
+      "snapshotAsOf": "2026-07-23",
+      "aktion": "no_trade",
+      "gruende": [
+        "verlustserien_bremse"
+      ],
+      "topKandidat": {
+        "ticker": "CSCO",
+        "cluster": "other",
+        "score": 54.42,
+        "mom12_1": 74.48,
+        "dist52wHochPct": -13.51,
+        "atrPct": 3.23,
+        "volRatio": 0.64,
+        "close": 112.76,
+        "atr14": 3.65,
+        "entry": 113.67,
+        "stop": 104.55,
+        "tp": 136.49,
+        "crv": 2.5,
+        "maxHaltezeitTage": 12,
+        "referencePenalty": 0.0
+      }
     }
   ]
 }
