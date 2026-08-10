@@ -369,7 +369,7 @@
       "tp": 151.06,
       "crv": 2.5,
       "maxHaltezeitTage": 12,
-      "status": "offen",
+      "status": "zeit_exit",
       "risikoUsd": 1500,
       "score": 59.39,
       "cluster": "healthcare",
@@ -382,21 +382,25 @@
         "2026-07-24 Entry-Fill 131.44"
       ],
       "entryFill": 131.44,
-      "entryDatum": "2026-07-24"
+      "entryDatum": "2026-07-24",
+      "exitDatum": "2026-08-10",
+      "exitKurs": 130.92,
+      "ergebnisR": -0.04,
+      "pnlEur": -60.0
     }
   ],
   "statistik": {
-    "trades": 9,
+    "trades": 10,
     "gewonnen": 3,
-    "verloren": 6,
+    "verloren": 7,
     "verfallen": 2,
-    "offen": 1,
-    "trefferquote": 33.3,
-    "summeR": -3.72,
-    "erwartungswertR": -0.413,
+    "offen": 0,
+    "trefferquote": 30.0,
+    "summeR": -3.76,
+    "erwartungswertR": -0.376,
     "profitFactor": 0.19,
-    "aktuelleVerlustserie": 5,
-    "groessteVerlustserie": 5,
+    "aktuelleVerlustserie": 6,
+    "groessteVerlustserie": 6,
     "bremseAktiv": true
   },
   "laufLog": [
