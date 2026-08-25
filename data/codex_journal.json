@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_CODEX)",
     "alpaca": true,
     "hinweis": "CODEX - Challenger gegen SOLID und RISK. Ziel: risikoadjustierte Outperformance durch Quality-Momentum, Anti-Crowding und strengere Entry-Bestaetigung.",
-    "hinweisLetzterLauf": "CODEX No-Trade 2026-08-22 fuer Snapshot 2026-08-21: verlustserien_bremse"
+    "hinweisLetzterLauf": "CODEX No-Trade 2026-08-25 fuer Snapshot 2026-08-24: verlustserien_bremse"
   },
   "positionen": [],
   "trades": [
@@ -1454,6 +1454,31 @@
         "entry": 1266.71,
         "stop": 1153.59,
         "tp": 1549.53,
+        "crv": 2.5,
+        "maxHaltezeitTage": 12,
+        "referencePenalty": 0.0
+      }
+    },
+    {
+      "datum": "2026-08-25T02:07:29.562155+00:00",
+      "snapshotAsOf": "2026-08-24",
+      "aktion": "no_trade",
+      "gruende": [
+        "verlustserien_bremse"
+      ],
+      "topKandidat": {
+        "ticker": "LLY",
+        "cluster": "healthcare",
+        "score": 69.49,
+        "mom12_1": 68.27,
+        "dist52wHochPct": -3.54,
+        "atrPct": 3.65,
+        "volRatio": 0.58,
+        "close": 1246.93,
+        "atr14": 45.57,
+        "entry": 1258.32,
+        "stop": 1144.4,
+        "tp": 1543.13,
         "crv": 2.5,
         "maxHaltezeitTage": 12,
         "referencePenalty": 0.0
