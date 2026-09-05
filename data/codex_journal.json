@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_CODEX)",
     "alpaca": true,
     "hinweis": "CODEX - Challenger gegen SOLID und RISK. Ziel: risikoadjustierte Outperformance durch Quality-Momentum, Anti-Crowding und strengere Entry-Bestaetigung.",
-    "hinweisLetzterLauf": "CODEX No-Trade 2026-09-04 fuer Snapshot 2026-09-03: verlustserien_bremse"
+    "hinweisLetzterLauf": "CODEX No-Trade 2026-09-05 fuer Snapshot 2026-09-04: verlustserien_bremse"
   },
   "positionen": [],
   "trades": [
@@ -1679,6 +1679,31 @@
         "entry": 153.57,
         "stop": 141.29,
         "tp": 184.25,
+        "crv": 2.5,
+        "maxHaltezeitTage": 12,
+        "referencePenalty": 0.0
+      }
+    },
+    {
+      "datum": "2026-09-05T04:55:45.908769+00:00",
+      "snapshotAsOf": "2026-09-04",
+      "aktion": "no_trade",
+      "gruende": [
+        "verlustserien_bremse"
+      ],
+      "topKandidat": {
+        "ticker": "MRK",
+        "cluster": "healthcare",
+        "score": 62.5,
+        "mom12_1": 51.79,
+        "dist52wHochPct": -4.2,
+        "atrPct": 3.25,
+        "volRatio": 0.4,
+        "close": 150.33,
+        "atr14": 4.88,
+        "entry": 151.55,
+        "stop": 139.35,
+        "tp": 182.05,
         "crv": 2.5,
         "maxHaltezeitTage": 12,
         "referencePenalty": 0.0
