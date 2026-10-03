@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_CODEX)",
     "alpaca": true,
     "hinweis": "CODEX - Challenger gegen SOLID und RISK. Ziel: risikoadjustierte Outperformance durch Quality-Momentum, Anti-Crowding und strengere Entry-Bestaetigung.",
-    "hinweisLetzterLauf": "CODEX No-Trade 2026-10-02 fuer Snapshot 2026-09-30: verlustserien_bremse"
+    "hinweisLetzterLauf": "CODEX No-Trade 2026-10-03 fuer Snapshot 2026-10-01: verlustserien_bremse"
   },
   "positionen": [],
   "trades": [
@@ -2179,6 +2179,31 @@
         "entry": 64.86,
         "stop": 55.2,
         "tp": 88.98,
+        "crv": 2.5,
+        "maxHaltezeitTage": 12,
+        "referencePenalty": 0.0
+      }
+    },
+    {
+      "datum": "2026-10-03T05:44:11.360453+00:00",
+      "snapshotAsOf": "2026-10-01",
+      "aktion": "no_trade",
+      "gruende": [
+        "verlustserien_bremse"
+      ],
+      "topKandidat": {
+        "ticker": "HPE",
+        "cluster": "other",
+        "score": 78.38,
+        "mom12_1": 107.9,
+        "dist52wHochPct": -3.76,
+        "atrPct": 5.69,
+        "volRatio": 0.64,
+        "close": 64.58,
+        "atr14": 3.68,
+        "entry": 65.5,
+        "stop": 56.3,
+        "tp": 88.5,
         "crv": 2.5,
         "maxHaltezeitTage": 12,
         "referencePenalty": 0.0
