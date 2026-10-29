@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_CODEX)",
     "alpaca": true,
     "hinweis": "CODEX - Challenger gegen SOLID und RISK. Ziel: risikoadjustierte Outperformance durch Quality-Momentum, Anti-Crowding und strengere Entry-Bestaetigung.",
-    "hinweisLetzterLauf": "CODEX No-Trade 2026-10-28 fuer Snapshot 2026-10-26: verlustserien_bremse"
+    "hinweisLetzterLauf": "CODEX No-Trade 2026-10-29 fuer Snapshot 2026-10-27: verlustserien_bremse"
   },
   "positionen": [],
   "trades": [
@@ -2629,6 +2629,31 @@
         "entry": 395.27,
         "stop": 347.15,
         "tp": 515.59,
+        "crv": 2.5,
+        "maxHaltezeitTage": 12,
+        "referencePenalty": 0.0
+      }
+    },
+    {
+      "datum": "2026-10-29T06:27:42.802130+00:00",
+      "snapshotAsOf": "2026-10-27",
+      "aktion": "no_trade",
+      "gruende": [
+        "verlustserien_bremse"
+      ],
+      "topKandidat": {
+        "ticker": "PANW",
+        "cluster": "mega_tech",
+        "score": 63.76,
+        "mom12_1": 76.32,
+        "dist52wHochPct": -7.08,
+        "atrPct": 4.81,
+        "volRatio": 0.9,
+        "close": 401.7,
+        "atr14": 19.34,
+        "entry": 406.53,
+        "stop": 358.19,
+        "tp": 527.41,
         "crv": 2.5,
         "maxHaltezeitTage": 12,
         "referencePenalty": 0.0
