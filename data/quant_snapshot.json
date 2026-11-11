@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-11-10T03:44:53Z",
+  "generatedAtUtc": "2026-11-11T01:25:11Z",
   "asOf": "2026-11-09",
   "ticker": {
     "AAPL": {
@@ -12,7 +12,7 @@
       "atr14": 9.42,
       "atrPct": 2.69,
       "volRatio": 0.98,
-      "dollarVol20dMio": 17477.2
+      "dollarVol20dMio": 17478.3
     },
     "MSFT": {
       "close": 545.18,
@@ -23,8 +23,8 @@
       "ueberSma200": true,
       "atr14": 16.54,
       "atrPct": 3.03,
-      "volRatio": 0.97,
-      "dollarVol20dMio": 14149.5
+      "volRatio": 0.98,
+      "dollarVol20dMio": 14150.6
     },
     "NVDA": {
       "close": 178.67,
@@ -35,8 +35,8 @@
       "ueberSma200": false,
       "atr14": 8.79,
       "atrPct": 4.92,
-      "volRatio": 3.35,
-      "dollarVol20dMio": 24499.3
+      "volRatio": 3.37,
+      "dollarVol20dMio": 24531.4
     },
     "AMZN": {
       "close": 266.93,
@@ -48,7 +48,7 @@
       "atr14": 10.56,
       "atrPct": 3.96,
       "volRatio": 1.04,
-      "dollarVol20dMio": 13255.7
+      "dollarVol20dMio": 13257.1
     },
     "GOOGL": {
       "close": 288.15,
@@ -59,8 +59,8 @@
       "ueberSma200": false,
       "atr14": 11.66,
       "atrPct": 4.05,
-      "volRatio": 0.91,
-      "dollarVol20dMio": 11470.1
+      "volRatio": 0.92,
+      "dollarVol20dMio": 11472.2
     },
     "META": {
       "close": 641.37,
@@ -72,7 +72,7 @@
       "atr14": 24.74,
       "atrPct": 3.86,
       "volRatio": 0.77,
-      "dollarVol20dMio": 15954.4
+      "dollarVol20dMio": 15955.6
     },
     "AVGO": {
       "close": 319.48,
@@ -84,7 +84,7 @@
       "atr14": 16.5,
       "atrPct": 5.16,
       "volRatio": 1.47,
-      "dollarVol20dMio": 7957.3
+      "dollarVol20dMio": 7958.6
     },
     "TSLA": {
       "close": 378.05,
@@ -96,7 +96,7 @@
       "atr14": 18.7,
       "atrPct": 4.95,
       "volRatio": 0.89,
-      "dollarVol20dMio": 15372.7
+      "dollarVol20dMio": 15374.2
     },
     "BRK-B": {
       "close": 575.25,
@@ -180,7 +180,7 @@
       "atr14": 5.03,
       "atrPct": 3.05,
       "volRatio": 1.21,
-      "dollarVol20dMio": 2343.7
+      "dollarVol20dMio": 2343.8
     },
     "CVX": {
       "close": 210.78,
@@ -227,8 +227,8 @@
       "ueberSma200": true,
       "atr14": 3.18,
       "atrPct": 2.53,
-      "volRatio": 1.03,
-      "dollarVol20dMio": 2891.8
+      "volRatio": 1.04,
+      "dollarVol20dMio": 2891.9
     },
     "PG": {
       "close": 168.32,
@@ -288,7 +288,7 @@
       "atr14": 8.78,
       "atrPct": 7.33,
       "volRatio": 0.63,
-      "dollarVol20dMio": 5255.2
+      "dollarVol20dMio": 5255.6
     },
     "CRM": {
       "close": 214.94,
@@ -324,7 +324,7 @@
       "atr14": 41.07,
       "atrPct": 8.07,
       "volRatio": 1.74,
-      "dollarVol20dMio": 14937.4
+      "dollarVol20dMio": 14944.3
     },
     "QCOM": {
       "close": 171.47,
@@ -336,7 +336,7 @@
       "atr14": 9.6,
       "atrPct": 5.6,
       "volRatio": 1.18,
-      "dollarVol20dMio": 2396.0
+      "dollarVol20dMio": 2396.1
     },
     "TXN": {
       "close": 295.73,
@@ -359,8 +359,8 @@
       "ueberSma200": false,
       "atr14": 6.45,
       "atrPct": 10.87,
-      "volRatio": 0.99,
-      "dollarVol20dMio": 8763.7
+      "volRatio": 1.0,
+      "dollarVol20dMio": 8766.2
     },
     "NFLX": {
       "close": 63.95,
@@ -371,8 +371,8 @@
       "ueberSma200": false,
       "atr14": 2.12,
       "atrPct": 3.31,
-      "volRatio": 0.75,
-      "dollarVol20dMio": 3014.1
+      "volRatio": 0.76,
+      "dollarVol20dMio": 3014.4
     },
     "DIS": {
       "close": 119.12,
@@ -515,8 +515,8 @@
       "ueberSma200": false,
       "atr14": 6.7,
       "atrPct": 3.89,
-      "volRatio": 1.08,
-      "dollarVol20dMio": 1813.5
+      "volRatio": 1.09,
+      "dollarVol20dMio": 1813.6
     },
     "GE": {
       "close": 335.54,
@@ -732,7 +732,7 @@
       "atr14": 7.72,
       "atrPct": 7.51,
       "volRatio": 0.65,
-      "dollarVol20dMio": 2069.6
+      "dollarVol20dMio": 2069.7
     },
     "PANW": {
       "close": 330.89,
@@ -767,8 +767,8 @@
       "ueberSma200": false,
       "atr14": 60.12,
       "atrPct": 8.2,
-      "volRatio": 1.03,
-      "dollarVol20dMio": 22690.8
+      "volRatio": 1.04,
+      "dollarVol20dMio": 22699.5
     },
     "LRCX": {
       "close": 221.31,
@@ -780,7 +780,7 @@
       "atr14": 17.56,
       "atrPct": 7.93,
       "volRatio": 1.21,
-      "dollarVol20dMio": 3066.1
+      "dollarVol20dMio": 3066.2
     },
     "AMAT": {
       "close": 370.55,
@@ -792,7 +792,7 @@
       "atr14": 25.17,
       "atrPct": 6.79,
       "volRatio": 1.25,
-      "dollarVol20dMio": 3249.9
+      "dollarVol20dMio": 3250.1
     },
     "KLAC": {
       "close": 151.38,
@@ -996,7 +996,7 @@
       "atr14": 3.81,
       "atrPct": 3.86,
       "volRatio": 1.08,
-      "dollarVol20dMio": 1853.8
+      "dollarVol20dMio": 1853.9
     },
     "T": {
       "close": 21.8,
@@ -1067,8 +1067,8 @@
       "ueberSma200": false,
       "atr14": 2.14,
       "atrPct": 3.01,
-      "volRatio": 1.0,
-      "dollarVol20dMio": 1356.4
+      "volRatio": 1.01,
+      "dollarVol20dMio": 1356.5
     },
     "PLTR": {
       "close": 169.2,
@@ -1080,7 +1080,7 @@
       "atr14": 10.22,
       "atrPct": 6.04,
       "volRatio": 0.9,
-      "dollarVol20dMio": 4481.2
+      "dollarVol20dMio": 4481.6
     }
   },
   "etfs": {
@@ -1094,7 +1094,7 @@
       "atr14": 11.98,
       "atrPct": 1.59,
       "volRatio": 1.03,
-      "dollarVol20dMio": 36568.9
+      "dollarVol20dMio": 36576.8
     },
     "QQQ": {
       "close": 679.35,
@@ -1106,7 +1106,7 @@
       "atr14": 17.62,
       "atrPct": 2.59,
       "volRatio": 1.07,
-      "dollarVol20dMio": 34694.0
+      "dollarVol20dMio": 34708.3
     },
     "IWM": {
       "close": 282.51,
@@ -1118,7 +1118,7 @@
       "atr14": 5.05,
       "atrPct": 1.79,
       "volRatio": 1.11,
-      "dollarVol20dMio": 7350.2
+      "dollarVol20dMio": 7350.5
     },
     "TQQQ": {
       "close": 57.58,
@@ -1129,30 +1129,30 @@
       "ueberSma200": false,
       "atr14": 4.77,
       "atrPct": 8.28,
-      "volRatio": 1.14,
-      "dollarVol20dMio": 4624.7
+      "volRatio": 1.15,
+      "dollarVol20dMio": 4627.9
     },
     "VIX": {
-      "close": 19.92,
-      "datum": "2026-11-09",
-      "mom12_1": -11.98,
-      "dist52wHochPct": -43.57,
-      "sma200": 18.41,
+      "close": 19.46,
+      "datum": "2026-11-10",
+      "mom12_1": -12.79,
+      "dist52wHochPct": -44.87,
+      "sma200": 18.43,
       "ueberSma200": true,
-      "atr14": 3.66,
-      "atrPct": 18.35,
+      "atr14": 3.74,
+      "atrPct": 19.24,
       "volRatio": null,
       "dollarVol20dMio": null
     },
     "IRX": {
-      "close": 4.03,
-      "datum": "2026-11-09",
-      "mom12_1": 7.8,
-      "dist52wHochPct": -2.7,
+      "close": 4.12,
+      "datum": "2026-11-10",
+      "mom12_1": 7.24,
+      "dist52wHochPct": -0.77,
       "sma200": 3.72,
       "ueberSma200": true,
-      "atr14": 0.03,
-      "atrPct": 0.78,
+      "atr14": 0.04,
+      "atrPct": 0.89,
       "volRatio": null,
       "dollarVol20dMio": null
     }
@@ -1160,7 +1160,7 @@
   "regime": {
     "spyZone": "risk_on",
     "qqqZone": "neutral",
-    "vixClose": 19.92,
+    "vixClose": 19.46,
     "vixUnter25": true
   },
   "fehler": [],
@@ -1269,7 +1269,7 @@
   "volumenSpikes": [
     {
       "ticker": "NVDA",
-      "volRatio": 3.35
+      "volRatio": 3.37
     }
   ]
 }
