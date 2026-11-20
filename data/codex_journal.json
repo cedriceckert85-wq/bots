@@ -4,7 +4,7 @@
     "status": "ALPACA PAPER (ALPACA_CODEX)",
     "alpaca": true,
     "hinweis": "CODEX - Challenger gegen SOLID und RISK. Ziel: risikoadjustierte Outperformance durch Quality-Momentum, Anti-Crowding und strengere Entry-Bestaetigung.",
-    "hinweisLetzterLauf": "CODEX No-Trade 2026-11-19 fuer Snapshot 2026-11-18: spyZone_neutral, verlustserien_bremse"
+    "hinweisLetzterLauf": "CODEX No-Trade 2026-11-20 fuer Snapshot 2026-11-19: spyZone_risk_off, verlustserien_bremse"
   },
   "positionen": [],
   "trades": [
@@ -3033,6 +3033,32 @@
         "entry": 296.33,
         "stop": 257.29,
         "tp": 393.96,
+        "crv": 2.5,
+        "maxHaltezeitTage": 12,
+        "referencePenalty": 0.0
+      }
+    },
+    {
+      "datum": "2026-11-20T07:45:04.612444+00:00",
+      "snapshotAsOf": "2026-11-19",
+      "aktion": "no_trade",
+      "gruende": [
+        "spyZone_risk_off",
+        "verlustserien_bremse"
+      ],
+      "topKandidat": {
+        "ticker": "COP",
+        "cluster": "energy_materials",
+        "score": 51.77,
+        "mom12_1": 65.53,
+        "dist52wHochPct": -12.5,
+        "atrPct": 3.35,
+        "volRatio": 0.67,
+        "close": 134.99,
+        "atr14": 4.52,
+        "entry": 136.12,
+        "stop": 124.82,
+        "tp": 164.37,
         "crv": 2.5,
         "maxHaltezeitTage": 12,
         "referencePenalty": 0.0
