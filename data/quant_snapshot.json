@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-11-26T03:43:13Z",
+  "generatedAtUtc": "2026-11-27T03:44:11Z",
   "asOf": "2026-11-25",
   "ticker": {
     "AAPL": {
@@ -12,7 +12,7 @@
       "atr14": 8.03,
       "atrPct": 2.26,
       "volRatio": 1.05,
-      "dollarVol20dMio": 18327.2
+      "dollarVol20dMio": 18328.0
     },
     "MSFT": {
       "close": 489.93,
@@ -24,7 +24,7 @@
       "atr14": 17.05,
       "atrPct": 3.48,
       "volRatio": 0.87,
-      "dollarVol20dMio": 15022.6
+      "dollarVol20dMio": 15023.2
     },
     "NVDA": {
       "close": 149.3,
@@ -36,7 +36,7 @@
       "atr14": 15.83,
       "atrPct": 10.6,
       "volRatio": 1.04,
-      "dollarVol20dMio": 52377.5
+      "dollarVol20dMio": 52401.3
     },
     "AMZN": {
       "close": 244.43,
@@ -48,7 +48,7 @@
       "atr14": 10.46,
       "atrPct": 4.28,
       "volRatio": 1.13,
-      "dollarVol20dMio": 13528.3
+      "dollarVol20dMio": 13530.8
     },
     "GOOGL": {
       "close": 273.1,
@@ -60,7 +60,7 @@
       "atr14": 11.63,
       "atrPct": 4.26,
       "volRatio": 0.91,
-      "dollarVol20dMio": 12418.0
+      "dollarVol20dMio": 12419.6
     },
     "META": {
       "close": 609.89,
@@ -72,7 +72,7 @@
       "atr14": 24.32,
       "atrPct": 3.99,
       "volRatio": 1.02,
-      "dollarVol20dMio": 11157.9
+      "dollarVol20dMio": 11160.0
     },
     "AVGO": {
       "close": 300.86,
@@ -84,7 +84,7 @@
       "atr14": 23.13,
       "atrPct": 7.69,
       "volRatio": 1.06,
-      "dollarVol20dMio": 9742.7
+      "dollarVol20dMio": 9744.1
     },
     "TSLA": {
       "close": 380.14,
@@ -96,7 +96,7 @@
       "atr14": 20.05,
       "atrPct": 5.27,
       "volRatio": 0.98,
-      "dollarVol20dMio": 13519.2
+      "dollarVol20dMio": 13521.6
     },
     "BRK-B": {
       "close": 579.32,
@@ -228,7 +228,7 @@
       "atr14": 2.81,
       "atrPct": 2.13,
       "volRatio": 0.94,
-      "dollarVol20dMio": 3298.0
+      "dollarVol20dMio": 3298.2
     },
     "PG": {
       "close": 173.23,
@@ -287,8 +287,8 @@
       "ueberSma200": false,
       "atr14": 8.32,
       "atrPct": 8.01,
-      "volRatio": 0.94,
-      "dollarVol20dMio": 4216.7
+      "volRatio": 0.95,
+      "dollarVol20dMio": 4217.6
     },
     "CRM": {
       "close": 197.21,
@@ -323,8 +323,8 @@
       "ueberSma200": false,
       "atr14": 52.47,
       "atrPct": 12.92,
-      "volRatio": 1.09,
-      "dollarVol20dMio": 19123.9
+      "volRatio": 1.1,
+      "dollarVol20dMio": 19129.8
     },
     "QCOM": {
       "close": 168.66,
@@ -336,7 +336,7 @@
       "atr14": 10.1,
       "atrPct": 5.99,
       "volRatio": 0.9,
-      "dollarVol20dMio": 2635.8
+      "dollarVol20dMio": 2636.0
     },
     "TXN": {
       "close": 270.19,
@@ -360,7 +360,7 @@
       "atr14": 4.83,
       "atrPct": 8.87,
       "volRatio": 0.8,
-      "dollarVol20dMio": 8795.0
+      "dollarVol20dMio": 8796.9
     },
     "NFLX": {
       "close": 59.41,
@@ -372,7 +372,7 @@
       "atr14": 1.94,
       "atrPct": 3.27,
       "volRatio": 1.13,
-      "dollarVol20dMio": 2402.4
+      "dollarVol20dMio": 2402.6
     },
     "DIS": {
       "close": 125.6,
@@ -420,7 +420,7 @@
       "atr14": 1.89,
       "atrPct": 1.94,
       "volRatio": 1.21,
-      "dollarVol20dMio": 2004.3
+      "dollarVol20dMio": 2004.4
     },
     "MCD": {
       "close": 283.5,
@@ -636,7 +636,7 @@
       "atr14": 1.14,
       "atrPct": 2.35,
       "volRatio": 1.04,
-      "dollarVol20dMio": 1778.8
+      "dollarVol20dMio": 1778.9
     },
     "WFC": {
       "close": 80.94,
@@ -743,8 +743,8 @@
       "ueberSma200": true,
       "atr14": 19.84,
       "atrPct": 5.57,
-      "volRatio": 0.81,
-      "dollarVol20dMio": 2915.2
+      "volRatio": 0.82,
+      "dollarVol20dMio": 2915.8
     },
     "ANET": {
       "close": 163.99,
@@ -767,8 +767,8 @@
       "ueberSma200": false,
       "atr14": 70.99,
       "atrPct": 11.81,
-      "volRatio": 1.42,
-      "dollarVol20dMio": 22262.4
+      "volRatio": 1.43,
+      "dollarVol20dMio": 22278.0
     },
     "LRCX": {
       "close": 185.01,
@@ -780,7 +780,7 @@
       "atr14": 18.59,
       "atrPct": 10.05,
       "volRatio": 1.46,
-      "dollarVol20dMio": 2721.0
+      "dollarVol20dMio": 2721.3
     },
     "AMAT": {
       "close": 311.18,
@@ -792,7 +792,7 @@
       "atr14": 29.59,
       "atrPct": 9.51,
       "volRatio": 1.28,
-      "dollarVol20dMio": 2854.6
+      "dollarVol20dMio": 2854.9
     },
     "KLAC": {
       "close": 134.2,
@@ -924,7 +924,7 @@
       "atr14": 5.29,
       "atrPct": 5.21,
       "volRatio": 1.01,
-      "dollarVol20dMio": 799.6
+      "dollarVol20dMio": 799.7
     },
     "COP": {
       "close": 135.02,
@@ -972,7 +972,7 @@
       "atr14": 4.17,
       "atrPct": 10.22,
       "volRatio": 1.45,
-      "dollarVol20dMio": 777.5
+      "dollarVol20dMio": 777.7
     },
     "IBM": {
       "close": 243.47,
@@ -1080,7 +1080,7 @@
       "atr14": 9.21,
       "atrPct": 5.63,
       "volRatio": 0.83,
-      "dollarVol20dMio": 4224.8
+      "dollarVol20dMio": 4225.4
     }
   },
   "etfs": {
@@ -1094,7 +1094,7 @@
       "atr14": 16.88,
       "atrPct": 2.36,
       "volRatio": 1.12,
-      "dollarVol20dMio": 46632.5
+      "dollarVol20dMio": 46639.5
     },
     "QQQ": {
       "close": 633.93,
@@ -1105,8 +1105,8 @@
       "ueberSma200": false,
       "atr14": 23.32,
       "atrPct": 3.68,
-      "volRatio": 1.28,
-      "dollarVol20dMio": 40339.7
+      "volRatio": 1.29,
+      "dollarVol20dMio": 40352.2
     },
     "IWM": {
       "close": 268.87,
@@ -1118,7 +1118,7 @@
       "atr14": 6.23,
       "atrPct": 2.32,
       "volRatio": 1.18,
-      "dollarVol20dMio": 7610.5
+      "dollarVol20dMio": 7610.9
     },
     "TQQQ": {
       "close": 45.28,
@@ -1129,23 +1129,23 @@
       "ueberSma200": false,
       "atr14": 5.33,
       "atrPct": 11.78,
-      "volRatio": 1.59,
-      "dollarVol20dMio": 5384.6
+      "volRatio": 1.62,
+      "dollarVol20dMio": 5392.7
     },
     "VIX": {
-      "close": 28.29,
-      "datum": "2026-11-25",
-      "mom12_1": 3.43,
-      "dist52wHochPct": -29.33,
-      "sma200": 18.78,
+      "close": 26.8,
+      "datum": "2026-11-26",
+      "mom12_1": -0.23,
+      "dist52wHochPct": -33.05,
+      "sma200": 18.82,
       "ueberSma200": true,
-      "atr14": 6.4,
-      "atrPct": 22.64,
+      "atr14": 6.19,
+      "atrPct": 23.1,
       "volRatio": null,
       "dollarVol20dMio": null
     },
     "IRX": {
-      "close": 4.15,
+      "close": 4.16,
       "datum": "2026-11-25",
       "mom12_1": 7.05,
       "dist52wHochPct": -0.48,
@@ -1160,7 +1160,7 @@
   "regime": {
     "spyZone": "risk_off",
     "qqqZone": "risk_off",
-    "vixClose": 28.29,
+    "vixClose": 26.8,
     "vixUnter25": false
   },
   "fehler": [],
